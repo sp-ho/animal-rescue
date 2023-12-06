@@ -63,7 +63,7 @@ const Contact = () => {
                 <FontAwesomeIcon icon={faEnvelope} size="2x" />
               </div>
               <p className="contact-p">Email</p>
-              <p>example@example.com</p>
+              <p>animalrescue@email.com</p>
             </div>
 
             {/* Right Section */}
