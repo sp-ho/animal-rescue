@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Message from "./components/Message";
+// import Message from "./components/Message";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -12,7 +12,7 @@ function App() {
     <>
       <Navbar />
       {/* Message component is used to display "SIte is under maintenance" text */}
-      <Message />
+      {/* <Message /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
