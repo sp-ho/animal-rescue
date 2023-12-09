@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faUsers } from "@fortawesome/free-solid-svg-icons";
@@ -9,8 +10,10 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import validateFormData from "../components/FormValidator";
+import axios from "axios";
 
 const Contact = () => {
+  // useState for data
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -22,32 +25,126 @@ const Contact = () => {
     agreeTerms: false,
   });
 
+  // useState for reCAPTCHA
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+
+  // useState for submission status
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+
+    // log for debug
+    // console.log(`Updating ${name} with value: ${value}`);
+
     setFormData({ ...formData, [name]: value });
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] ?? null;
-    setFormData({ ...formData, image: file });
+
+    if (file) {
+      // Check if the file format is allowed
+      const allowedImageFormats = ["image/jpeg", "image/png", "image/jpg"];
+
+      if (allowedImageFormats.includes(file.type)) {
+        setFormData({ ...formData, image: file });
+      }
+    } else {
+      // Set image to null when no file is provided
+      setFormData({ ...formData, image: null });
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleRecaptchaChange = (value: string | null) => {
+    setRecaptchaValue(value);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!recaptchaValue) {
+      // Handle case where reCAPTCHA is not completed
+      console.error("reCAPTCHA not completed");
+      return;
+    }
+
     const formDataInstance = new FormData();
+
+    // log for debug
+    // console.log("Current formData:", formData);
+
     Object.entries(formData).forEach(([key, value]) => {
       formDataInstance.append(key, value as string | Blob);
     });
+
+    // log for debug
+    // console.log("Form Data Instance:", formDataInstance);
+
     const errors = validateFormData(formDataInstance);
 
     if (Object.keys(errors).length === 0) {
       // No validation errors, proceed with form submission logic
-      console.log("Form submitted:", formData);
+
+      // Include reCAPTCHA value in the form data
+      formDataInstance.append("recaptcha", recaptchaValue);
+
+      // Perform the actual form submission, e.g., using fetch or axios
+      try {
+        const response = await axios.post(
+          "http://localhost:5000/api/submit",
+          formDataInstance
+        );
+
+        if (response.status === 200) {
+          console.log("Form submitted successfully");
+
+          // Reset reCAPTCHA
+          setRecaptchaValue(null);
+
+          // If the submission is successful, update the submission status
+          setSubmissionStatus("success");
+
+          // Clear the form fields
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            subject: "",
+            telephone: "",
+            comments: "",
+            image: null,
+            agreeTerms: false,
+          });
+        } else {
+          console.error("Form submission failed");
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
     } else {
       // Validation errors, handle them (e.g., display errors to the user)
       console.error("Validation errors:", errors);
+
+      // Display validation errors to the user
+      // You can update the UI directly without using state
+      Object.entries(errors).forEach(([key, value]) => {
+        const inputElement = document.getElementById(key) as HTMLInputElement;
+        if (inputElement) {
+          inputElement.classList.add("is-invalid");
+
+          const errorElement = document.createElement("div");
+          errorElement.classList.add("invalid-feedback");
+          errorElement.innerText = value;
+
+          const parentElement = inputElement.parentElement;
+          if (parentElement) {
+            parentElement.appendChild(errorElement);
+          }
+        }
+      });
     }
   };
 
@@ -179,9 +276,19 @@ const Contact = () => {
             </div>
 
             <div>
+              {/* we are using the global site key for testing */}
+              <ReCAPTCHA
+                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                onChange={handleRecaptchaChange}
+              />
               <button type="submit" className="btn btn-secondary">
                 Submit
               </button>
+              {submissionStatus === "success" && (
+                <div className="success-message">
+                  Form submitted successfully!
+                </div>
+              )}
             </div>
           </form>
         </div>

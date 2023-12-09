@@ -80,3 +80,8 @@
   .compact-form button {
     margin-top: 1rem;
   }
+
+  .success-message {
+    font-size: large;
+    color: darkgreen;
+  }

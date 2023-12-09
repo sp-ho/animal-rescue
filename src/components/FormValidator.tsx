@@ -1,33 +1,67 @@
 // FormValidator.tsx
-import Joi from "joi";
-
-const schema = Joi.object({
-  firstName: Joi.string().required(),
-  lastName: Joi.string().required(),
-  email: Joi.string()
-    .email({ tlds: { allow: false } })
-    .required(),
-  telephone: Joi.string().pattern(/^[0-9+\-() ]*$/),
-  subject: Joi.string().required(),
-  comments: Joi.string().required().max(500),
-  image: Joi.object({
-    name: Joi.string().required(),
-    type: Joi.string().valid("image/jpeg", "image/png").required(),
-    size: Joi.number().max(5 * 1024 * 1024),
-  }),
-});
-
 const validateFormData = (formData: FormData) => {
-  const { error } = schema.validate(formData, { abortEarly: false });
-  if (error) {
-    const errors: Record<string, string> = {}; // use Record<string, string> for explicit typing
-    error.details.forEach((detail) => {
-      errors[detail.path[0] as string] = detail.message;
-    });
-    return errors;
+  const errors: Record<string, string> = {};
+
+  // Check required fields
+  const requiredFields = [
+    "firstName",
+    "lastName",
+    "email",
+    "subject",
+    "comments",
+  ];
+  requiredFields.forEach((field) => {
+    if (!formData.get(field)) {
+      errors[field] = `"${field}" is required`;
+    }
+  });
+
+  // Validate email format
+  const email = formData.get("email") as string;
+  if (!isValidEmail(email)) {
+    errors["email"] = `"${email}" is not a valid email address`;
   }
 
-  return {};
+  // Validate telephone format
+  const telephone = formData.get("telephone") as string;
+  if (telephone && !isValidTelephone(telephone)) {
+    errors["telephone"] = `"${telephone}" is not a valid telephone number`;
+  }
+
+  // Validate image if provided
+  const image = formData.get("image") as File | null;
+  if (image) {
+    const imageSize = image.size / (1024 * 1024); // in MB
+    const allowedImageFormats = ["image/jpeg", "image/png", "image/jpg"];
+
+    if (image.type != null) {
+      if (!allowedImageFormats.includes(image.type)) {
+        errors["image"] =
+          "Invalid image format. Please upload a jpg, jpeg, or png file.";
+      }
+
+      if (imageSize > 5) {
+        errors["image"] =
+          "Image size exceeds the maximum allowed limit of 5MB.";
+      }
+    }
+  }
+
+  return errors;
+};
+
+const isValidEmail = (email: string) => {
+  // Implement your email validation logic here
+  // For a simple example, you can use a regular expression
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+const isValidTelephone = (telephone: string) => {
+  // Implement your telephone validation logic here
+  // For a simple example, you can use a regular expression
+  const telephoneRegex = /^[0-9+\-() ]*$/;
+  return telephoneRegex.test(telephone);
 };
 
 export default validateFormData;
