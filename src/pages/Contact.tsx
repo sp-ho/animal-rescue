@@ -29,7 +29,7 @@ const Contact = () => {
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   // useState for submission status
-  const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
