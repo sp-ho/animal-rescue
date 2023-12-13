@@ -85,3 +85,21 @@
     font-size: large;
     color: darkgreen;
   }
+
+  .uploaded-image {
+    display: flex;
+    align-items: center;
+  }
+
+  .trash-icon {
+    color: red;
+    margin-left: 10px; /* spacing between image and icon*/
+    cursor: pointer;
+  }
+
+.flag-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+

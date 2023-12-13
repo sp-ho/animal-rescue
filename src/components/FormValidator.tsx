@@ -1,4 +1,3 @@
-// FormValidator.tsx
 const validateFormData = (formData: FormData) => {
   const errors: Record<string, string> = {};
 
@@ -51,15 +50,13 @@ const validateFormData = (formData: FormData) => {
 };
 
 const isValidEmail = (email: string) => {
-  // Implement your email validation logic here
-  // For a simple example, you can use a regular expression
+  // Email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
 
 const isValidTelephone = (telephone: string) => {
-  // Implement your telephone validation logic here
-  // For a simple example, you can use a regular expression
+  // Telephone validation
   const telephoneRegex = /^[0-9+\-() ]*$/;
   return telephoneRegex.test(telephone);
 };

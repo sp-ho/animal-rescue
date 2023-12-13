@@ -2,7 +2,11 @@ import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faUsers } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faUsers,
+  faTrashAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faInstagram,
@@ -23,6 +27,7 @@ const Contact = () => {
     comments: "",
     image: null as File | null,
     agreeTerms: false,
+    imagePreview: null as string | null, // Store the image preview URL
   });
 
   // useState for reCAPTCHA
@@ -50,11 +55,33 @@ const Contact = () => {
       const allowedImageFormats = ["image/jpeg", "image/png", "image/jpg"];
 
       if (allowedImageFormats.includes(file.type)) {
-        setFormData({ ...formData, image: file });
+        setFormData({
+          ...formData,
+          image: file,
+        });
       }
     } else {
-      // Set image to null when no file is provided
-      setFormData({ ...formData, image: null });
+      setFormData({
+        ...formData,
+        image: null,
+      });
+    }
+  };
+
+  const handleDeleteImage = () => {
+    setFormData({
+      ...formData,
+      image: null,
+    });
+    // Clear the file input
+    clearFileInput();
+  };
+
+  const clearFileInput = () => {
+    const fileInput = document.getElementById("image") as HTMLInputElement;
+
+    if (fileInput) {
+      fileInput.value = ""; // Reset the value of the file input
     }
   };
 
@@ -117,19 +144,22 @@ const Contact = () => {
             comments: "",
             image: null,
             agreeTerms: false,
+            imagePreview: null,
           });
         } else {
           console.error("Form submission failed");
         }
       } catch (error) {
         console.error("Error submitting form:", error);
+
+        // Update the submission status with an error message
+        setSubmissionStatus("error");
       }
     } else {
       // Validation errors, handle them (e.g., display errors to the user)
       console.error("Validation errors:", errors);
 
       // Display validation errors to the user
-      // You can update the UI directly without using state
       Object.entries(errors).forEach(([key, value]) => {
         const inputElement = document.getElementById(key) as HTMLInputElement;
         if (inputElement) {
@@ -273,6 +303,20 @@ const Contact = () => {
                 onChange={handleFileChange}
                 className="form-control"
               />
+              {formData.image && (
+                <div className="uploaded-image">
+                  <img
+                    src={URL.createObjectURL(formData.image)}
+                    alt="Uploaded Preview"
+                    style={{ width: "100px", height: "100px" }}
+                  />
+                  <FontAwesomeIcon
+                    icon={faTrashAlt}
+                    onClick={handleDeleteImage}
+                    className="trash-icon"
+                  />
+                </div>
+              )}
             </div>
 
             <div>

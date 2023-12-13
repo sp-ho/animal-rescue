@@ -9,7 +9,7 @@ const Home = () => {
           backgroundImage: `url(${backgroundImage})`, // image
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "900px", // adjust the height as needed
+          height: "900px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -23,7 +23,7 @@ const Home = () => {
           style={{
             position: "absolute",
             top: "30%",
-            right: "200px", // Adjust the distance from the right side
+            right: "200px",
             transform: "translateY(-50%)",
             textAlign: "left",
             maxWidth: "60%",
