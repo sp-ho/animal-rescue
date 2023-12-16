@@ -1,0 +1,45 @@
+{
+    "home": {
+        "line1": "Mi hárman a",
+        "line2": "Németjuhászoknak",
+        "line3": "Alapítvány",
+        "adoptButton": "ELFOGADTA",
+        "spay-neuter": "Spay/Neuter program",
+        "spay-neuter2": "Amióta elindultunk, sok kutyát tudtunk műteni ivartalanítási/ivartalanítási programunkon keresztül",
+        "dogs-adopted": "Dogs Adopted",
+        "dogs-adopted2": "Mióta megnyitottuk kapuinkat, sok kutyának segítettünk szerető otthonra találni",
+        "together": "Együtt többet tudunk tenni",
+        "together2": "Az Ön segítségével minden évben többet tudunk elérni",
+        "story": "A mi történetünk",
+        "story2": "A kezdetektől fogva szívünket-lelkünket öntjük a rászoruló kutyák megmentésébe. Ezt kívánjuk folytatni az elkövetkező években is.",
+        "abUsButton": "RÓLUNK",
+        "foster": "Légy nevelőotthon!",
+        "foster2": "Alapítványunk egyik legfontosabb része, hogy átmenetileg nevelhessük a kutyákat, amíg nem találunk nekik örök otthont.",
+        "fosterButton": "AZ FOSTERING",
+        "breed": "A fajtáról",
+        "breed2": "Ha többet tud a német juhászkutyákról, beleértve a személyiségüket és a történelmüket, akkor jobban megértheti ezt a fajtát, hogy megtudja, ez a megfelelő kutya-e a családjának.",
+        "breedButton": "A FAJTÁRÓL",
+        "success": "Sikertörténeteink",
+        "success1a": "Huba családtag lett, most van egy testvére Matyi és egy húga Luca. Órákig nézi a szomszéd birkáját.",
+        "success1b": "- Gábor",
+        "success2a": "Nyaralásunkon vagyunk, sátorban alszunk és Diego is velünk van.",
+        "success2b": "- Annamari & Bence",
+        "success3a": "Köszönjük, hogy bízott bennünk. Mindent megteszünk annak érdekében, hogy Szana boldog élete legyen velünk..",
+        "success3b": "- Edit & Dóra"
+    },
+
+    "aboutUs": {
+        "aboutUs": "Rólunk",
+        "p1": "Szeretném bemutatni nektek az alapítványunkat: 'Mi Hárman a Németjuhászokért Alapítvány.'",
+        "p2": "2020 márciusában kezdtük együtt menteni a németjuhászokat és néhány kistestű kutyát Börcsök Erzsikével és Nevelitsné Kriston Annával (ők nem alapító tagok).",
+        "p3": "2020-ban körülbelül 110 kutya talált általunk szerető családra. Életem egyik büszkesége volt ez az év, bár hobbinak indult, de ma már az életem részévé vált. Küldetésnek tekintem, hogy aki kutyát szeretne, az mentett kutyát fogadjon örökbe és ne vásároljon. ",
+        "p4": "Hihetetlenül feltölt azóta is az állatok mentése, szívvel-lélekkel csináljuk. ",
+        "p5": "Úgy érzem, sokan értékelitek a munkánkat. Ez az alapítvány is azért született, mert sokan kérdeztétek, hogy hogyan lehetne minket támogatni. Nagyon hálásak vagyunk érte. ",
+        "p6": "Civilként kezdtünk és 1 éven keresztül minden költséget mi álltunk. Szeretnénk elkezdeni most már ivartalanítani, többet panzióztatni, a kutyák orvosi költségébe besegíteni, az ideiglenes befogadókat táppal segíteni, de ez saját erőből már nem megy. ",
+        "p7": "Mivel az SZJA 1%-ot sajnos még nem tudjuk igénybe venni, hálásak lennénk, ha támogatnátok az alapítványt. ",
+        "p8": "Kérlek segítsetek, hogy segíthessünk! Minden adomány számít. Nagyon köszönjük, ha támogatjátok a munkánkat.",
+        "p9": "Mi Hárman a Németjuhászokért ",
+        "p10": "Számlaszám: 11702081-21453991 ",
+        "p11": "Kárpáti Judit "
+    }
+}

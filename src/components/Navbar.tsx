@@ -1,9 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import hungarian from "../images/hungarian.png";
-import english from "../images/united-kingdom.png";
+import { useTranslation } from "react-i18next";
+import hungarian from "../images/hungary.png";
+import english from "../images/canada.png";
 
 const Navbar: React.FC = () => {
+  const { i18n } = useTranslation(); // Access the i18n object
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng); // Change the language
+  };
+
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
@@ -179,16 +186,24 @@ const Navbar: React.FC = () => {
             </li>
             {/* Language selection */}
             <li className="nav-item">
-              <span className="nav-link">
-                <img src={english} alt="English" className="flag-icon" />{" "}
-                {/* English flag icon */}
-              </span>
-            </li>
-            <li className="nav-item">
-              <span className="nav-link">
+              <button
+                title="Hungarian"
+                className="nav-link"
+                onClick={() => changeLanguage("hu")}
+              >
                 <img src={hungarian} alt="Hungarian" className="flag-icon" />{" "}
                 {/* Hungarian flag icon */}
-              </span>
+              </button>
+            </li>
+            <li className="nav-item">
+              <button
+                title="English"
+                className="nav-link"
+                onClick={() => changeLanguage("en")}
+              >
+                <img src={english} alt="English" className="flag-icon" />{" "}
+                {/* English flag icon */}
+              </button>
             </li>
           </ul>
         </div>
