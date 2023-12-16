@@ -7,9 +7,9 @@ const About = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1 className="mb-4">{t("aboutUs.aboutUs")}</h1>
-          <div className="row">
-            <div className="col-md-12">
+          <h1>{t("aboutUs.aboutUs")}</h1>
+          <div>
+            <div>
               {/* Use d-flex to display p1 in one line */}
               <p className="intro d-flex">{t("aboutUs.p1")}</p>
             </div>
@@ -23,8 +23,8 @@ const About = () => {
           {/* Image on the left with reduced margin */}
           <div className="col-md-6">
             <img
-              src="src\images\german-shepherds-foundation.jpg" // Replace with actual image URL
-              alt="About Us Image"
+              src="src/images/german-shepherds-foundation.jpg" // Replace with actual image URL
+              alt="About Us"
               className="about-us img-fluid rounded"
             />
           </div>

@@ -162,8 +162,8 @@ const Home = () => {
           >
             {/* Image */}
             <img
-              src="src\images\home\become-a-foster-home.jpg"
-              alt="Image Placeholder"
+              src="/src/images/home/become-a-foster-home.jpg"
+              alt="Become a Foster Home"
               style={{ width: "90%" }}
             />
           </div>
@@ -185,8 +185,8 @@ const Home = () => {
           >
             {/* Image */}
             <img
-              src="src\images\home\about-the-breed.jpg"
-              alt="Image Placeholder"
+              src="/src/images/home/about-the-breed.jpg"
+              alt="About the Breed"
               style={{ width: "90%" }}
             />
           </div>
@@ -232,8 +232,8 @@ const Home = () => {
           >
             {/* Image */}
             <img
-              src="src\images\home\already-adopted-dogs1.jpg"
-              alt="Image Placeholder"
+              src="src/images/home/already-adopted-dogs1.jpg"
+              alt="Already Adopted Dog 1"
               style={{ width: "90%", borderRadius: "15px" }}
             />
           </div>
@@ -244,8 +244,8 @@ const Home = () => {
           >
             {/* Image */}
             <img
-              src="src\images\home\already-adopted-dogs2.jpg"
-              alt="Image Placeholder"
+              src="src/images/home/already-adopted-dogs2.jpg"
+              alt="Already Adopted Dog 2"
               style={{ width: "90%", borderRadius: "15px" }}
             />
           </div>
@@ -269,8 +269,8 @@ const Home = () => {
               {/* Check icon in a circle */}
               <div>
                 <img
-                  src="src\images\home\dog-circle1.jpg"
-                  alt="Image Placeholder"
+                  src="/src/images/home/dog-circle1.jpg"
+                  alt="Dog Circle 1"
                   style={{ width: "30%", borderRadius: "50%" }}
                 />
               </div>
@@ -296,8 +296,8 @@ const Home = () => {
               {/* Check icon in a circle */}
               <div>
                 <img
-                  src="src\images\home\dog-circle2.jpg"
-                  alt="Image Placeholder"
+                  src="src/images/home/dog-circle2.jpg"
+                  alt="Dog Circle 2"
                   style={{ width: "30%", borderRadius: "50%" }}
                 />
               </div>
@@ -323,8 +323,8 @@ const Home = () => {
               {/* Check icon in a circle */}
               <div>
                 <img
-                  src="src\images\home\dog-circle3.jpg"
-                  alt="Image Placeholder"
+                  src="src/images/home/dog-circle3.jpg"
+                  alt="Dog Circle 3"
                   style={{ width: "30%", borderRadius: "50%" }}
                 />
               </div>
