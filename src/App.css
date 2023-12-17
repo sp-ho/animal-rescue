@@ -24,13 +24,6 @@ h1 {
   margin: auto;
 }
 
-/* Styling of About Us page */
-.about-us {
-  width:600px;
-  height:auto;
-  margin: auto 180px;
-}
-
 /* Styling of Contact Us page */
 .contact-container {
     display: flex;

@@ -41,5 +41,39 @@
         "p9": "Mi Hárman a Németjuhászokért (Three of Us For German Shepherds Foundation)",
         "p10": "Account number: 11702081-21453991 ",
         "p11": "Judit Kárpáti"
-  }
+    },
+
+    "fostering": {
+        "aboutFostering": "About Fostering",
+        "p1": "Saving lives by fostering a dog",
+        "p2": "If you love dogs but are unable to make a long-term commitment to adopt, why not consider perhaps fostering one of our dogs?",
+        "p3": "Fostering is one of the most important and rewarding aspects of our organization for the dogs that we might be able to help. When you open your home to an animal in need, it means that you are saving the life of that dog either as he/she has been on the streets, in a very difficult situation, or had no chances at a place where he/she ended up.",
+        "p4": "If we don’t act quickly in these situations finding homes for the dogs that might still have a chance with us, they might not have a chance otherwise. We could be their last hope since even though there might be other rescues elsewhere, they are also facing difficulties in many cases taking in more animals.",
+        "p5": "By fostering one of our dogs means that you will host the animal entrusted to you at your home. While an animal is in your care, our organization will provide you with the food and medication of that dog. If they need any medical attention such as any treatment or given any medication (in tablet or liquid form), we would explain to you all the details related to how it would need to be done. We will also expect you to keep us informed of their health and get in touch with us right away if you notice any issues that need attention. If you also have animals of your own, it is important to make sure that they are up-to-date with their vaccines.",
+        "p6": "Fill out the form below if you are interested to foster one of our dogs! "
+    },
+
+    "breed": {
+        "aboutBreed": "About the Breed",
+        "p1": "The German Shepherd may embody some of the best traits of dogs, but they're not for everyone. ",
+        "p2": "The German Shepherd or German Shepherd Dog, is a German breed of working dog, originally bred as a herding dog, for herding sheep. The breed also goes by the name Alsatian or Alsatian Wolf Dog in Great Britain and parts of Europe. Since then these types of dogs have been used and excelled in many other areas as well, including guide and assistance work for the handicapped, search-and-rescue, police and military work, drug detection and of course being a faithful companion.",
+        "p3": "They are loyal, confident, courageous, could be of medium to large size, agile, muscular dog of noble character and high intelligence. They’re amazingly versatile and probably one of the world's most recognized breeds.",
+        "p4": "German Shepherds will be gentle family pets and true guardians with the ability to learn commands for many tasks, and the willingness to put their life on the line in defense of loved ones.",
+        "p5": "Despite their purebred status, you may find German Shepherds in shelters and breed specific rescues, like ours. So remember to adopt and don’t shop if this is the breed for you.",
+        "p6": "Average sizes and life expectancy of the breed",
+        "p7": "Height:",
+        "p7a": "24-26 inches (male)",
+        "p7b": "22-24 inches (female)",
+        "p8": "Weight:",
+        "p8a": "65-95 pounds (male) as per akc.org",
+        "p8b": "50-70 pounds (female)",
+        "p9": "Life Expectancy: ",
+        "p9a": "7-14 years",
+        "p10": "Videos about the Breed",
+        "p11": "Learn more about our adoption process & fostering",
+        "videosButton":"Click here to view more videos",
+        "p12": "Become a Volunteer",
+        "p13": "If you are interested in the breed and would love to help us when you have a bit of free time, we would love to hear from you.",
+        "learnMoreButton": "LEARN MORE"
+    }
 }

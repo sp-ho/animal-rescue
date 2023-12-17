@@ -1,4 +1,11 @@
 import backgroundImage from "../images/german-shepherd-dog.jpg";
+import breedImage from "../images/home/about-the-breed.jpg";
+import adoptedImage1 from "../images/home/already-adopted-dogs1.jpg";
+import adoptedImage2 from "../images/home/already-adopted-dogs2.jpg";
+import fosterImage from "../images/home/become-a-foster-home.jpg";
+import dogCircleImage1 from "../images/home/dog-circle1.jpg";
+import dogCircleImage2 from "../images/home/dog-circle2.jpg";
+import dogCircleImage3 from "../images/home/dog-circle3.jpg";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +17,7 @@ const Home = () => {
       {/* Big Image */}
       <div
         style={{
-          backgroundImage: `url(${backgroundImage})`, // image
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "750px",
@@ -37,16 +44,30 @@ const Home = () => {
         >
           <h1>{t("home.line1")}</h1>
           <h1>{t("home.line2")}</h1>
-          <h1>{t("home.line2")}</h1>
-          <button className="btn btn-secondary">{t("home.adoptButton")}</button>
+          <h1>{t("home.line3")}</h1>
+          <button
+            className="btn"
+            style={{
+              background: "linear-gradient(45deg, #cc66ff, #3399ff)",
+              backgroundSize: "200% 200%",
+              color: "white",
+              border: "none",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              transition: "0.5s",
+              cursor: "pointer",
+            }}
+          >
+            {t("home.adoptButton")}
+          </button>
         </div>
       </div>
 
       {/* Section with 3 columns */}
-      <div className="container" style={{ margin: "100px auto 100px auto" }}>
+      <div className="container mt-5 mb-4">
         <div className="row">
           {/* Column 1 */}
-          <div className="col-md-4">
+          <div className="col-md-4 mb-4">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
               <div className="check-icon">
@@ -59,7 +80,7 @@ const Home = () => {
             <p>{t("home.spay-neuter2")}</p>
           </div>
           {/* Column 2 */}
-          <div className="col-md-4">
+          <div className="col-md-4 mb-4">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
               <div className="check-icon">
@@ -72,7 +93,7 @@ const Home = () => {
             <p>{t("home.dogs-adopted2")}</p>
           </div>
           {/* Column 3 */}
-          <div className="col-md-4">
+          <div className="col-md-4 mb-4">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
               <div className="check-icon">
@@ -88,18 +109,10 @@ const Home = () => {
       </div>
 
       {/* Section with 2 columns and grey background */}
-      <div className="container-fluid bg-light">
-        <div className="row">
+      <div className="container-fluid bg-light mt-5 mb-5">
+        <div className="row justify-content-center">
           {/* Column 1 - Placeholder for YouTube video */}
-          <div
-            className="col-md-6"
-            style={{
-              marginLeft: "150px",
-              marginRight: "20px",
-              marginTop: "100px",
-              marginBottom: "100px",
-            }}
-          >
+          <div className="col-md-6 mt-5 mb-5">
             {/* YouTube video here */}
             <iframe
               width="100%"
@@ -111,19 +124,26 @@ const Home = () => {
             ></iframe>
           </div>
           {/* Column 2 */}
-          <div
-            className="col-md-3"
-            style={{
-              marginRight: "20px",
-              marginTop: "180px",
-            }}
-          >
+          <div className="col-md-4 d-flex flex-column justify-content-center">
             {/* Subtitle 1 */}
             <h2 className="mb-4">{t("home.story")}</h2>
             {/* Subtitle 2 */}
             <p className="mb-4">{t("home.story2")}</p>
             {/* Description */}
-            <button className="btn btn-secondary">
+            <button
+              className="btn"
+              style={{
+                maxWidth: "150px",
+                background: "linear-gradient(90deg, #cc66ff, #3399ff)",
+                backgroundSize: "200% 200%",
+                color: "white",
+                border: "none",
+                padding: "10px 20px",
+                borderRadius: "5px",
+                transition: "0.5s",
+                cursor: "pointer",
+              }}
+            >
               {t("home.abUsButton")}
             </button>
           </div>
@@ -132,72 +152,57 @@ const Home = () => {
 
       {/* Section with 2 columns and white background */}
       <div className="container-fluid">
-        <div className="row">
+        <div className="row justify-content-center">
           {/* Column 1 - Placeholder for YouTube video */}
-          <div
-            className="col-md-5"
-            style={{
-              marginLeft: "150px",
-              marginRight: "20px",
-              marginTop: "300px",
-            }}
-          >
+          <div className="col-md-5 mb-5 d-flex flex-column justify-content-center">
             {/* Subtitle 1 */}
             <h2 className="mb-4">{t("home.foster")}</h2>
             {/* Subtitle 2 */}
             <p className="mb-4">{t("home.foster2")}</p>
             {/* Description */}
-            <button className="btn btn-secondary">
+            <button
+              className="btn"
+              style={{
+                maxWidth: "200px",
+                background: "linear-gradient(45deg, #cc66ff, #3399ff)",
+                backgroundSize: "200% 200%",
+                color: "white",
+                border: "none",
+                padding: "10px 20px",
+                borderRadius: "5px",
+                transition: "0.5s",
+                cursor: "pointer",
+              }}
+            >
               {t("home.fosterButton")}
             </button>
           </div>
           {/* Column 2 */}
-          <div
-            className="col-md-5"
-            style={{
-              marginLeft: "20px",
-              marginTop: "100px",
-              marginBottom: "100px",
-            }}
-          >
+          <div className="col-md-5 mb-4">
             {/* Image */}
             <img
-              src="/src/images/home/become-a-foster-home.jpg"
+              src={fosterImage}
               alt="Become a Foster Home"
-              style={{ width: "90%" }}
+              style={{ width: "100%" }}
             />
           </div>
         </div>
       </div>
 
       {/* Section with 2 columns and black background */}
-      <div className="container-fluid bg-dark">
-        <div className="row">
+      <div className="container-fluid bg-dark mt-5 mb-5">
+        <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
-          <div
-            className="col-md-5"
-            style={{
-              marginLeft: "150px",
-              marginRight: "20px",
-              marginTop: "100px",
-              marginBottom: "100px",
-            }}
-          >
+          <div className="col-md-5 mb-5 mt-5">
             {/* Image */}
             <img
-              src="/src/images/home/about-the-breed.jpg"
+              src={breedImage}
               alt="About the Breed"
-              style={{ width: "90%" }}
+              style={{ width: "100%", marginLeft: "calc(-25vw + 50%)" }}
             />
           </div>
           {/* Column 2 */}
-          <div
-            className="col-md-4"
-            style={{
-              marginRight: "50px",
-              marginTop: "250px",
-            }}
-          >
+          <div className="col-md-4 mb-4 d-flex flex-column justify-content-center">
             {/* Subtitle 1 */}
             <h2 className="mb-4" style={{ color: "white" }}>
               {t("home.breed")}
@@ -207,7 +212,20 @@ const Home = () => {
               {t("home.breed2")}
             </p>
             {/* Description */}
-            <button className="btn btn-secondary">
+            <button
+              className="btn btn-secondary"
+              style={{
+                maxWidth: "200px",
+                background: "linear-gradient(45deg, #cc66ff, #3399ff)",
+                backgroundSize: "200% 200%",
+                color: "white",
+                border: "none",
+                padding: "10px 20px",
+                borderRadius: "5px",
+                transition: "0.5s",
+                cursor: "pointer",
+              }}
+            >
               {t("home.breedButton")}
             </button>
           </div>
@@ -215,36 +233,25 @@ const Home = () => {
       </div>
 
       {/* Section with 2 columns and white background */}
-      <div className="container-fluid">
-        <h2 style={{ marginTop: "50px", marginLeft: "150px" }}>
+      <div className="container-fluid mt-5 mb-5">
+        <h2 className="mb-5" style={{ marginLeft: "calc(-40vw + 50%)" }}>
           {t("home.success")}
         </h2>
-        <div className="row">
+        <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
-          <div
-            className="col-md-5 text-center"
-            style={{
-              marginTop: "50px",
-              marginLeft: "auto",
-              marginRight: 0,
-              marginBottom: "50px",
-            }}
-          >
+          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
             <img
-              src="src/images/home/already-adopted-dogs1.jpg"
+              src={adoptedImage1}
               alt="Already Adopted Dog 1"
               style={{ width: "90%", borderRadius: "15px" }}
             />
           </div>
           {/* Column 2 */}
-          <div
-            className="col-md-5 text-center"
-            style={{ marginTop: "50px", marginLeft: 0, marginRight: "auto" }}
-          >
+          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
             <img
-              src="src/images/home/already-adopted-dogs2.jpg"
+              src={adoptedImage2}
               alt="Already Adopted Dog 2"
               style={{ width: "90%", borderRadius: "15px" }}
             />
@@ -253,86 +260,62 @@ const Home = () => {
       </div>
 
       {/* Section with 3 columns */}
-      <div className="container-fluid bg-light">
-        <div className="row">
+      <div className="container-fluid bg-light mt-5">
+        <div className="row justify-content-center">
           {/* Column 1 */}
-          <div
-            className="col-md-3"
-            style={{
-              marginTop: "100px",
-              marginLeft: "150px",
-              marginRight: "25px",
-              marginBottom: "100px",
-            }}
-          >
+          <div className="col-md-3 mb-5 mt-5">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
               <div>
                 <img
-                  src="/src/images/home/dog-circle1.jpg"
+                  src={dogCircleImage1}
                   alt="Dog Circle 1"
                   style={{ width: "30%", borderRadius: "50%" }}
                 />
               </div>
             </div>
             {/* Subtitle */}
-            <h5 className="mb-3" style={{ fontStyle: "italic" }}>
+            <p className="mb-3" style={{ fontStyle: "italic" }}>
               {t("home.success1a")}
-            </h5>
+            </p>
             {/* Description */}
             <p style={{ fontStyle: "italic" }}>{t("home.success1b")}</p>
           </div>
           {/* Column 2 */}
-          <div
-            className="col-md-3"
-            style={{
-              marginTop: "100px",
-              marginLeft: "25px",
-              marginRight: "25px",
-              marginBottom: "100px",
-            }}
-          >
+          <div className="col-md-3 mb-4 mt-5">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
               <div>
                 <img
-                  src="src/images/home/dog-circle2.jpg"
+                  src={dogCircleImage2}
                   alt="Dog Circle 2"
                   style={{ width: "30%", borderRadius: "50%" }}
                 />
               </div>
             </div>
             {/* Subtitle */}
-            <h5 className="mb-3" style={{ fontStyle: "italic" }}>
+            <p className="mb-3" style={{ fontStyle: "italic" }}>
               {t("home.success2a")}
-            </h5>
+            </p>
             {/* Description */}
             <p style={{ fontStyle: "italic" }}>{t("home.success2b")}</p>
           </div>
           {/* Column 3 */}
-          <div
-            className="col-md-3"
-            style={{
-              marginTop: "100px",
-              marginLeft: "25px",
-              marginRight: "50px",
-              marginBottom: "100px",
-            }}
-          >
+          <div className="col-md-3 mb-4 mt-5">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
               <div>
                 <img
-                  src="src/images/home/dog-circle3.jpg"
+                  src={dogCircleImage3}
                   alt="Dog Circle 3"
                   style={{ width: "30%", borderRadius: "50%" }}
                 />
               </div>
             </div>
             {/* Subtitle */}
-            <h5 className="mb-3" style={{ fontStyle: "italic" }}>
+            <p className="mb-3" style={{ fontStyle: "italic" }}>
               {t("home.success3a")}
-            </h5>
+            </p>
             {/* Description */}
             <p style={{ fontStyle: "italic" }}>{t("home.success3b")}</p>
           </div>

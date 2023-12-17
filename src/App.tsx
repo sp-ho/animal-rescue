@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import Fostering from "./pages/Fostering";
+import Breed from "./pages/Breed";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/fostering" element={<Fostering />} />
+          <Route path="/breed" element={<Breed />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

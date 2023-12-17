@@ -151,7 +151,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/foster">
+                  <Link className="dropdown-item" to="/fostering">
                     Become a Foster Home
                   </Link>
                 </li>

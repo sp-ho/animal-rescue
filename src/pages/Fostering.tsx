@@ -1,18 +1,19 @@
 import { useTranslation } from "react-i18next";
-import aboutUsImage from "../images/german-shepherds-foundation.jpg";
+import fosterImage from "../images/fostering/volunteer.jpg";
 
-const About = () => {
+const Fostering = () => {
   const { t } = useTranslation();
+
   return (
     <>
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("aboutUs.aboutUs")}</h1>
+          <h1>{t("fostering.aboutFostering")}</h1>
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}
-              <p className="intro d-flex">{t("aboutUs.p1")}</p>
+              <p className="intro d-flex">{t("fostering.p1")}</p>
             </div>
           </div>
         </div>
@@ -25,8 +26,8 @@ const About = () => {
             {/* Image on the left with reduced margin */}
             <div className="col-md-6">
               <img
-                src={aboutUsImage}
-                alt="About Us"
+                src={fosterImage}
+                alt="About Fostering"
                 className="img-fluid rounded"
                 style={{ maxWidth: "90%", height: "auto", marginBottom: 10 }}
               />
@@ -34,17 +35,11 @@ const About = () => {
 
             {/* Text on the right */}
             <div className="col-md-6">
-              <p>{t("aboutUs.p2")}</p>
-              <p>{t("aboutUs.p3")}</p>
-              <p>{t("aboutUs.p4")}</p>
-              <p>{t("aboutUs.p5")}</p>
-              <p>{t("aboutUs.p6")}</p>
-              <p>{t("aboutUs.p7")}</p>
-              <p>{t("aboutUs.p8")}</p>
-              <p>
-                {t("aboutUs.p9")} <br /> {t("aboutUs.p10")}
-              </p>
-              <p>{t("aboutUs.p11")}</p>
+              <p>{t("fostering.p2")}</p>
+              <p>{t("fostering.p3")}</p>
+              <p>{t("fostering.p4")}</p>
+              <p>{t("fostering.p5")}</p>
+              <p>{t("fostering.p6")}</p>
             </div>
           </div>
         </div>
@@ -53,4 +48,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Fostering;

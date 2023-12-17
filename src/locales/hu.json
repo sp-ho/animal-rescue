@@ -4,9 +4,9 @@
         "line2": "Németjuhászoknak",
         "line3": "Alapítvány",
         "adoptButton": "ELFOGADTA",
-        "spay-neuter": "Spay/Neuter program",
+        "spay-neuter": "Ivartalanít/Semleges program",
         "spay-neuter2": "Amióta elindultunk, sok kutyát tudtunk műteni ivartalanítási/ivartalanítási programunkon keresztül",
-        "dogs-adopted": "Dogs Adopted",
+        "dogs-adopted": "Örökbefogadott kutyák",
         "dogs-adopted2": "Mióta megnyitottuk kapuinkat, sok kutyának segítettünk szerető otthonra találni",
         "together": "Együtt többet tudunk tenni",
         "together2": "Az Ön segítségével minden évben többet tudunk elérni",
@@ -15,7 +15,7 @@
         "abUsButton": "RÓLUNK",
         "foster": "Légy nevelőotthon!",
         "foster2": "Alapítványunk egyik legfontosabb része, hogy átmenetileg nevelhessük a kutyákat, amíg nem találunk nekik örök otthont.",
-        "fosterButton": "AZ FOSTERING",
+        "fosterButton": "A FOSTERINGRőL",
         "breed": "A fajtáról",
         "breed2": "Ha többet tud a német juhászkutyákról, beleértve a személyiségüket és a történelmüket, akkor jobban megértheti ezt a fajtát, hogy megtudja, ez a megfelelő kutya-e a családjának.",
         "breedButton": "A FAJTÁRÓL",
@@ -41,5 +41,40 @@
         "p9": "Mi Hárman a Németjuhászokért ",
         "p10": "Számlaszám: 11702081-21453991 ",
         "p11": "Kárpáti Judit "
+    },
+
+    "fostering": {
+        "aboutFostering": "A Fosteringről",
+        "p1": "Életet menthetsz egy kutya ideiglenes befogadásával ",
+        "p2": "Ha szereti a kutyákat, de nem képes hosszú távú elköteleződést vállalni hogy örökbefogadjon, miért ne lehetne ideiglenes befogadója valamelyik kutyánknak?",
+        "p3": "A ideiglenes vigyázás a kutyáinkra a szervezetünk egyik legfontosabb és legörömteljesebb része. Ha megnyitja otthonát egy rászoruló állat előtt, az azt jelenti, hogy megmenti annak a kutyának az életét, akár úgy, mivel az utcán volt azelőtt, nagyon nehéz helyzetben volt, vagy esélye sem volt hogy életben maradjon.",
+        "p4": "Ha ezekben a helyzetekben nem cselekszünk gyorsan, hogy otthont találjunk azoknak a kutyáknak, akiknek még van esélyük nálunk, akkor lehet, hogy másként esélyük sem lesz. Mi lehetünk az utolsó reménységük, hiszen bár máshol is vannak állatmentők, ők is sok esetben nehézségekbe ütköznek a több állat befogadása miatt mert lehet telt ház van náluk már.",
+        "p5": "Egy kutyánk nevelése azt jelenti, hogy otthonában látja vendégül a rád bízott állatot. Amíg egy állat az Ön gondozásában van, szervezetünk biztosítja Önnek az adott kutya táplálékát és gyógyszereit. Ha bármilyen orvosi ellátásra, például kezelésre vagy gyógyszeres kezelésre van szükségük (tabletta vagy folyékony formában), elmagyarázuk Önnek minden részletet, hogy hogyan kell ezt elvégezni. Azt is kérnénk, hogy tájékoztasson minket egészségi állapotukról, és azonnal lépjen kapcsolatba velünk, ha olyan problémát észlel, amely figyelmet igényel. Ha saját állatai is vannak, fontos, hogy meglegyenek az oltásai. ",
+        "p6": "Töltse ki az alábbi űrlapot, ha ideiglenes befogadó szeretne lenni!"
+    },
+
+    "breed": {
+        "aboutBreed": "Fajták Jellemzői",
+        "p1": "A német juhászkutya megtestesítheti a kutyák legjobb tulajdonságait, de nem mindenkinek valók.",
+        "p2": "A német juhász vagy német juhászkutya egy német munkakutya fajta, eredetileg terelőkutyaként tenyésztették, juhok terelésére. A fajta Nagy-Britanniában és Európa egyes részein elzászi vagy elzászi farkaskutya néven is szerepel. Azóta az ilyen típusú kutyákat számos más területen is alkalmazzák sikeresen, beleértve a vakok vagy bizonyos betegséggel élők segítői tevékenységét, a kutató-mentő munkát, a rendőrségi és katonai munkát, a kábítószer-felderítést és természetesen mindamellett hogy hűséges társakká válnak családunkban.",
+        "p3": "Hűségesek, magabiztosak, bátrak, lehetnek közepes és nagy termetűek, mozgékonyak, izmos, nemes karakterű, magas intelligenciájú kutyák. Elképesztően sokoldalúak, és valószínűleg a világ egyik legelismertebb fajtája.",
+        "p4": "A német juhászkutyák gyengéd házi kedvencek és igazi házőrzők lesznek, akik képesek megtanulni a parancsokat számos feladathoz, és hajlandóak arra, hogy életüket kockára tegyék szeretteik védelmében.",
+        "p5": "Fajtatiszta státuszuk ellenére előfordulhat, hogy a német juhászkutyákat menhelyen találja meg, és fajspecifikus mentőket találhat, mint a miénk. Tehát ne felejtse milyen fontos örökbe fogadni vásárlás helyett, ha ez a fajta a legjobb az Ön számára.",
+        "p6": "A fajta átlagos méretei és várható élettartama",
+        "p7": "Marmagasság:",
+        "p7a": "61-66 cm (kan) ",
+        "p7b": "56-61 cm (szuka) ",
+        "p8": "Testsúly:",
+        "p8a": "30-43 kg (kan)",
+        "p8b": "22-32 kg (szuka)",
+        "p9": "Várható élettartam: ",
+        "p9a": "7-14 év",
+        "p10": "Videók a fajtáról",
+        "p11": "Tudjon meg többet örökbefogadási folyamatunkról és hogy hogyan legyen ideiglenes befogadó",
+        "videosButton":"További videók megtekintéséhez kattintson ide",
+        "p12": "Legyél Önkéntes!",
+        "p13": "Ha érdekel a német juhászkutya fajta, és szívesen segítenél nekünk, ha van egy kis szabadidőd, szívesen várunk.",
+        "learnMoreButton": "További részletek"
     }
 }
+
