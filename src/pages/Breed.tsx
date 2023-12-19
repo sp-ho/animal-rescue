@@ -80,8 +80,8 @@ const Breed = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_1`}
-                title="YouTube Video 1"
+                src="https://www.youtube.com/embed/MxaJb-fYR4M  "
+                title="All about the German Shepherd - History, care & training"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -91,8 +91,8 @@ const Breed = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_2`}
-                title="YouTube Video 2"
+                src="https://www.youtube.com/embed/W2pkvy5t3Bo "
+                title="Best German Shepherd Puppy Training Tips"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -102,8 +102,8 @@ const Breed = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_3`}
-                title="YouTube Video 3"
+                src="https://www.youtube.com/embed/W7eGaraQSqs"
+                title="All you need to know about German Shepherd dogs- History, Transformation, breeding and types"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -113,8 +113,8 @@ const Breed = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_4`}
-                title="YouTube Video 4"
+                src="https://www.youtube.com/embed/ddv0QaPay94"
+                title="History Of The German Shepherd"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
