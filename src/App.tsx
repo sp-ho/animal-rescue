@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Fostering from "./pages/Fostering";
 import Breed from "./pages/Breed";
+import Microchips from "./pages/Microchips";
+import SpayNeuter from "./pages/SpayNeuter";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -20,6 +22,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/fostering" element={<Fostering />} />
           <Route path="/breed" element={<Breed />} />
+          <Route path="/microchips" element={<Microchips />} />
+          <Route path="/spayneuter" element={<SpayNeuter />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/spayingneutering">
+                  <Link className="dropdown-item" to="/spayneuter">
                     About Spaying & Neutering
                   </Link>
                 </li>
