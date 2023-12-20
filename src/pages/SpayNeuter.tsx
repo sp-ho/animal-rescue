@@ -187,21 +187,6 @@ const SpayNeuter = () => {
             {t("spay-neuter.learnMoreButton")}
           </button>
         </Link>
-        <button
-          className="btn btn-secondary mb-5"
-          style={{
-            background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
-            backgroundSize: "200% 200%",
-            color: "white",
-            border: "none",
-            padding: "10px 20px",
-            borderRadius: "5px",
-            transition: "0.5s",
-            cursor: "pointer",
-          }}
-        >
-          {t("spay-neuter.learnMoreButton")}
-        </button>
       </div>
     </>
   );
