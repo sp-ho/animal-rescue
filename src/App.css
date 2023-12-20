@@ -12,6 +12,10 @@ h1 {
   font-size: larger;
 }
 
+.nav-item {
+  font-weight: bold;
+}
+
 /* Styling of Home page */
 .check-icon {
   width: 50px;

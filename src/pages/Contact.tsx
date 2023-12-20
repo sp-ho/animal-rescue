@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +18,8 @@ import validateFormData from "../components/FormValidator";
 import axios from "axios";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   // useState for data
   const [formData, setFormData] = useState({
     firstName: "",
@@ -180,7 +183,7 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="contact-heading">Contact Us</h2>
+      <h2 className="contact-heading">{t("contact.contact")}</h2>
       <div className="contact-container">
         <div className="contact-div">
           <div className="columns">
@@ -190,7 +193,7 @@ const Contact = () => {
                 <FontAwesomeIcon icon={faEnvelope} size="2x" />
               </div>
               <p className="contact-p">Email</p>
-              <p>animalrescue@email.com</p>
+              <p>judit.valent@gmail.com</p>
             </div>
 
             {/* Right Section */}
@@ -199,7 +202,7 @@ const Contact = () => {
                 <FontAwesomeIcon icon={faUsers} size="2x" />
               </div>
               <div>
-                <p className="contact-p">Follow us on Social Media</p>
+                <p className="contact-p">{t("contact.p1")}</p>
                 <div className="social-icons">
                   <FontAwesomeIcon icon={faFacebook} />
                   <FontAwesomeIcon icon={faInstagram} />
@@ -214,11 +217,11 @@ const Contact = () => {
         {/* Form Section */}
         <div className="form-section">
           <form onSubmit={handleSubmit} className="compact-form">
-            <h2>Send Us a Message</h2>
+            <h2>{t("contact.p2")}</h2>
             <br />
             <div className="row mb-3">
               <div className="col-md-6">
-                <label htmlFor="firstName">First Name:</label>
+                <label htmlFor="firstName">{t("contact.p3")}</label>
                 <input
                   type="text"
                   id="firstName"
@@ -230,7 +233,7 @@ const Contact = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label htmlFor="lastName">Last Name:</label>
+                <label htmlFor="lastName">{t("contact.p4")}</label>
                 <input
                   type="text"
                   id="lastName"
@@ -244,7 +247,7 @@ const Contact = () => {
             </div>
             <div className="row mb-3">
               <div className="col-md-6">
-                <label htmlFor="email">Email Address:</label>
+                <label htmlFor="email">{t("contact.p5")}</label>
                 <input
                   type="email"
                   id="email"
@@ -256,7 +259,7 @@ const Contact = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label htmlFor="telephone">Telephone:</label>
+                <label htmlFor="telephone">{t("contact.p7")}</label>
                 <input
                   type="tel"
                   id="telephone"
@@ -269,7 +272,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="subject">Subject:</label>
+              <label htmlFor="subject">{t("contact.p6")}</label>
               <input
                 type="text"
                 id="subject"
@@ -282,7 +285,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="comments">Comments/Questions:</label>
+              <label htmlFor="comments">{t("contact.p8")}</label>
               <textarea
                 id="comments"
                 name="comments"
@@ -294,7 +297,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="image">Upload an Image (optional):</label>
+              <label htmlFor="image">{t("contact.p9")}</label>
               <input
                 type="file"
                 id="image"
@@ -326,7 +329,7 @@ const Contact = () => {
                 onChange={handleRecaptchaChange}
               />
               <button type="submit" className="btn btn-secondary">
-                Submit
+                {t("contact.submitButton")}
               </button>
               {submissionStatus === "success" && (
                 <div className="success-message">
