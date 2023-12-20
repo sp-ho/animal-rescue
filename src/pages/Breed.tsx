@@ -81,11 +81,7 @@ const Breed = () => {
               <iframe
                 width="100%"
                 height="315"
-<<<<<<< HEAD
                 src="https://www.youtube.com/embed/MxaJb-fYR4M"
-=======
-                src="https://www.youtube.com/embed/MxaJb-fYR4M  "
->>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
                 title="All about the German Shepherd - History, care & training"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -96,13 +92,8 @@ const Breed = () => {
               <iframe
                 width="100%"
                 height="315"
-<<<<<<< HEAD
                 src="https://www.youtube.com/embed/W2pkvy5t3Bo"
-                title="YouTube Video 2"
-=======
-                src="https://www.youtube.com/embed/W2pkvy5t3Bo "
                 title="Best German Shepherd Puppy Training Tips"
->>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -113,11 +104,7 @@ const Breed = () => {
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/W7eGaraQSqs"
-<<<<<<< HEAD
                 title="All you need to know about German Shepherd dogs - History, Transformation, breeding and types"
-=======
-                title="All you need to know about German Shepherd dogs- History, Transformation, breeding and types"
->>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -128,11 +115,7 @@ const Breed = () => {
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/ddv0QaPay94"
-<<<<<<< HEAD
                 title="History Of The GERMAN SHEPHERD"
-=======
-                title="History Of The German Shepherd"
->>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
