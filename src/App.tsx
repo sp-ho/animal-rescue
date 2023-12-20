@@ -9,15 +9,12 @@ import Fostering from "./pages/Fostering";
 import Breed from "./pages/Breed";
 import Microchips from "./pages/Microchips";
 import SpayNeuter from "./pages/SpayNeuter";
-<<<<<<< HEAD
 import Adoption from "./pages/Adoption";
 import Donate from "./pages/Donate";
 import DonateItems from "./pages/DonateItems";
 import Volunteer from "./pages/Volunteer";
 import Sponsors from "./pages/Sponsors";
 import Feedback from "./pages/Feedback";
-=======
->>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -33,15 +30,12 @@ function App() {
           <Route path="/breed" element={<Breed />} />
           <Route path="/microchips" element={<Microchips />} />
           <Route path="/spayneuter" element={<SpayNeuter />} />
-<<<<<<< HEAD
           <Route path="/adoption" element={<Adoption />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/donate-items" element={<DonateItems />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/feedback" element={<Feedback />} />
-=======
->>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
