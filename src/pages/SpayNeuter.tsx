@@ -2,7 +2,10 @@ import { useTranslation } from "react-i18next";
 import neuterSpayImage from "../images/spay_neuter/neuter-spay.jpg";
 import microchipsImage from "../images/spay_neuter/microchips.jpg";
 import dogImage from "../images/spay_neuter/dog-german-shepherd.jpg";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+>>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
 
 const SpayNeuter = () => {
   const { t } = useTranslation();
@@ -170,6 +173,7 @@ const SpayNeuter = () => {
         </h3>
         <p className="mt-5">{t("spay-neuter.fosterProcess1")}</p>
         <p className="mb-5">{t("spay-neuter.fosterProcess2")}</p>
+<<<<<<< HEAD
         <Link to="/fostering">
           <button
             className="btn btn-secondary mb-5"
@@ -187,6 +191,23 @@ const SpayNeuter = () => {
             {t("spay-neuter.learnMoreButton")}
           </button>
         </Link>
+=======
+        <button
+          className="btn btn-secondary mb-5"
+          style={{
+            background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
+            backgroundSize: "200% 200%",
+            color: "white",
+            border: "none",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            transition: "0.5s",
+            cursor: "pointer",
+          }}
+        >
+          {t("spay-neuter.learnMoreButton")}
+        </button>
+>>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
       </div>
     </>
   );

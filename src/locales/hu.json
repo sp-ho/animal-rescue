@@ -131,6 +131,7 @@
         "fosterProcess1": "Ha nem biztos benne, hogy készen áll-e egy hosszú távú elköteleződésre,",
         "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét valamelyik kutyánk számára, hogy átmenetileg nevelje őket, amíg örök otthonra nem talál?",
         "learnMoreButton": "TUDJ MEG TÖBBET"
+<<<<<<< HEAD
     },
 
     "adoption": {
@@ -253,6 +254,8 @@
         "thinkAdopt": "Örökbefogadáson gondolkodik?",
         "adoptionProcess": "Tájékozódjon örökbefogadási folyamatunkról!",
         "learnMoreButton": "TUDJ MEG TÖBBET"
+=======
+>>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
     }
 }
 

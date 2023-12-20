@@ -131,6 +131,7 @@
         "fosterProcess1": "If you are not sure whether you are ready for a long-term commitment, have you considered opening your home & heart",
         "fosterProcess2": "for one of our dogs to foster them temporarily till they find a forever home?",
         "learnMoreButton": "LEARN MORE"
+<<<<<<< HEAD
     },
 
     "adoption": {
@@ -253,5 +254,7 @@
         "thinkAdopt": "Thinking about Adopting?",
         "adoptionProcess": "Find out about our adoption process!",
         "learnMoreButton": "LEARN MORE"
+=======
+>>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
     }
 }
