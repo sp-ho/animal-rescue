@@ -2,10 +2,7 @@ import { useTranslation } from "react-i18next";
 import dogImage from "../images/microchips/german-shepherd-dog.jpg";
 import microchipsImage from "../images/microchips/microchips-for-dogs.jpg";
 import spayNeuterImage from "../images/microchips/spay-neuter.jpg";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-=======
->>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
 
 const Microchips = () => {
   const { t } = useTranslation();
@@ -185,7 +182,6 @@ const Microchips = () => {
           {t("microchips.thinkAdopt")}
         </h3>
         <p className="mt-5 mb-5">{t("microchips.adoptionProcess")}</p>
-<<<<<<< HEAD
         <Link to="/adoption">
           <button
             className="btn btn-secondary mb-5"
@@ -203,7 +199,6 @@ const Microchips = () => {
             {t("microchips.learnMoreButton")}
           </button>
         </Link>
-=======
         <button
           className="btn btn-secondary mb-5"
           style={{
@@ -219,7 +214,6 @@ const Microchips = () => {
         >
           {t("microchips.learnMoreButton")}
         </button>
->>>>>>> 72de7b4c2763da49b56a044367718747dbb09d12
       </div>
     </>
   );
