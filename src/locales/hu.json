@@ -1,7 +1,7 @@
 {
     "home": {
-        "line1": "Mi hárman a",
-        "line2": "Németjuhászoknak",
+        "line1": "Mi Hárman a",
+        "line2": "Németjuhászokért",
         "line3": "Alapítvány",
         "adoptButton": "ELFOGADTA",
         "spay-neuter": "Ivartalanít/Semleges program",
@@ -44,7 +44,7 @@
     },
 
     "fostering": {
-        "aboutFostering": "A Fosteringről",
+        "aboutFostering": "Legyél Ideiglenes Befogadó",
         "p1": "Életet menthetsz egy kutya ideiglenes befogadásával ",
         "p2": "Ha szereti a kutyákat, de nem képes hosszú távú elköteleződést vállalni hogy örökbefogadjon, miért ne lehetne ideiglenes befogadója valamelyik kutyánknak?",
         "p3": "A ideiglenes vigyázás a kutyáinkra a szervezetünk egyik legfontosabb és legörömteljesebb része. Ha megnyitja otthonát egy rászoruló állat előtt, az azt jelenti, hogy megmenti annak a kutyának az életét, akár úgy, mivel az utcán volt azelőtt, nagyon nehéz helyzetben volt, vagy esélye sem volt hogy életben maradjon.",
