@@ -92,7 +92,7 @@ const Breed = () => {
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/W2pkvy5t3Bo"
+                src={`https://www.youtube.com/embed/VIDEO_ID_2`}
                 title="YouTube Video 2"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -148,24 +148,20 @@ const Breed = () => {
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="/adoption" target="_blank">
-              <img
-                src={adoptImage1}
-                alt="adopting-dog"
-                style={{ width: "90%", borderRadius: "15px" }}
-              />
-            </Link>
+            <img
+              src={adoptImage1}
+              alt="adopting-dog"
+              style={{ width: "90%", borderRadius: "15px" }}
+            />
           </div>
           {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="/fostering" target="_blank">
-              <img
-                src={adoptImage2}
-                alt="foster-a-dog"
-                style={{ width: "90%", borderRadius: "15px" }}
-              />
-            </Link>
+            <img
+              src={adoptImage2}
+              alt="foster-a-dog"
+              style={{ width: "90%", borderRadius: "15px" }}
+            />
           </div>
         </div>
       </div>
@@ -178,23 +174,21 @@ const Breed = () => {
           {t("breed.p12")}
         </h3>
         <p className="mt-5 mb-5">{t("breed.p13")}</p>
-        <Link to="/volunteer" target="_blank">
-          <button
-            className="btn btn-secondary mb-5"
-            style={{
-              background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
-              backgroundSize: "200% 200%",
-              color: "white",
-              border: "none",
-              padding: "10px 20px",
-              borderRadius: "5px",
-              transition: "0.5s",
-              cursor: "pointer",
-            }}
-          >
-            {t("breed.learnMoreButton")}
-          </button>
-        </Link>
+        <button
+          className="btn btn-secondary mb-5"
+          style={{
+            background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
+            backgroundSize: "200% 200%",
+            color: "white",
+            border: "none",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            transition: "0.5s",
+            cursor: "pointer",
+          }}
+        >
+          {t("breed.learnMoreButton")}
+        </button>
       </div>
     </>
   );

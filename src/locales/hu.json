@@ -291,9 +291,10 @@
     },
 
     "adopted-videos": {
-        "adopted" : "ár elfogadva -Videók",
+        "adopted" : "Már elfogadva -Videók",
         "intro1": "Íme néhány videó azokról a kutyákról, amelyeket megmentettünk, és már örök otthonra találtunk. Kövess minket ",
-        "intro2": " további videók megtekintéséhez."
+        "intro2": " további videók megtekintéséhez.",
+        "learnMoreButton": "TUDJ MEG TÖBBET"
     }
 }
 
