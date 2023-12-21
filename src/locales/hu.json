@@ -74,7 +74,226 @@
         "videosButton":"További videók megtekintéséhez kattintson ide",
         "p12": "Legyél Önkéntes!",
         "p13": "Ha érdekel a német juhászkutya fajta, és szívesen segítenél nekünk, ha van egy kis szabadidőd, szívesen várunk.",
-        "learnMoreButton": "További részletek"
+        "learnMoreButton": "TUDJ MEG TÖBBET"
+    },
+
+    "microchips": {
+        "aboutMicrochips": "A Mikrochipekről",
+        "intro": "Mi az a mikrochip, és hogyan működik?",
+        "p1": "Miért érdemes mikrochippel ellátni kedvencét?",
+        "p2": "Évente több ezer elveszett és elhagyott állatot fogadnak be menhelyek és humánus társadalmak szerte a világon. Sok ilyen állat soha nem jut haza, mert nem lehet azonosítani őket. Ha kedvencét mikrochippel látja el, jelentősen megnöveli annak esélyét, hogy újra találkozhasson, ha eltűnne vagy ellopják. Segít a tulajdonjog igazolásában is, ha megjelenik a menhelyen, ahová kedvencét vitték. Az Egyesült Államokban végzett vizsgálatok alapján a menhelyről a tulajdonoshoz való visszajuttatási aránya a mikrochippel ellátott macskáknak 20-szor, a mikrochippel ellátott kutyák esetében pedig 2,5-szerese volt.",
+        "p3": "Hogyan észlelhető a mikrochip?",
+        "p4": "A chipbe ágyazott konkrét elektronikus kód egy mikrochip-szkennerrel „leolvasható”. Megjeleníti az azonosító számot a szkenner képernyőjén. Bár a mikrochipeket a háziállatok testén egy meghatározott területre helyezik, idővel elvándorolhatnak, vagy elmozdulhatnak a helyükről. Emiatt a mikrochip-leolvasót a kisállat teljes testén átviszik, hogy biztosítsák a chip észlelését, ha van.",
+        "p5": "Kell valamit tennem, ha a mikrochipet beültették kedvencembe?",
+        "p6": "Miután kedvence mikrochippel lett ellátva, regisztrálnia kell kedvencét, és meg kell adnia nevét és elérhetőségeit. A vonatkozó dokumentumokat és elérhetőségeket az állatorvos adja meg. Azt is meg tudja mondani, hogy a mikrochip regisztrációjával kapcsolatban felmerülnek-e díjak. Nagyon fontos, hogy regisztrálja kedvence mikrochipes azonosítóját. Ennek elmulasztása az egész folyamatot használhatatlanná teszi, mivel a mikrochip száma nem fog akkor információt tartalmazni a gazdiról.",
+        "p7": "Fájdalmas-e behelyezni a chipet a kedvencembe?",
+        "p8": "Ez egy nagyon gyors, biztonságos és viszonylag fájdalommentes eljárás. Mivel a mikrochip behelyezéséhez használt tű nagy, előfordulhat, hogy egyesek úgy döntenek, hogy ezt kedvencük ivartalanítása során végzik el, így az állatok egyáltalán nem fogják érezni, mivel egyébként is elaltatják őket az ilyen műtétekhez. A mikrochip azonban bármikor beültethető.",
+        "p9": "Nem elég az azonosító címkével ellátott nyakörv kedvencemnek?",
+        "p10": "Habár hasznos, ha van egy azonosító címkével ellátott nyakörv kedvence számára, az még mindig leeshet vagy leszakadhat, ha kedvence elveszik, vagy eltávolítják, ha valaki ellopja az állatát. Amikor az azonosító címkék újak, könnyen olvashatóak viszont idővel azonban nehéz lehet az olvasásuk ahogy lekophat az információ.",
+        "p11": "Mi van, ha a kedvencemnek már van tetoválása?",
+        "p12": "A tetoválásokat nagyon nehéz leolvasni, mivel a szőr elfedheti őket. Még akkor is, ha a kedvenc fülében vannak, idővel kifakulhatnak, a számok és betűk pedig olvashatatlanná válhatnak. Valaki meg is változtathatja őket, ami a mikrochipeknél nem így van. Még ha a tetoválás olvasható is, ezeknek az információknak nincs közös adatbázisa. Így a háziállatról és gazdájáról nehéz lehet információt szerezni.",
+        "p13": "Működhet úgy a mikrochip, mint egy GPS?",
+        "p14": "Ellentétben azzal a hittel, amit sokan gondolnak, a mikrochipeket nem lehet nyomkövető eszközként használni. Mikrochip szkennerrel ellenőrizheti őket állatorvos vagy menhelyi szervezet, és ez egyfajta azonosítás.",
+        "p15": "A mikrochipek olyan azonosítók, amelyeket nem lehet megváltoztatni, és nem lehet félreolvasni",
+        "p16": "A címkék és nyakörvek könnyen leeshetnek vagy eltávolíthatók, ha valaki el akarja lopni kedvencét. Tolvaj is könnyen lecserélheti őket. A mikrochipek viszont hamisításbiztosak, mivel kedvence bőre alá helyezik őket. A mikrochipen tárolt azonosítószám egy adatbázis-bejegyzésre utal, és csak az arra jogosult felek férhetnek hozzá ezekhez az információkhoz, például állatorvosok és állatmenhelyek.",
+        "p17": "Személyes adatai biztonságban vannak",
+        "p18": "Mivel a személyazonosság-lopás egyre nagyobb problémát jelent a mai társadalomban, biztos lehet benne, hogy a mikrochipen és az adatbázisban tárolt információk nagyon biztonságosak. Magán a chipen az egyedi hivatkozási számon kívül semmilyen adat nem tárolódik. A hivatkozási számmal kapcsolatban megadott adatok a mikrochip szolgáltatója által kezelt és biztonságos adatbázison keresztül érhetők csak el.",
+        "videos": "Videók a mikrochipekről",
+        "videosButton": "További videók megtekintéséhez kattintson ide",
+        "spayNeuter": "További információ a fajtáról és arról, hogy miért érdemes ivartalanítani/ivartalanítanig",
+        "thinkAdopt": "Örökbefogadáson gondolkodik?",
+        "adoptionProcess": "Tájékozódjon örökbefogadási folyamatunkról!",
+        "learnMoreButton": "TUDJ MEG TÖBBET"
+    },
+
+    "spay-neuter": {
+        "aboutSpayNeuter": "Az Ivartalanitásról",
+        "intro": "Mik a lehetőségek és miért ivartalanítsunk",
+        "p1": "Mit jelent a ivartalanítás?",
+        "p2": "Az „ivartalanítás” olyan sebészeti eljárás, amely megakadályozza az állatok szaporodását. Számos egészségügyi és viselkedési előnnyel járnak az állatok számára a nem kívánt utódok megelőzése mellett.",
+        "p3": "A kedvence ivartalanításának előnyei",
+        "p4": "A tanulmányok azt mutatják, hogy az ivartalanított háziállatok átlagosan tovább élnek.",
+        "p5": "Az ivartalanítás csökkenti az agresszív viselkedést, ami nyugodtabbá, kevésbé frusztrálttá teszi a kutyáját, és kisebb a valószínűsége annak, hogy harap, vagy megtámad más kutyákat.",
+        "p6": "Az ivartalanítás véget vet a nőstényeknél a hőciklusnak, ami általában évente kétszer történik a kutyáknál. A hőciklusok sok nem kívánt viselkedési változást eredményeznek, beleértve az esetleges agressziót is.",
+        "p7": "Az ivartalanítás csökkenti a reproduktív egészségügyi problémákat, köztük a petefészek- és méhrák, valamint a pyometra (életveszélyes méhfertőzés) kockázatát.",
+        "p8": "Az ivartalanítás csökkenti az emlőrák kockázatát. Az ivartalanítás megszünteti a here rák kockázatát, és csökkenti a prosztata problémák kockázatát kan kutyáknál.",
+        "p9": "Az ivartalanítás megszünteti a szaporodási vágyat, és megakadályozza a véletlen terhességet is. Csökken annak a valószínűsége, hogy hím kedvence elkóborol vagy megszökik.",
+        "p10": "Az ivartalanítás során egyéb fontos dolgok is elvégezhetők a műtét során, mint például azonosító tetoválás, mikrochip beültetés, fogtisztítás vagy sérv műtét.",
+        "p11": "A kedvence ivartalanítása segít csökkenteni a túlnépesedési problémákat, mivel segít csökkenteni a kóbor vagy nem kívánt állatok számát a közösségben. A kóbor állatok számának csökkentése segít megelőzni más háziállatok és vadon élő állatok sérülését vagy elpusztulását.",
+        "p12": "Van valamilyen kockázata az ivartalanításának?",
+        "p13": "Minden sebészeti beavatkozás bizonyos kockázatokat rejt magában. Az általános előny azonban a legtöbb állat esetében meghaladja a kockázatot. Kérjük, forduljon állatorvosához, ha bármilyen kérdése van.",
+        "p14": "Mikor kell ivartalanítani a kutyámat?",
+        "p15": "Kutyák esetében általában hat és fél hónap előtt ajánlott. Forduljon állatorvosához, hogy meghatározza kedvence számára a legjobb időt. A nőstény kutyáknak nem kell egy almuk legyen előtte.",
+        "videos": "Videók a Spay/Neuterről",
+        "videosButton": "További videók megtekintéséhez kattintson ide",
+        "spayNeuter": "További információ a fajtáról és arról, hogy miért érdemes mikrochippel ellátni egy kutyát",
+        "becomeFoster": "Legyen nevelőotthon",
+        "fosterProcess1": "Ha nem biztos benne, hogy készen áll-e egy hosszú távú elköteleződésre,",
+        "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét valamelyik kutyánk számára, hogy átmenetileg nevelje őket, amíg örök otthonra nem talál?",
+        "learnMoreButton": "TUDJ MEG TÖBBET"
+    },
+
+    "adoption": {
+        "adoptionProcess": "Az örökbefogadási folyamat",
+        "intro": "Ismerje meg örökbefogadási folyamatunkat!",
+        "p1": "Nagyon fontos számunkra, hogy minden állat számára megfelelő otthont találjunk. Minden kutyának megvan a maga egyénisége, és szeretnénk gondoskodni arról, hogy a kutya szükségleteit az Ön szükségleteihez igazítsuk, amikor a következő családtagot keresi otthonába.",
+        "p2": "Egy nagyon aktív kutyát egy aktív családhoz kell elhelyezni, egy olyan kutyát, amely még mindig nem áll készen arra, hogy gyermekes családba kerüljön, mert például képzésre van szüksége, bizonyos esetekben előfordulhat, hogy gyermek nélküli családhoz kell mennie, hacsak nem továbbképzést biztosítanak. Ezért megvizsgálunk minden fontos elemet, hogy biztosan megtaláljuk a legmegfelelőbbet Önnek és a kérdéses kutyának.",
+        "p3": "Örökbefogadásunk szokásos folyamata az, hogy kérjük, kommunikáljon velünk. Írjon nekünk üzenetet, ha szeretne örökbe fogadni. Miután megkaptuk ezeket az információkat, felhívjuk Önt és megbeszéljük Önt, hogy megtudjuk, mi érdekli, milyen típusú kutyát keres, és megbeszéljük a részleteket. Ha van egy adott időpontban örökbefogadható kutyánk, amely megfelel az Ön igényeinek, akkor egy találkozást is meg tudunk szervezni, és nagyszerű, ha úgy gondoljuk, hogy Ön a megfelelő.",
+        "p4": "Kérjük, töltse ki kapcsolatfelvételi űrlapunkat, hogy a lehető leghamarabb kapcsolatba tudjunk lépni Önnel. (link a kapcsolatfelvételi űrlaphoz)",
+        "p5": "Köszönjük, hogy megkeresett minket.",
+        "contactButton": "LÉPJEN KAPCSOLATBA VELÜNK",
+        "success": "Sikertörténeteink",
+        "becomeFoster": "Legyen nevelőotthon",
+        "fosterProcess1": "Ha nem biztos benne, hogy készen áll-e egy hosszú távú elköteleződésre,",
+        "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét valamelyik kutyánk számára, hogy átmenetileg nevelje őket, amíg örök otthonra nem talál?",
+        "learnMoreButton": "TUDJ MEG TÖBBET"
+    },
+
+    "donate" : {
+        "donate": "Támogass Minket",
+        "intro": "Adománya nagymértékben segíti a gondozásunkban lévő állatokat. Kérjük, támogasson minket ha megteheti.",
+        "p1": "Alapítványunkat többféleképpen is támogathatod, többek között:",
+        "p2": "Pénzküldés a bankon keresztül a következő címre:",
+        "p3": "Mi Hárman a Németjuhászokért Alapítvány",
+        "p4": "Magyarországról, Számlaszám: 11702081-21453991",
+        "p5": "Nemzetközi referenciaként:",
+        "p6": "IBAN: HU49-1170-2081-2145-3991",
+        "p7": "SWIFT kód: OTPVHUHB",
+        "p8": "Bank: OTP",
+        "p9": "Paypalon keresztül:",
+        "p10": "GoFundMe oldalunk: GoFundMe",
+        "p11": "Megszervezheti adományainak (játékok, takarók, élelmiszerek, kutyaház stb.) elküldését. Kattintson ide, ha többet szeretne megtudni a gyakran szükséges tárgyakról. ",
+        "link": "Adományozható tárgyak",
+        "p12": "Lehet keresztszülő egy vagy több gondozásunkban lévő állatunknak. Ha nincs abban a helyzetben, hogy örökbe fogadhassa valamelyik kutyánkat, de szívét megérintette egy állat története, akit megmentettünk, akkor lehetősége van keresztszülővé válni, hogy egy hónapig vagy még tovább támogassa a kutyát.",
+        "p13": "Mivel az állatok orvosi ellátása drága, és költséges a kennelek beszerzése, még a használtak is, a számláink gyorsan felhalmozódhatnak, hogy bármilyen új állatot befogadhassunk, amelyhez támogatásukra van szükségünk. Minden amit nekünk ad segíteni fog abban, hogy a gondozásunkba vett kutyákat ellássuk mindennel amire szükségük van. Köszönjük hogy ránk gondol pénz vagy tárgyi támogatásával."
+    },
+
+    "donate-items": {
+        "donateItems": "Adományozható tárgyak",
+        "intro": "Előfordulhat, hogy vannak olyan dolgok, amelyeket nem használ otthon, és valóban csodálatos ajándék lehet kutyáinknak, ha felajánlja. Új és használt dolgokat is fogadunk, csak ügyeljenek arra, hogy azok még jó állapotban legyenek, és ha élelmiszerről van szó, akkor az nem járt le.",
+        "p1": "Élelmiszer, amit adományozhatsz nekünk:",
+        "p2": "Készételek",
+        "p3": "Nyers hús",
+        "p4": "Száraztáp kölyökkutyáknak és felnőtt kutyáknak",
+        "p5": "Konzervek kölyökkutyáknak és felnőtt kutyáknak",
+        "p6": "Gyengéd, diétás száraztáp beteg és elhízott kutyák számára",
+        "p7": "Mindennapi dolgok és játékok kutyáknak:",
+        "p8": "Fém etető és itatótálak",
+        "p9": "Kutyaágy",
+        "p10": "Kutyaház",
+        "p11": "Kutyaruha",
+        "p12": "Kutyahordozó",
+        "p13": "Fésűk, kefék, körömvágók, szőrvágók kutyák számára",
+        "p14": "Kutyajátékok",
+        "p15": "•Nyakörv és póráz minden méretben"
+    },
+
+    "volunteer": {
+        "volunteer": "Legyél Önkéntes",
+        "intro": "A Hárman a Németjuhászokért Alapítvány kizárólag adományokkal és önkéntes munkával tudja csak célját elérni.",
+        "p1": "Bízunk az Ön nagylelkűségében és támogatásában, hogy a lehető legtöbb kutyát meg tudjunk menteni ezévben is. Az önkéntesek munkája kulcsfontosságú ahhoz, hogy a lehető legtöbb kutyának megtalálhassuk a szükséges támogatást és otthont.",
+        "p2": "Milyen önkéntes munkában tudnál nekünk segíteni:",
+        "p3": "Állatok szállítása",
+        "p4": "A szükséges tárgyak szállítása",
+        "p5": "Állatápolás",
+        "p6": "Kennelek takarítása",
+        "p7": "Állatok tisztítása",
+        "p8": "Állatok kiképzése és állatrehabilitáció",
+        "p9": "Adománygyűjtés",
+        "p10": "Legyen ideiglenes befogadó, ",
+        "link": "kattintson ide további részletekért.",
+        "p11": "Beteg állatok gondozása",
+        "p12": "Állatorvosi ellátás (állatorvosoktól és állattechnikusoktól)",
+        "p13": "Ne feledje, hogy mivel nagyon korlátozott pénz áll rendelkezésünkre a mentési tevékenységre, az önkéntesség nem fizetett."
+    },
+
+    "sponsor": {
+        "sponsor": "Szponzoraink",
+        "link1": "Panzi Pet",
+        "link2": "Net Vet Kft Veterinary Office",
+        "link3": "Consultation SOS",
+        "foster": "Önkénteseink",
+        "volunteer": "Legyen szponzor",
+        "p1": "Legyen szponzor",
+        "p2": "Sokféle módon segíthet nekünk akár vállalati szponzorként, akár egyéni szponzorként.",
+        "p3": "Vállalati szponzorainknak lehetőségünk nyílik arra, hogy weboldalunkon elhelyezhessük logóját és cégnevét, valamint megemlítsük közösségi média platformjainkon, hogy hírt adjunk szervezetéről. Így hűséges ügyfélszolgálatunktól további online és személyes forgalmat kap webhelye és üzletei felé.",
+        "p4": "Egyéni szponzoraink esetében az Ön nevét is fel tudjuk tüntetni weboldalunkon, ha érdekli, hogy ezeket az információkat online is közöljük. Az egyéni szponzorálás magában foglalhatja szervezetünknek nyújtott pénzbeli hozzájárulást és/vagy egy vagy több kutya havi szponzorálását az orvosi számláik, az élelmezés és/vagy egyéb költségeik rövid vagy hosszabb ideig történő kifizetésére.",
+        "p5": "Csapatunk és kutyáink minden támogatását nagyra értékelni fogják, mivel ez segít elérni céljainkat, hogy az állatoknak mindenkor szükséges gondoskodást nyújtsunk, és minél több német juhásznak találjunk szerető otthont.",
+        "p6": "Kérjük, vegye fel velünk a kapcsolatot még ma, ha vállalati vagy egyéni szponzorrá szeretne válni. (vigye őket a Kapcsolat oldalra)",
+        "contactButton": "LÉPJEN KAPCSOLATBA VELÜNK"
+    },
+
+    "contact": {
+        "contact": "Lépjen kapcsolatba velünk",
+        "p1": "Kövess minket itt is",
+        "p2": "Írjon nekünk",
+        "p3": "Keresztnév:",
+        "p4": "Vezetéknév/Családnév:",
+        "p5": "Email:",
+        "p6": "Tárgy:",
+        "p7": "Telefon:",
+        "p8": "Üzenet/Kérdések:",
+        "p9": "Kép feltöltése (nem kötelező):",
+        "submitButton": "Elküldöm"
+    },
+
+    "feedback": {
+        "feedback": "Visszajelzések az örökbefogadóktól",
+        "intro": "Íme néhány szó örökbefogadóinktól",
+        "p1": "Huba családtag lett, már tesók a Lucával meg Matyival. A szomszéd birkáit órákig nézi, csak simire jön ?? Holnap megyünk dokihoz utolsó oltásra. Kapott szép nyakörvet. Imádom, nagyon bujós. Szépen eszik. Jaaa es a rosszcsondkodást Lucámtol simán tanulja ????",
+        "p2": "- Gábor",
+        "p3": "Nyaralónkban vagyunk, mi sátorban alszunk és Diego is velünk volt.",
+        "p4": "- Annamari & Bence",
+        "p5": "Holnap megyünk haza és pont holnap lesz 4. hónapja, hogy Neked és Andornak köszönhetoen igaz családra találtam.",
+        "p6": "Köszönöm! Mangó",
+        "p7": "- Ági",
+        "p8": "Régen írtam, de igazándiból nem sok minden történt. Bodza még mindig háromszor eszik egy nap. Nem is eszik, hanem fal. A bordái már egyáltalán nem kitapinthatók, csak a gerince dudorodik ki. Úgy gondoltam, hogy lassan átállunk a kétszeri evésre, mert nem szeretném, ha elhízna. Gyönyöru a szore, csak a hátán nem akar noni. Ugyan ki fogom vizsgáltatni, de ha nem lesz a hátán szor, az sem baj, mert ez lesz az o szexepilje. Már teljes mértékben hallgat a nevére. Én állandóan simizem, puszit adok Bodzának. Engem fogadott el gazdijának. Mindenhova követ, mint a csík, vagy keres a lakásban. Nagyon egymásra találtunk. Nagyon jól megértjük egymást. Egyik szeme mindig rajtam van. O imádatom középpontja. Minden vezényszavamra jól reagál. Szóval nagyon jó kutyust választottam. Végtelen a boldogságom. ",
+        "p9": "- Ildikó",
+        "success": "Sikertörténeteink",
+        "thinkAdopt": "Örökbefogadáson gondolkodik?",
+        "adoptionProcess": "Tájékozódjon örökbefogadási folyamatunkról!",
+        "learnMoreButton": "TUDJ MEG TÖBBET"
+    },
+
+    "adoptable": {
+        "adoptable": "Örökbefogadható kutyák",
+        "kelly": {
+            "p1": "Kelly gazdit keres ❤️❤️❤️",
+            "p2": "Gyönyörű fekete gyémánt Kelly németjuhász kislány. ❤️ Fajtáján belül is mese szép ❤️❤️❤️",
+            "p3": "Nagyon kedves kutya ❤️ Embereket szereti , kutyákkal jól kijön 🤗 Cicákkal a kapcsolata nem ismert 🤷‍♀️",
+            "p4": "3 éves. Mèg nagyon fiatal. Könnyen tanítható 🤗 Okos , értelmes kutya 🤗",
+            "p5": "A gazdája leadta , mert nem tud vele foglalkozni",
+            "p6": "Útlevelet tudunk intézni !",
+            "p7": "Ivartalan , oltott , chipes ✅",
+            "p8": "Helyileg : Bács Kiskun megye , Tiszakécske",
+            "p9": "Részletes bemutatkozó üzenetet kérek ❣️"
+        },
+        "cezar": {
+            "p1": "Gyönyörű Cézár gazdit keres 🙏❤️",
+            "p2": "Cézár 1 éves németjuhász kan ❤️🤗",
+            "p3": "Rendkívül aranyos, kedves kutya. 🤗",
+            "p4": "Nagyon ragaszkodó, nem ás, nem rág meg semmit. ",
+            "p5": "Nagyon jóétvágyú, szeret mindent. ",
+            "p6": "Szeret az ember közelében lenni.Nem ugat feleslegesen 🙏",
+            "p7": "Ő kóbor kutyaként került hozzánk, így más kutyákkal a kapcsolata nem ismert, de szerintem simán kijön velük. ",
+            "p8": "Cicával szintén nem tudjuk a kapcsolatát 🤷‍♀️",
+            "p9": "Ivartalan, oltott, chipes ✅",
+            "p10": "Helyileg : Hajdú Bihar megye, Hajdúszovát",
+            "p11": "Részletes bemutatkozó üzenetet kérek ❗️"
+        }
+    },
+
+    "adopted-photos": {
+        "adopted" : "Már elfogadva - Fotók",
+        "intro": "Íme néhány kép azokról a kutyákról, akiket megmentettünk és már örök otthonra találtunk. Nyugodtan küldje el nekünk fogadott kutyáiról készült fotóit, hogy megoszthassuk azokat itt a weboldalunkon.",
+        "sendPhotoButton": "Küldje el nekünk fotóit",
+        "morePhotosButton": "Kattintson ide, ha további képeket szeretne megtekinteni a Flickr-en"
+    },
+
+    "adopted-videos": {
+        "adopted" : "ár elfogadva -Videók",
+        "intro1": "Íme néhány videó azokról a kutyákról, amelyeket megmentettünk, és már örök otthonra találtunk. Kövess minket ",
+        "intro2": " további videók megtekintéséhez."
     }
 }
 

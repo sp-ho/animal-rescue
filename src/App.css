@@ -10,6 +10,11 @@ h1 {
 /* intro of all pages */
 .intro {
   font-size: larger;
+  margin-top: 30px;
+}
+
+.nav-item {
+  font-weight: bold;
 }
 
 /* Styling of Home page */
@@ -130,4 +135,34 @@ h1 {
   margin-left: 5px;
 }
 
+/* Styling of AdoptedPhotos image grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.image-cell {
+  position: relative;
+  padding: 4px;
+  border: 1px solid lightgrey;
+  margin: 5px;
+}
+
+.image-id {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Set the width to 100% */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 4px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.image-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make the image fill the container while maintaining its aspect ratio */
+}
 

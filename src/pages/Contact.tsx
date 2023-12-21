@@ -1,22 +1,22 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faUsers,
-  faTrashAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUsers, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
+  faFlickr,
   faInstagram,
   faYoutube,
-  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import validateFormData from "../components/FormValidator";
 import axios from "axios";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   // useState for data
   const [formData, setFormData] = useState({
     firstName: "",
@@ -180,31 +180,75 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="contact-heading">Contact Us</h2>
+      <h2 className="contact-heading">{t("contact.contact")}</h2>
       <div className="contact-container">
         <div className="contact-div">
           <div className="columns">
             {/* Left Section */}
             <div className="left-section">
               <div className="contact-section">
-                <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size="2x"
+                  style={{
+                    backgroundColor: "orange", // Set the background color to orange
+                    borderRadius: "50%", // Make it a circle by setting border-radius
+                    padding: "20px", // Adjust padding for better appearance
+                  }}
+                />
               </div>
               <p className="contact-p">Email</p>
-              <p>animalrescue@email.com</p>
+              <p>judit.valent@gmail.com</p>
             </div>
 
             {/* Right Section */}
             <div className="right-section">
               <div className="contact-section">
-                <FontAwesomeIcon icon={faUsers} size="2x" />
+                <FontAwesomeIcon
+                  icon={faUsers}
+                  size="2x"
+                  style={{
+                    width: "35px",
+                    backgroundColor: "orange", // Set the background color to orange
+                    borderRadius: "50%", // Make it a circle by setting border-radius
+                    padding: "20px", // Adjust padding for better appearance
+                  }}
+                />
               </div>
               <div>
-                <p className="contact-p">Follow us on Social Media</p>
+                <p className="contact-p">{t("contact.p1")}</p>
                 <div className="social-icons">
-                  <FontAwesomeIcon icon={faFacebook} />
-                  <FontAwesomeIcon icon={faInstagram} />
-                  <FontAwesomeIcon icon={faYoutube} />
-                  <FontAwesomeIcon icon={faTiktok} />
+                  <a href="https://bit.ly/3ua4R7s">
+                    <FontAwesomeIcon
+                      className="me-3"
+                      icon={faFacebook}
+                      size="2x"
+                    />
+                  </a>
+                  <a href="https://bit.ly/3m89uKF">
+                    <FontAwesomeIcon
+                      className="me-3"
+                      icon={faInstagram}
+                      size="2x"
+                      style={{ color: "#d62976" }}
+                    />
+                  </a>
+                  <a href="http://bit.ly/3trNey7">
+                    <FontAwesomeIcon
+                      className="me-3"
+                      icon={faYoutube}
+                      size="2x"
+                      style={{ color: "red" }}
+                    />
+                  </a>
+                  <a href="http://bit.ly/3vyEfxz">
+                    <FontAwesomeIcon
+                      className="me-3"
+                      icon={faFlickr}
+                      size="2x"
+                      style={{ color: "blue" }}
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -214,11 +258,11 @@ const Contact = () => {
         {/* Form Section */}
         <div className="form-section">
           <form onSubmit={handleSubmit} className="compact-form">
-            <h2>Send Us a Message</h2>
+            <h2>{t("contact.p2")}</h2>
             <br />
             <div className="row mb-3">
               <div className="col-md-6">
-                <label htmlFor="firstName">First Name:</label>
+                <label htmlFor="firstName">{t("contact.p3")}</label>
                 <input
                   type="text"
                   id="firstName"
@@ -230,7 +274,7 @@ const Contact = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label htmlFor="lastName">Last Name:</label>
+                <label htmlFor="lastName">{t("contact.p4")}</label>
                 <input
                   type="text"
                   id="lastName"
@@ -244,7 +288,7 @@ const Contact = () => {
             </div>
             <div className="row mb-3">
               <div className="col-md-6">
-                <label htmlFor="email">Email Address:</label>
+                <label htmlFor="email">{t("contact.p5")}</label>
                 <input
                   type="email"
                   id="email"
@@ -256,7 +300,7 @@ const Contact = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label htmlFor="telephone">Telephone:</label>
+                <label htmlFor="telephone">{t("contact.p7")}</label>
                 <input
                   type="tel"
                   id="telephone"
@@ -269,7 +313,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="subject">Subject:</label>
+              <label htmlFor="subject">{t("contact.p6")}</label>
               <input
                 type="text"
                 id="subject"
@@ -282,7 +326,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="comments">Comments/Questions:</label>
+              <label htmlFor="comments">{t("contact.p8")}</label>
               <textarea
                 id="comments"
                 name="comments"
@@ -294,7 +338,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="image">Upload an Image (optional):</label>
+              <label htmlFor="image">{t("contact.p9")}</label>
               <input
                 type="file"
                 id="image"
@@ -326,7 +370,7 @@ const Contact = () => {
                 onChange={handleRecaptchaChange}
               />
               <button type="submit" className="btn btn-secondary">
-                Submit
+                {t("contact.submitButton")}
               </button>
               {submissionStatus === "success" && (
                 <div className="success-message">

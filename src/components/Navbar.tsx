@@ -38,18 +38,23 @@ const Navbar: React.FC = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to={"/"}>
-                Home
+              <Link
+                className="navbarLink nav-link active"
+                aria-current="page"
+                style={{ color: "#0047AB", fontWeight: "bold" }}
+                to={"/"}
+              >
+                HOME
               </Link>
             </li>
             <li className="nav-item  dropdown">
               <span
-                className="nav-link dropdown-toggle"
+                className="navbarLink nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                About
+                ABOUT
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
@@ -73,7 +78,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/spayingneutering">
+                  <Link className="dropdown-item" to="/spayneuter">
                     About Spaying & Neutering
                   </Link>
                 </li>
@@ -86,12 +91,17 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Adopt
+                ADOPT
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/adopt">
+                  <Link className="dropdown-item" to="/adoption">
                     The Adoption process
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/adoptable">
+                    Adoptable Dogs
                   </Link>
                 </li>
               </ul>
@@ -104,7 +114,7 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Success Stories
+                SUCCESS STORIES
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
@@ -132,16 +142,16 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Get Involved
+                GET INVOLVED
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/people">
+                  <Link className="dropdown-item" to="/sponsors">
                     Our Sponsors, Foster & Volunteers
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/sponsor">
+                  <Link className="dropdown-item" to="/sponsors">
                     Become a Sponsor
                   </Link>
                 </li>
@@ -165,12 +175,17 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Important
+                IMPORTANT
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <Link className="dropdown-item" to="/videos">
                     Videos
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/donateitems">
+                    Items You May Donate
                   </Link>
                 </li>
               </ul>
@@ -181,7 +196,16 @@ const Navbar: React.FC = () => {
                 aria-current="page"
                 to={"/contact"}
               >
-                Contact
+                CONTACT
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to={"/donate"}
+              >
+                DONATE
               </Link>
             </li>
             {/* Language selection */}
