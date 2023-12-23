@@ -92,8 +92,8 @@ const Breed = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_2`}
-                title="YouTube Video 2"
+                src={`https://www.youtube.com/embed/W2pkvy5t3Bo `}
+                title="Best German Shepherd Puppy Training Tips"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>

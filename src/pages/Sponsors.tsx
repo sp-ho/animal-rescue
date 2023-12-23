@@ -1,9 +1,57 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import panzipetImage from "../images/sponsors/panzipet.png";
+import consultsosImage from "../images/sponsors/consultation-sos.png";
+import netvetImage from "../images/sponsors/net-vet-logo.png";
+import panzipetImage from "../images/sponsors/panzi-pet-logo.png";
+import taravetImage from "../images/sponsors/tara-vet.jpg";
+import batizImage from "../images/fosters/andor-batiz.jpg";
+import csabaImage from "../images/fosters/gal-csaba.jpg";
+import erikaImage from "../images/fosters/ivanyi-erika.jpg";
+import jozsefImage from "../images/fosters/nemeth-jozsef.jpg";
+import timeaImage from "../images/volunteers/ivan-timea.jpg";
+import eraImage from "../images/volunteers/kozma-era-volunteer.jpg";
 
 const Sponsors = () => {
   const { t } = useTranslation();
+
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
+  const openLightbox = (src: string) => {
+    setLightboxImage(src);
+  };
+
+  const closeLightbox = () => {
+    setLightboxImage(null);
+  };
+
+  const sponsorImages = [
+    {
+      name: "Panzi Pet",
+      link: "https://panzipet.hu/",
+      src: panzipetImage,
+    },
+    {
+      name: "Net Vet Kft Veterinary Office",
+      link: "https://www.netvet.hu/",
+      src: netvetImage,
+    },
+    {
+      name: "Tara-Vet Állatorvosi Rendelő",
+      link: "https://taracsoport.hu/",
+      src: taravetImage,
+    },
+    {
+      name: "Consultation SOS",
+      link: "https://www.consultationsos.com/",
+      src: consultsosImage,
+    },
+  ];
+
+  const volunteerImages = [
+    { name: "Ivan Timea", src: timeaImage },
+    { name: "Kozma Era", src: eraImage },
+  ];
 
   return (
     <>
@@ -14,74 +62,36 @@ const Sponsors = () => {
         </div>
       </div>
 
-      {/* Section with 3 columns and grey background */}
+      {/* Sponsors */}
       <div className="container-fluid bg-light mt-5 mb-5 py-5">
         <div className="row justify-content-center py-5">
-          {/* Column 1 - Placeholder for image */}
-          <div className="col-md-3 mb-4 text-center">
-            <div className="mb-2">
-              <Link to="https://panzipet.hu/" target="_blank">
-                {t("sponsor.link1")}
-              </Link>
+          {sponsorImages.map((sponsor) => (
+            <div key={sponsor.name} className="col-md-3 mb-4 text-center">
+              <div className="mb-2">
+                <Link to={sponsor.link} target="_blank">
+                  {sponsor.name}
+                </Link>
+              </div>
+              {/* Image */}
+              <div>
+                <Link to={sponsor.link} target="_blank">
+                  <img
+                    className="mx-auto mt-3"
+                    src={sponsor.src}
+                    alt={sponsor.name}
+                    style={{
+                      width: "40%",
+                    }}
+                  />
+                </Link>
+              </div>
             </div>
-            {/* Image */}
-            <div>
-              <Link to="https://panzipet.hu/" target="_blank">
-                <img
-                  className="mx-auto mt-3"
-                  src={panzipetImage}
-                  alt="Panzi Pet"
-                  style={{
-                    width: "40%",
-                    borderRadius: "50%",
-                  }}
-                />
-              </Link>
-            </div>
-          </div>
-          {/* Column 2 */}
-          <div className="col-md-3 mb-4 text-center">
-            <div className="mb-2">
-              <Link to="" target="_blank">
-                {t("sponsor.link2")}
-              </Link>
-            </div>
-            {/* Image */}
-            <div>
-              <Link to="" target="_blank">
-                <img
-                  className="mx-auto mt-3"
-                  src="https://via.placeholder.com/150"
-                  alt="Net Vet Kit Veterinary Office"
-                  style={{ width: "40%", borderRadius: "50%" }}
-                />
-              </Link>
-            </div>
-          </div>
-          {/* Column 3 */}
-          <div className="col-md-3 mb-4 text-center">
-            <div className="mb-2">
-              <Link to="https://www.consultationsos.com/" target="_blank">
-                {t("sponsor.link3")}
-              </Link>
-            </div>
-            {/* Image */}
-            <div>
-              <Link to="https://www.consultationsos.com/" target="_blank">
-                <img
-                  className="mx-auto mt-3"
-                  src="https://via.placeholder.com/150"
-                  alt="Consultation SOS"
-                  style={{ width: "40%", borderRadius: "50%" }}
-                />
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* Section with 5 columns and white background */}
-      <div className="container-fluid mt-5 mb-5 py-5">
+      {/* Fosters */}
+      <div className="container-fluid mt-5">
         <div className="row justify-content-center">
           <div className="container text-center">
             <h3>{t("sponsor.foster")}</h3>
@@ -89,89 +99,104 @@ const Sponsors = () => {
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
-            <img
-              className="mb-3"
-              src="https://via.placeholder.com/150"
-              alt="foster1"
-              style={{ width: "60%", borderRadius: "50%" }}
-            />
-            <p>Foster 1</p>
+            <div
+              onClick={() => openLightbox(batizImage)}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                className="mb-3"
+                src={batizImage}
+                alt="AndorBatiz"
+                style={{ width: "60%", borderRadius: "50%" }}
+              />
+            </div>
+            <p>Andor Batiz</p>
           </div>
           {/* Column 2 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
-            <img
-              className="mb-3"
-              src="https://via.placeholder.com/150"
-              alt="foster2"
-              style={{ width: "60%", borderRadius: "50%" }}
-            />
-            <p>Foster 2</p>
+            <div
+              onClick={() => openLightbox(erikaImage)}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                className="mb-3"
+                src={erikaImage}
+                alt="IványiErika"
+                style={{
+                  width: "60%",
+                  height: "30%",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                }}
+              />
+            </div>
+            <p>Iványi Erika</p>
           </div>
           {/* Column 3 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
-            <img
-              className="mb-3"
-              src="https://via.placeholder.com/150"
-              alt="foster3"
-              style={{ width: "60%", borderRadius: "50%" }}
-            />
-            <p>Foster 3</p>
+            <div
+              onClick={() => openLightbox(csabaImage)}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                className="mb-3"
+                src={csabaImage}
+                alt="GálCsaba"
+                style={{ width: "60%", borderRadius: "50%" }}
+              />
+            </div>
+            <p>Gál Csaba</p>
           </div>
           {/* Column 4 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
-            <img
-              className="mb-3"
-              src="https://via.placeholder.com/150"
-              alt="foster4"
-              style={{ width: "60%", borderRadius: "50%" }}
-            />
-            <p>Foster 4</p>
-          </div>
-          {/* Column 5 */}
-          <div className="col-md-2 mb-4 text-center mt-5 py-5">
-            {/* Image */}
-            <img
-              className="mb-3"
-              src="https://via.placeholder.com/150"
-              alt="foster5"
-              style={{ width: "60%", borderRadius: "50%" }}
-            />
-            <p>Foster 5</p>
+            <div
+              onClick={() => openLightbox(jozsefImage)}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                className="mb-3"
+                src={jozsefImage}
+                alt="Németh József"
+                style={{ width: "60%", borderRadius: "50%" }}
+              />
+            </div>
+            <p>Németh József</p>
           </div>
         </div>
       </div>
 
-      {/* Section with 2 columns and grey background */}
+      {/* Volunteers */}
       <div className="container-fluid bg-light py-5">
         <div className="row justify-content-center py-5">
           <div className="container text-center">
             <h3>{t("sponsor.volunteer")}</h3>
           </div>
           {/* Column 1 - Placeholder for image */}
-          <div className="col-md-5 mt-5 py-5 text-center">
-            {/* Image */}
-            <img
-              className="mb-3"
-              src="https://via.placeholder.com/150"
-              alt="volunteer1"
-              style={{ width: "25%", borderRadius: "50%" }}
-            />
-            <p>Volunteer 1</p>
-          </div>
-          {/* Column 2 */}
-          <div className="col-md-5 mt-5 py-5 text-center">
-            {/* Image */}
-            <img
-              className="mb-3"
-              src="https://via.placeholder.com/150"
-              alt="volunteer2"
-              style={{ width: "25%", borderRadius: "50%" }}
-            />
-            <p>Volunteer 2</p>
-          </div>
+
+          {volunteerImages.map((volunteer) => (
+            <div
+              key={volunteer.name}
+              className="col-md-5 mt-5 py-5 text-center"
+            >
+              <div
+                onClick={() => openLightbox(volunteer.src)}
+                style={{ cursor: "pointer" }}
+              >
+                {/* Image */}
+                <img
+                  className="mb-3"
+                  src={volunteer.src}
+                  alt={volunteer.name}
+                  style={{ width: "25%", borderRadius: "50%" }}
+                />
+              </div>
+              <p>{volunteer.name}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -218,6 +243,22 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <div
+            className="lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Larger image */}
+            <img src={lightboxImage} alt="Larger Foster Image" />
+
+            {/* Close button */}
+            <button onClick={closeLightbox}>CLOSE</button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

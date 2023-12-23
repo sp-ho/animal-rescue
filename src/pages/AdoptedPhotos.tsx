@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import beniImage from "../images/breed/adopting-dog.jpg";
+import kellyImage from "../images/adoptable/kelly2-web-res.jpg";
+import cezarImage from "../images/adoptable/cezar1.jpg";
 
 const AdoptedPhotos = () => {
   const { t } = useTranslation();
@@ -8,6 +10,8 @@ const AdoptedPhotos = () => {
   // Array of images
   const images = [
     { id: "Beni", src: beniImage },
+    { id: "Kelly", src: kellyImage },
+    { id: "Cézár", src: cezarImage },
     { id: "Wilson", src: "https://via.placeholder.com/150" },
     { id: "Matyi", src: "https://via.placeholder.com/150" },
     { id: "Roxy", src: "https://via.placeholder.com/150" },
