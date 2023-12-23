@@ -102,6 +102,12 @@ const Sponsors = () => {
             <div
               onClick={() => openLightbox(batizImage)}
               style={{ cursor: "pointer" }}
+              onKeyDown={(e) => {
+                // Handle keyboard events
+                if (e.key === "Enter") {
+                  openLightbox(batizImage);
+                }
+              }}
             >
               <img
                 className="mb-3"
@@ -118,6 +124,12 @@ const Sponsors = () => {
             <div
               onClick={() => openLightbox(erikaImage)}
               style={{ cursor: "pointer" }}
+              onKeyDown={(e) => {
+                // Handle keyboard events
+                if (e.key === "Enter") {
+                  openLightbox(batizImage);
+                }
+              }}
             >
               <img
                 className="mb-3"
@@ -140,6 +152,12 @@ const Sponsors = () => {
             <div
               onClick={() => openLightbox(csabaImage)}
               style={{ cursor: "pointer" }}
+              onKeyDown={(e) => {
+                // Handle keyboard events
+                if (e.key === "Enter") {
+                  openLightbox(batizImage);
+                }
+              }}
             >
               <img
                 className="mb-3"
@@ -156,6 +174,12 @@ const Sponsors = () => {
             <div
               onClick={() => openLightbox(jozsefImage)}
               style={{ cursor: "pointer" }}
+              onKeyDown={(e) => {
+                // Handle keyboard events
+                if (e.key === "Enter") {
+                  openLightbox(batizImage);
+                }
+              }}
             >
               <img
                 className="mb-3"
@@ -185,6 +209,12 @@ const Sponsors = () => {
               <div
                 onClick={() => openLightbox(volunteer.src)}
                 style={{ cursor: "pointer" }}
+                onKeyDown={(e) => {
+                  // Handle keyboard events (e.g., open on 'Enter')
+                  if (e.key === "Enter") {
+                    openLightbox(batizImage);
+                  }
+                }}
               >
                 {/* Image */}
                 <img
@@ -246,13 +276,26 @@ const Sponsors = () => {
 
       {/* Lightbox */}
       {lightboxImage && (
-        <div className="lightbox" onClick={closeLightbox}>
+        <div
+          className="lightbox"
+          onClick={closeLightbox}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === "Escape") {
+              closeLightbox();
+            }
+          }}
+        >
           <div
             className="lightbox-content"
             onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") {
+                closeLightbox();
+              }
+            }}
           >
             {/* Larger image */}
-            <img src={lightboxImage} alt="Larger Foster Image" />
+            <img src={lightboxImage} alt="Larger View" />
 
             {/* Close button */}
             <button onClick={closeLightbox}>CLOSE</button>
