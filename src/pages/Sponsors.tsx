@@ -53,15 +53,6 @@ const Sponsors = () => {
     },
   ];
 
-  const volunteerImages = [
-    { name: "Ivan Timea", src: timeaImage },
-    { name: "Kozma Era", src: eraImage },
-  ];
-
-  const volunteerSmallImages = [
-    { name: "Ivan Timea", src: timeaSmallImage },
-    { name: "Kozma Era", src: eraSmallImage },
-  ];
   return (
     <>
       {/* White background section under the navbar */}
