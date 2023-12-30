@@ -11,7 +11,6 @@ import Microchips from "./pages/Microchips";
 import SpayNeuter from "./pages/SpayNeuter";
 import Adoption from "./pages/Adoption";
 import Donate from "./pages/Donate";
-import DonateItems from "./pages/DonateItems";
 import Volunteer from "./pages/Volunteer";
 import Sponsors from "./pages/Sponsors";
 import Feedback from "./pages/Feedback";
@@ -36,7 +35,6 @@ function App() {
           <Route path="/adoption" element={<Adoption />} />
           <Route path="/adoptable" element={<Adoptable />} />
           <Route path="/donate" element={<Donate />} />
-          <Route path="/donateitems" element={<DonateItems />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/feedback" element={<Feedback />} />

@@ -6,11 +6,16 @@ import netvetImage from "../images/sponsors/net-vet-logo.png";
 import panzipetImage from "../images/sponsors/panzi-pet-logo.png";
 import taravetImage from "../images/sponsors/tara-vet.jpg";
 import batizImage from "../images/fosters/andor-batiz.jpg";
+import csabaSmallImage from "../images/fosters/gal-csaba-thumbnail.jpg";
 import csabaImage from "../images/fosters/gal-csaba.jpg";
+import erikaSmallImage from "../images/fosters/ivanyi-erika-thumbnail.jpg";
 import erikaImage from "../images/fosters/ivanyi-erika.jpg";
 import jozsefImage from "../images/fosters/nemeth-jozsef.jpg";
+import ildikoImage from "../images/fosters/leopold-ildiko-thumbnail.jpg";
+import timeaSmallImage from "../images/volunteers/ivan-timea-volunteer.jpg";
 import timeaImage from "../images/volunteers/ivan-timea.jpg";
-import eraImage from "../images/volunteers/kozma-era-volunteer.jpg";
+import eraSmallImage from "../images/volunteers/kozma-era-volunteer.jpg";
+import eraImage from "../images/volunteers/kozma-era-modified.jpg";
 
 const Sponsors = () => {
   const { t } = useTranslation();
@@ -53,6 +58,10 @@ const Sponsors = () => {
     { name: "Kozma Era", src: eraImage },
   ];
 
+  const volunteerSmallImages = [
+    { name: "Ivan Timea", src: timeaSmallImage },
+    { name: "Kozma Era", src: eraSmallImage },
+  ];
   return (
     <>
       {/* White background section under the navbar */}
@@ -127,13 +136,13 @@ const Sponsors = () => {
               onKeyDown={(e) => {
                 // Handle keyboard events
                 if (e.key === "Enter") {
-                  openLightbox(batizImage);
+                  openLightbox(erikaImage);
                 }
               }}
             >
               <img
                 className="mb-3"
-                src={erikaImage}
+                src={erikaSmallImage}
                 alt="IványiErika"
                 style={{
                   width: "60%",
@@ -155,13 +164,13 @@ const Sponsors = () => {
               onKeyDown={(e) => {
                 // Handle keyboard events
                 if (e.key === "Enter") {
-                  openLightbox(batizImage);
+                  openLightbox(csabaImage);
                 }
               }}
             >
               <img
                 className="mb-3"
-                src={csabaImage}
+                src={csabaSmallImage}
                 alt="GálCsaba"
                 style={{ width: "60%", borderRadius: "50%" }}
               />
@@ -177,7 +186,7 @@ const Sponsors = () => {
               onKeyDown={(e) => {
                 // Handle keyboard events
                 if (e.key === "Enter") {
-                  openLightbox(batizImage);
+                  openLightbox(jozsefImage);
                 }
               }}
             >
@@ -190,6 +199,28 @@ const Sponsors = () => {
             </div>
             <p>Németh József</p>
           </div>
+          {/* Column 5 */}
+          <div className="col-md-2 mb-4 text-center mt-5 py-5">
+            {/* Image */}
+            <div
+              onClick={() => openLightbox(ildikoImage)}
+              style={{ cursor: "pointer" }}
+              onKeyDown={(e) => {
+                // Handle keyboard events
+                if (e.key === "Enter") {
+                  openLightbox(ildikoImage);
+                }
+              }}
+            >
+              <img
+                className="mb-3"
+                src={ildikoImage}
+                alt="Leopold Ildikó"
+                style={{ width: "60%", borderRadius: "50%" }}
+              />
+            </div>
+            <p>Leopold Ildikó</p>
+          </div>
         </div>
       </div>
 
@@ -199,34 +230,51 @@ const Sponsors = () => {
           <div className="container text-center">
             <h3>{t("sponsor.volunteer")}</h3>
           </div>
-          {/* Column 1 - Placeholder for image */}
-
-          {volunteerImages.map((volunteer) => (
+          {/* Column 1 - Volunteer 1 */}
+          <div className="col-md-2 mb-4 text-center mt-5 py-5">
+            {/* Image */}
             <div
-              key={volunteer.name}
-              className="col-md-5 mt-5 py-5 text-center"
+              onClick={() => openLightbox(timeaImage)}
+              style={{ cursor: "pointer" }}
+              onKeyDown={(e) => {
+                // Handle keyboard events
+                if (e.key === "Enter") {
+                  openLightbox(timeaImage);
+                }
+              }}
             >
-              <div
-                onClick={() => openLightbox(volunteer.src)}
-                style={{ cursor: "pointer" }}
-                onKeyDown={(e) => {
-                  // Handle keyboard events (e.g., open on 'Enter')
-                  if (e.key === "Enter") {
-                    openLightbox(batizImage);
-                  }
-                }}
-              >
-                {/* Image */}
-                <img
-                  className="mb-3"
-                  src={volunteer.src}
-                  alt={volunteer.name}
-                  style={{ width: "25%", borderRadius: "50%" }}
-                />
-              </div>
-              <p>{volunteer.name}</p>
+              <img
+                className="mb-3"
+                src={timeaSmallImage}
+                alt="Ivan Timea"
+                style={{ width: "60%", borderRadius: "50%" }}
+              />
             </div>
-          ))}
+            <p>Ivan Timea</p>
+          </div>
+
+          {/* Column 2 - Volunteer 2 */}
+          <div className="col-md-2 mb-4 text-center mt-5 py-5">
+            {/* Image */}
+            <div
+              onClick={() => openLightbox(eraImage)}
+              style={{ cursor: "pointer" }}
+              onKeyDown={(e) => {
+                // Handle keyboard events
+                if (e.key === "Enter") {
+                  openLightbox(eraImage);
+                }
+              }}
+            >
+              <img
+                className="mb-3"
+                src={eraSmallImage}
+                alt="Kozma Era"
+                style={{ width: "60%", borderRadius: "50%" }}
+              />
+            </div>
+            <p>Kozma Era</p>
+          </div>
         </div>
       </div>
 

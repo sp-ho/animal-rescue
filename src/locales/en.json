@@ -1,4 +1,32 @@
 {
+    "navbar": {
+        "home": "HOME",
+        "about": "ABOUT",
+        "abUs": "About Us",
+        "abFoster": "About Fostering",
+        "abBreed": "About the Breed",
+        "abMicrochips": "About Microchips",
+        "abSpayNeuter": "About Spaying & Neutering",
+        "adopt": "ADOPT",
+        "adoptProcess": "The Adoption Process",
+        "adoptable":"Adoptable Dogs",
+        "success": "SUCCESS STORIES",
+        "adoptedPhotos": "Already Adopted - Photos",
+        "adoptedVideos": "Already Adopted - Videos",
+        "feedback": "Feedback from Adopters",
+        "involve": "GET INVOLVED",
+        "sponsorsFostersVolunteers": "Our Sponsors, Fosters & Volunteers",
+        "sponsor": "Become a Sponsor",
+        "volunteer": "Become a Volunteer",
+        "foster": "Become a Foster Home",
+        "important": "IMPORTANT",
+        "videos": "Videos",
+        "contact": "CONTACT",
+        "donate": "DONATE",
+        "english": "English",
+        "hungarian": "Hungarian"
+    },
+
     "home": {
         "line1": "Three of Us For",
         "line2": "German Shepherds",
@@ -160,12 +188,15 @@
         "p6": "IBAN: HU49-1170-2081-2145-3991",
         "p7": "SWIFT code: OTPVHUHB",
         "p8": "Bank: OTP",
-        "p9": "Via Paypal: ",
-        "p10": "Our GoFundMe page: GoFundMe",
+        "p9": "Via Paypal: judit.valent@gmail.com",
+        "p10": "Our GoFundMe page",
         "p11": "You can arrange the transfer of your donations (toys, blankets, food, dog house etc.) Click here for more details regarding the items that we need often. ",
         "link": "Items You May Donate",
         "p12": "Consider becoming a Godparent of one or more of our animals in our care. If you are not in a position to adopt one of our dogs, but your heart has been touched by the story of an animal we rescued, you have the opportunity to become a Godparent to support that dog for a month or even more.",
-        "p13": "As medical care of the animals is expensive and so are the purchases of any kennels, even used ones, our bills can pile up pretty quickly to take in any new animal that needs our support. Your generosity will help us to make a difference with every dog we take into our care. Thank you for thinking of us to make a donation."
+        "p13": "As medical care of the animals is expensive and so are the purchases of any kennels, even used ones, our bills can pile up pretty quickly to take in any new animal that needs our support. Your generosity will help us to make a difference with every dog we take into our care. Thank you for thinking of us to make a donation.",
+        "becomeSponsor": "Become a Sponsor",
+        "sponsor": "We rely on local, national and international companies and individual sponsors to achieve our mission.",
+        "moreInfoButton": "More information"
     },
 
     "donate-items": {
@@ -291,5 +322,20 @@
         "adopted" : "Already Adopted - Videos",
         "intro1": "Here are some videos of the dogs we rescued and have already found a forever home. Follow us on ",
         "intro2": " to see more videos."
+    },
+
+    "videos": {
+        "videos": "Videos",
+        "intro": "See more videos: ",
+        "breedLink": "About the Breed",
+        "spayNeuterLink": "Spay/Neuter",
+        "microchipsLink": "About Microchips",
+        "trainTips": "Dog Training and Tips",
+        "healthCareLink": "Health Care",
+        "breedSub": "About The Breed",
+        "spayNeuterSub": "About Spay/Neutering",
+        "microchipsSub": "About Microchips",
+        "trainTipsSub": "Dog Training and Tips",
+        "healthCareSub": "Health Care"
     }
 }

@@ -1,9 +1,37 @@
 {
+    "navbar": {
+        "home": "FÖOLDAL",
+        "about": "RÓLUNK",
+        "abUs": "Rólunk",
+        "abFoster": "Legyél Ideiglenes Befogadó",
+        "abBreed": "Fajták Jellemzői",
+        "abMicrochips": "A Mikrochipekről",
+        "abSpayNeuter": "Az Ivartalanitásról",
+        "adopt": "FOGADJ ÖRÖKBE",
+        "adoptProcess": "Az Örökbefogadási Folyamat",
+        "adoptable":"Örökbefogadható Kutyák",
+        "success": "SIKERTÖRTÉNETEK",
+        "adoptedPhotos": "Már Elfogadva - Fotók",
+        "adoptedVideos": "Már Elfogadva -Videók",
+        "feedback": "Visszajelzések Az Örökbefogadóktól",
+        "involve": "HOGYAN SEGÍTHETSZ",
+        "sponsorsFostersVolunteers": "Oor Szponzorok, Nevelőszülők és Önkéntesek",
+        "sponsor": "Legyen Szponzor",
+        "volunteer": "Legyél Önkéntes",
+        "foster": "Legyen Nevelőotthon",
+        "important": "HASZNOS",
+        "videos": "Videók",
+        "contact": "KAPCSOLAT",
+        "donate": "TÁMOGASS MINKET",
+        "english": "Angol",
+        "hungarian": "Magyar"
+    },
+
     "home": {
         "line1": "Mi Hárman a",
         "line2": "Németjuhászokért",
         "line3": "Alapítvány",
-        "adoptButton": "ELFOGADTA",
+        "adoptButton": "Fogadj Örökbe",
         "spay-neuter": "Ivartalanít/Semleges program",
         "spay-neuter2": "Amióta elindultunk, sok kutyát tudtunk műteni ivartalanítási/ivartalanítási programunkon keresztül",
         "dogs-adopted": "Örökbefogadott kutyák",
@@ -15,7 +43,7 @@
         "abUsButton": "RÓLUNK",
         "foster": "Légy nevelőotthon!",
         "foster2": "Alapítványunk egyik legfontosabb része, hogy átmenetileg nevelhessük a kutyákat, amíg nem találunk nekik örök otthont.",
-        "fosterButton": "A FOSTERINGRőL",
+        "fosterButton": "Legyél Ideiglenes Befogadó",
         "breed": "A fajtáról",
         "breed2": "Ha többet tud a német juhászkutyákról, beleértve a személyiségüket és a történelmüket, akkor jobban megértheti ezt a fajtát, hogy megtudja, ez a megfelelő kutya-e a családjának.",
         "breedButton": "A FAJTÁRÓL",
@@ -160,12 +188,15 @@
         "p6": "IBAN: HU49-1170-2081-2145-3991",
         "p7": "SWIFT kód: OTPVHUHB",
         "p8": "Bank: OTP",
-        "p9": "Paypalon keresztül:",
-        "p10": "GoFundMe oldalunk: GoFundMe",
+        "p9": "Paypalon keresztül: judit.valent@gmail.com",
+        "p10": "GoFundMe oldalunk",
         "p11": "Megszervezheti adományainak (játékok, takarók, élelmiszerek, kutyaház stb.) elküldését. Kattintson ide, ha többet szeretne megtudni a gyakran szükséges tárgyakról. ",
         "link": "Adományozható tárgyak",
         "p12": "Lehet keresztszülő egy vagy több gondozásunkban lévő állatunknak. Ha nincs abban a helyzetben, hogy örökbe fogadhassa valamelyik kutyánkat, de szívét megérintette egy állat története, akit megmentettünk, akkor lehetősége van keresztszülővé válni, hogy egy hónapig vagy még tovább támogassa a kutyát.",
-        "p13": "Mivel az állatok orvosi ellátása drága, és költséges a kennelek beszerzése, még a használtak is, a számláink gyorsan felhalmozódhatnak, hogy bármilyen új állatot befogadhassunk, amelyhez támogatásukra van szükségünk. Minden amit nekünk ad segíteni fog abban, hogy a gondozásunkba vett kutyákat ellássuk mindennel amire szükségük van. Köszönjük hogy ránk gondol pénz vagy tárgyi támogatásával."
+        "p13": "Mivel az állatok orvosi ellátása drága, és költséges a kennelek beszerzése, még a használtak is, a számláink gyorsan felhalmozódhatnak, hogy bármilyen új állatot befogadhassunk, amelyhez támogatásukra van szükségünk. Minden amit nekünk ad segíteni fog abban, hogy a gondozásunkba vett kutyákat ellássuk mindennel amire szükségük van. Köszönjük hogy ránk gondol pénz vagy tárgyi támogatásával.",
+        "becomeSponsor": "Legyan Szponzor",
+        "sponsor": "Küldetésünk megvalósításában helyi, nemzeti és nemzetközi vállalatokra és egyéni szponzorokra támaszkodunk.",
+        "moreInfoButton": "Több informáciö"
     },
 
     "donate-items": {
@@ -209,8 +240,8 @@
 
     "sponsor": {
         "sponsor": "Szponzoraink",
-        "foster": "Önkénteseink",
-        "volunteer": "Legyen szponzor",
+        "foster": "Nevelőink",
+        "volunteer": "Önkénteseink",
         "p1": "Legyen szponzor",
         "p2": "Sokféle módon segíthet nekünk akár vállalati szponzorként, akár egyéni szponzorként.",
         "p3": "Vállalati szponzorainknak lehetőségünk nyílik arra, hogy weboldalunkon elhelyezhessük logóját és cégnevét, valamint megemlítsük közösségi média platformjainkon, hogy hírt adjunk szervezetéről. Így hűséges ügyfélszolgálatunktól további online és személyes forgalmat kap webhelye és üzletei felé.",
@@ -292,6 +323,21 @@
         "intro1": "Íme néhány videó azokról a kutyákról, amelyeket megmentettünk, és már örök otthonra találtunk. Kövess minket ",
         "intro2": " további videók megtekintéséhez.",
         "learnMoreButton": "TUDJ MEG TÖBBET"
+    },
+
+    "videos": {
+        "videos": "Videók",
+        "intro": "További videók megtekintése: ",
+        "breedLink": "A fajtáról",
+        "spayNeuterLink": "Spay/Neuter",
+        "microchipsLink": "A mikrochipekről",
+        "trainTips": "Kutyakiképzés és tippek",
+        "healthCareLink": "Egészségügy",
+        "breedSub": "A fajtáról",
+        "spayNeuterSub": "A Spay/ivartalanításról",
+        "microchipsSub": "A mikrochipekről",
+        "trainTipsSub": "Kutyakiképzés és tippek",
+        "healthCareSub": "Egészségügy"
     }
 }
 

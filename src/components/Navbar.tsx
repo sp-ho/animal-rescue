@@ -3,26 +3,31 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import hungarian from "../images/hungary.png";
 import english from "../images/canada.png";
+import huLogo from "../images/logos/M3N-website logo-hungarian.png";
+import enLogo from "../images/logos/M3N-website logo-english.png";
 
 const Navbar: React.FC = () => {
   const { i18n } = useTranslation(); // Access the i18n object
+  const { t } = useTranslation();
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng); // Change the language
   };
+
+  // Determine the current language
+  const currentLanguage = i18n.language;
 
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
         <Link className="navbar-brand" to={"/"}>
           <img
-            src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+            src={currentLanguage === "en" ? enLogo : huLogo} // Change logo language
             alt="Logo"
-            width="30"
-            height="24"
+            width="180"
+            height="60"
             className="d-inline-block align-text-top"
           />
-          Mi Hárman a Németjuhászokért Alapítvány
         </Link>
         <button
           className="navbar-toggler"
@@ -32,9 +37,7 @@ const Navbar: React.FC = () => {
           aria-controls="navbarNavDropdown"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        />
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
@@ -44,7 +47,7 @@ const Navbar: React.FC = () => {
                 style={{ color: "#0047AB", fontWeight: "bold" }}
                 to={"/"}
               >
-                HOME
+                {t("navbar.home")}
               </Link>
             </li>
             <li className="nav-item  dropdown">
@@ -54,32 +57,32 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                ABOUT
+                {t("navbar.about")}
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <Link className="dropdown-item" to="/about">
-                    About Us
+                    {t("navbar.abUs")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/fostering">
-                    About Fostering
+                    {t("navbar.abFoster")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/breed">
-                    About The Breed
+                    {t("navbar.abBreed")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/microchips">
-                    About Microchips
+                    {t("navbar.abMicrochips")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/spayneuter">
-                    About Spaying & Neutering
+                    {t("navbar.abSpayNeuter")}
                   </Link>
                 </li>
               </ul>
@@ -91,17 +94,17 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                ADOPT
+                {t("navbar.adopt")}
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <Link className="dropdown-item" to="/adoption">
-                    The Adoption process
+                    {t("navbar.adoptProcess")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/adoptable">
-                    Adoptable Dogs
+                    {t("navbar.adoptable")}
                   </Link>
                 </li>
               </ul>
@@ -114,22 +117,22 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                SUCCESS STORIES
+                {t("navbar.success")}
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <Link className="dropdown-item" to="/adoptedphotos">
-                    Already Adopted - Photos
+                    {t("navbar.adoptedPhotos")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/adoptedvideos">
-                    Already Adopted - Videos
+                    {t("navbar.adoptedVideos")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/feedback">
-                    Feedback from Adopters
+                    {t("navbar.feedback")}
                   </Link>
                 </li>
               </ul>
@@ -142,27 +145,27 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                GET INVOLVED
+                {t("navbar.involve")}
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <Link className="dropdown-item" to="/sponsors">
-                    Our Sponsors, Foster & Volunteers
+                    {t("navbar.sponsorsFostersVolunteers")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/sponsors">
-                    Become a Sponsor
+                    {t("navbar.sponsor")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/volunteer">
-                    Become a Volunteer
+                    {t("navbar.volunteer")}
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/fostering">
-                    Become a Foster Home
+                    {t("navbar.foster")}
                   </Link>
                 </li>
               </ul>
@@ -175,17 +178,12 @@ const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                IMPORTANT
+                {t("navbar.important")}
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <Link className="dropdown-item" to="/videos">
-                    Videos
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/donateitems">
-                    Items You May Donate
+                    {t("navbar.videos")}
                   </Link>
                 </li>
               </ul>
@@ -196,7 +194,7 @@ const Navbar: React.FC = () => {
                 aria-current="page"
                 to={"/contact"}
               >
-                CONTACT
+                {t("navbar.contact")}
               </Link>
             </li>
             <li className="nav-item">
@@ -205,27 +203,35 @@ const Navbar: React.FC = () => {
                 aria-current="page"
                 to={"/donate"}
               >
-                DONATE
+                {t("navbar.donate")}
               </Link>
             </li>
             {/* Language selection */}
             <li className="nav-item">
               <button
-                title="Hungarian"
+                title={t("navbar.hungarian")}
                 className="nav-link"
                 onClick={() => changeLanguage("hu")}
               >
-                <img src={hungarian} alt="Hungarian" className="flag-icon" />{" "}
+                <img
+                  src={hungarian}
+                  alt={t("navbar.hungarian")}
+                  className="flag-icon"
+                />{" "}
                 {/* Hungarian flag icon */}
               </button>
             </li>
             <li className="nav-item">
               <button
-                title="English"
+                title={t("navbar.english")}
                 className="nav-link"
                 onClick={() => changeLanguage("en")}
               >
-                <img src={english} alt="English" className="flag-icon" />{" "}
+                <img
+                  src={english}
+                  alt={t("navbar.english")}
+                  className="flag-icon"
+                />{" "}
                 {/* English flag icon */}
               </button>
             </li>

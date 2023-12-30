@@ -169,7 +169,7 @@ const Home = () => {
               <button
                 className="btn"
                 style={{
-                  maxWidth: "200px",
+                  maxWidth: "300px",
                   background: "linear-gradient(45deg, #cc66ff, #3399ff)",
                   backgroundSize: "200% 200%",
                   color: "white",
