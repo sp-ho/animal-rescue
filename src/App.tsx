@@ -4,7 +4,6 @@ import i18n from "./i18n";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
 import Fostering from "./pages/Fostering";
 import Breed from "./pages/Breed";
 import Microchips from "./pages/Microchips";
@@ -17,6 +16,8 @@ import Feedback from "./pages/Feedback";
 import Adoptable from "./pages/Adoptable";
 import AdoptedPhotos from "./pages/AdoptedPhotos";
 import AdoptedVideos from "./pages/AdoptedVideos";
+import Videos from "./pages/Videos";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/adoptedphotos" element={<AdoptedPhotos />} />
           <Route path="/adoptedvideos" element={<AdoptedVideos />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

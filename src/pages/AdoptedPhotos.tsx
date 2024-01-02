@@ -76,6 +76,8 @@ const AdoptedPhotos = () => {
             <div className="image-id">{image.id}</div>
           </div>
         ))}
+      </div>
+      <div className="container py-5">
         <Link to="http://bit.ly/3vyEfxz" target="_blank">
           <button
             className="btn btn-secondary mt-4 mb-4"
