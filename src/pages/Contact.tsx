@@ -121,7 +121,7 @@ const Contact = () => {
       // Perform the actual form submission, e.g., using fetch or axios
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/submit",
+          "http://localhost:5000/api/contact",
           formDataInstance
         );
 
