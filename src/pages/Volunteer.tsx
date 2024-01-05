@@ -1,8 +1,206 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 
 const Volunteer = () => {
   const { t } = useTranslation();
+
+  // Define interests with corresponding translations
+  const interests = [
+    { id: 1, text: t("volunteer.form.option1") },
+    { id: 2, text: t("volunteer.form.option2") },
+    { id: 3, text: t("volunteer.form.option3") },
+    { id: 4, text: t("volunteer.form.option4") },
+    { id: 5, text: t("volunteer.form.option5") },
+    { id: 6, text: t("volunteer.form.option6") },
+    { id: 7, text: t("volunteer.form.option7") },
+    { id: 8, text: t("volunteer.form.option8") },
+    { id: 9, text: t("volunteer.form.option9") },
+    { id: 10, text: t("volunteer.form.option10") },
+  ];
+
+  // useState for data
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    tel: "",
+    age: "",
+    selectedInterests: [] as string[],
+  });
+
+  // useState for reCAPTCHA
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+
+  // useState for submission status
+  const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
+
+  // useState for error messages
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+
+  const isEmailValid = (email: string): boolean => {
+    // Simple email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isPhoneNumberValid = (phoneNumber: string): boolean => {
+    // Simple phone number validation regex
+    const phoneRegex = /^[0-9+\-() ]*$/; // Change this regex based on your validation criteria
+    return phoneRegex.test(phoneNumber);
+  };
+
+  const validateField = (fieldName: string, value: string) => {
+    const errors: Record<string, string> = {};
+
+    // Validate email format
+    if (fieldName === "email" && value.trim() !== "" && !isEmailValid(value)) {
+      errors[fieldName] = `"${value}" is not a valid email address`;
+    }
+
+    // Validate telephone format
+    if (
+      fieldName === "tel" &&
+      value.trim() !== "" &&
+      !isPhoneNumberValid(value)
+    ) {
+      errors[fieldName] = `"${value}" is not a valid Home Tel number`;
+    }
+
+    // Clear the error message if the entered value is valid
+    if (!errors[fieldName]) {
+      setFormErrors({ ...formErrors, [fieldName]: "" });
+    } else {
+      setFormErrors({
+        ...formErrors,
+        [fieldName]: errors[fieldName],
+      });
+    }
+  };
+  const handleRecaptchaChange = (value: string | null) => {
+    setRecaptchaValue(value);
+  };
+
+  // Handle the radio buttons
+  const handleRadioChange = (category: string, value: string) => {
+    setFormData((prevData) => {
+      return {
+        ...prevData,
+        [category]: value,
+      };
+    });
+  };
+
+  // Handle the checkbox change
+  const handleCheckboxChange = (interest: string) => {
+    setFormData((prevData) => {
+      const selectedInterests = [...prevData.selectedInterests];
+      const interestIndex = selectedInterests.indexOf(interest);
+
+      if (interestIndex !== -1) {
+        // Remove interest if already selected
+        selectedInterests.splice(interestIndex, 1);
+      } else {
+        // Add interest if not selected
+        selectedInterests.push(interest);
+      }
+
+      return {
+        ...prevData,
+        selectedInterests,
+      };
+    });
+  };
+
+  const handleInputChange = (fieldName: string, value: string) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [fieldName]: value,
+    }));
+    validateField(fieldName, value);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Check for validation errors
+    const hasErrors = Object.values(formErrors).some((error) => !!error);
+    if (hasErrors || !recaptchaValue) {
+      // Handle case where there are errors or reCAPTCHA is not completed
+      console.error("Validation failed or reCAPTCHA not completed");
+      return;
+    }
+
+    // Ensure that selectedInterests is always an array
+    const interestsArray = Array.isArray(formData.selectedInterests)
+      ? formData.selectedInterests
+      : [];
+
+    console.log("Form Data:", formData);
+    console.log("Selected Interests:", interestsArray.join(", "));
+    console.log("Recaptcha Value:", recaptchaValue);
+
+    // Validation for required fields
+    const requiredFields = [
+      "firstName",
+      "lastName",
+      "email",
+      "tel",
+      "age",
+      "selectedInterests",
+    ];
+
+    // Declare errors object
+    const errors: Record<string, string> = {};
+
+    requiredFields.forEach((field) => {
+      if (!formData[field as keyof typeof formData]) {
+        errors[field] = `"${field}" is required`;
+      }
+    });
+
+    // Prepare the data for the POST request
+    const postData = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      tel: formData.tel,
+      age: formData.age,
+      selectedInterests: formData.selectedInterests,
+    };
+
+    try {
+      // Make the POST request using Axios
+      const response = await axios.post(
+        "http://localhost:5000/api/volunteer",
+        postData
+      );
+
+      // Check if the request was successful (status code 2xx)
+      if (response.status === 200) {
+        // Reset form data, clear errors, and update submission status
+        setFormData({
+          // Initial values
+          firstName: "",
+          lastName: "",
+          email: "",
+          tel: "",
+          age: "",
+          selectedInterests: [],
+        });
+        setFormErrors({});
+        setSubmissionStatus("success");
+      } else {
+        // Handle the error
+        console.error("Error submitting form:", response.statusText);
+      }
+    } catch (error) {
+      // Handle network or other errors
+      console.error("Error submitting form:", error);
+    }
+  };
 
   return (
     <>
@@ -12,7 +210,6 @@ const Volunteer = () => {
           <h1>{t("volunteer.volunteer")}</h1>
           <div>
             <div>
-              {/* Use d-flex to display p1 in one line */}
               <p className="intro d-flex">{t("volunteer.intro")}</p>
             </div>
           </div>
@@ -24,7 +221,7 @@ const Volunteer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 mt-5 mb-5">
-              {/* YouTube video here */}
+              {/* YouTube video */}
               <iframe
                 width="100%"
                 height="400"
@@ -80,6 +277,154 @@ const Volunteer = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Form Section */}
+      <div className="container-fluid bg-dark py-5" style={{ color: "white" }}>
+        <form onSubmit={handleSubmit} className="container">
+          <h2>{t("volunteer.form.title")}</h2>
+          <p>{t("volunteer.form.intro")}</p>
+          <br />
+          <div className="row mb-3">
+            {/* First Name */}
+            <div className="col-md-4 me-5">
+              <label htmlFor="firstName">{t("volunteer.form.fName")}</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                className="form-control"
+                value={formData.firstName}
+                onChange={(e) => handleInputChange("firstName", e.target.value)}
+              />
+            </div>
+            {/* Last Name */}
+            <div className="col-md-4">
+              <label htmlFor="lastName">{t("volunteer.form.lName")}</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                className="form-control"
+                value={formData.lastName}
+                onChange={(e) => handleInputChange("lastName", e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="row mb-3">
+            {/* Email */}
+            <div className="col-md-4 me-5 mb-3">
+              <label htmlFor="email">{t("volunteer.form.email")}</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                className={`form-control ${
+                  formErrors.email ? "is-invalid" : ""
+                }`}
+                value={formData.email}
+                onChange={(e) => handleInputChange("email", e.target.value)}
+              />
+              {formErrors.email && (
+                <div className="invalid-feedback">{formErrors.email}</div>
+              )}
+            </div>
+            {/* Telephone */}
+            <div className="col-md-4 ">
+              <label htmlFor="tel">{t("volunteer.form.tel")}</label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                className={`form-control ${formErrors.tel ? "is-invalid" : ""}`}
+                value={formData.tel}
+                onChange={(e) => handleInputChange("tel", e.target.value)}
+              />
+              {formErrors.tel && (
+                <div className="invalid-feedback">{formErrors.tel}</div>
+              )}
+            </div>
+          </div>
+
+          {/* Age */}
+          <div className="mb-3">
+            <label>{t("volunteer.form.age")}</label>
+            {/* Radio: Under 18 */}
+            <div className="form-check py-1 mx-2">
+              <input
+                type="radio"
+                id="under18"
+                name="age"
+                value="under18"
+                className="form-check-input"
+                onChange={() => handleRadioChange("age", "Under 18")}
+              />
+              <label htmlFor="age" className="form-check-label">
+                {t("volunteer.form.radio1")}
+              </label>
+            </div>
+
+            {/* Radio: Over 18 */}
+            <div className="form-check py-1 mx-2">
+              <input
+                type="radio"
+                id="over18"
+                name="age"
+                value="over18"
+                className="form-check-input"
+                onChange={() => handleRadioChange("age", "Over 18")}
+              />
+              <label htmlFor="age" className="form-check-label">
+                {t("volunteer.form.radio2")}
+              </label>
+            </div>
+          </div>
+
+          {/* Interests */}
+          <div className="mb-3">
+            <label>{t("volunteer.form.interests")}</label>
+            {/* Checkboxes for multiple selections */}
+            {interests.map((interest) => (
+              <div key={interest.id} className="form-check py-1 mx-2">
+                <input
+                  type="checkbox"
+                  id={`interest${interest.id}`}
+                  name={`interest${interest.id}`}
+                  value={interest.text}
+                  className="form-check-input"
+                  checked={formData.selectedInterests.includes(interest.text)}
+                  onChange={() => handleCheckboxChange(interest.text)}
+                />
+                <label
+                  htmlFor={`interest${interest.id}`}
+                  className="form-check-label"
+                >
+                  {interest.text}
+                </label>
+              </div>
+            ))}
+          </div>
+
+          <div>
+            {/* We are using the global site key for testing */}
+            <ReCAPTCHA
+              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              onChange={handleRecaptchaChange}
+            />
+            <button type="submit" className="btn btn-secondary mt-3">
+              {t("contact.submitButton")}
+            </button>
+            {submissionStatus === "success" && (
+              <div className="success-message">
+                Form submitted successfully!
+              </div>
+            )}
+          </div>
+        </form>
       </div>
     </>
   );

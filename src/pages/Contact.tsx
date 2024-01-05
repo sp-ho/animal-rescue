@@ -113,12 +113,10 @@ const Contact = () => {
     const errors = validateFormData(formDataInstance);
 
     if (Object.keys(errors).length === 0) {
-      // No validation errors, proceed with form submission logic
-
       // Include reCAPTCHA value in the form data
       formDataInstance.append("recaptcha", recaptchaValue);
 
-      // Perform the actual form submission, e.g., using fetch or axios
+      // Perform the actual form submission
       try {
         const response = await axios.post(
           "http://localhost:5000/api/contact",
@@ -156,7 +154,7 @@ const Contact = () => {
         setSubmissionStatus("error");
       }
     } else {
-      // Validation errors, handle them (e.g., display errors to the user)
+      // Validation errors
       console.error("Validation errors:", errors);
 
       // Display validation errors to the user
@@ -364,7 +362,7 @@ const Contact = () => {
             </div>
 
             <div>
-              {/* we are using the global site key for testing */}
+              {/* We are using the global site key for testing */}
               <ReCAPTCHA
                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                 onChange={handleRecaptchaChange}

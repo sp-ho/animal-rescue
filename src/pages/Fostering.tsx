@@ -9,9 +9,252 @@ const Fostering = () => {
   const { t } = useTranslation();
 
   const countries = [
-    { label: t("fostering.form.hungary"), value: "Hungary" },
-    { label: t("fostering.form.canada"), value: "Canada" },
-    { label: t("fostering.form.usa"), value: "USA" },
+    { label: t("fostering.countries.afghanistan"), value: "Afghanistan" },
+    { label: t("fostering.countries.albania"), value: "Albania" },
+    { label: t("fostering.countries.algeria"), value: "Algeria" },
+    { label: t("fostering.countries.andorra"), value: "Andorra" },
+    { label: t("fostering.countries.angola"), value: "Angola" },
+    {
+      label: t("fostering.countries.antiguaAndBarbuda"),
+      value: "Antigua and Barbuda",
+    },
+    { label: t("fostering.countries.armenia"), value: "Armenia" },
+    { label: t("fostering.countries.australia"), value: "Australia" },
+    { label: t("fostering.countries.austria"), value: "Austria" },
+    { label: t("fostering.countries.azerbaijan"), value: "Azerbaijan" },
+    { label: t("fostering.countries.bahamas"), value: "Bahamas" },
+    { label: t("fostering.countries.bahrain"), value: "Bahrain" },
+    { label: t("fostering.countries.bangladesh"), value: "Bangladesh" },
+    { label: t("fostering.countries.belarus"), value: "Belarus" },
+    { label: t("fostering.countries.belgium"), value: "Belgium" },
+    { label: t("fostering.countries.belize"), value: "Belize" },
+    { label: t("fostering.countries.benin"), value: "Benin" },
+    { label: t("fostering.countries.bhutan"), value: "Bhutan" },
+    { label: t("fostering.countries.bolivia"), value: "Bolivia" },
+    {
+      label: t("fostering.countries.bosniaAndHerzegovina"),
+      value: "Bosnia and Herzegovina",
+    },
+    { label: t("fostering.countries.botswana"), value: "Botswana" },
+    { label: t("fostering.countries.brazil"), value: "Brazil" },
+    { label: t("fostering.countries.brunei"), value: "Brunei" },
+    { label: t("fostering.countries.bulgaria"), value: "Bulgaria" },
+    { label: t("fostering.countries.burkinaFaso"), value: "Burkina Faso" },
+    { label: t("fostering.countries.burundi"), value: "Burundi" },
+    { label: t("fostering.countries.cambodia"), value: "Cambodia" },
+    { label: t("fostering.countries.cameroon"), value: "Cameroon" },
+    { label: t("fostering.countries.canada"), value: "Canada" },
+    { label: t("fostering.countries.capeVerde"), value: "Cape Verde" },
+    {
+      label: t("fostering.countries.centralAfricanRepublic"),
+      value: "Central African Republic",
+    },
+    { label: t("fostering.countries.chad"), value: "Chad" },
+    { label: t("fostering.countries.chile"), value: "Chile" },
+    { label: t("fostering.countries.china"), value: "China" },
+    { label: t("fostering.countries.colombia"), value: "Colombia" },
+    { label: t("fostering.countries.comoros"), value: "Comoros" },
+    { label: t("fostering.countries.costaRica"), value: "Costa Rica" },
+    {
+      label: t("fostering.countries.ivoryCoast"),
+      value: "Côte d’Ivoire/Ivory Coast",
+    },
+    { label: t("fostering.countries.croatia"), value: "Croatia" },
+    { label: t("fostering.countries.cuba"), value: "Cuba" },
+    { label: t("fostering.countries.cyprus"), value: "Cyprus" },
+    {
+      label: t("fostering.countries.czechRepublic"),
+      value: "Czechia/Czech Republic",
+    },
+    {
+      label: t("fostering.countries.democraticRepublicOfTheCongo"),
+      value: "Democratic Republic of the Congo",
+    },
+    { label: t("fostering.countries.denmark"), value: "Denmark" },
+    { label: t("fostering.countries.djibouti"), value: "Djibouti" },
+    { label: t("fostering.countries.dominica"), value: "Dominica" },
+    {
+      label: t("fostering.countries.dominicanRepublic"),
+      value: "DominicanRepublic",
+    },
+    { label: t("fostering.countries.ecuador"), value: "Ecuador" },
+    { label: t("fostering.countries.egypt"), value: "Egypt" },
+    { label: t("fostering.countries.elSalvador"), value: "El Salvador" },
+    {
+      label: t("fostering.countries.equatorialGuinea"),
+      value: "Equatorial Guinea",
+    },
+    { label: t("fostering.countries.eritrea"), value: "Eritrea" },
+    { label: t("fostering.countries.estonia"), value: "Estonia" },
+    {
+      label: t("fostering.countries.eswatini"),
+      value: "Eswatini (formerly Swaziland)",
+    },
+    { label: t("fostering.countries.ethiopia"), value: "Ethiopia" },
+    { label: t("fostering.countries.fiji"), value: "Fiji" },
+    { label: t("fostering.countries.finland"), value: "Finland" },
+    { label: t("fostering.countries.france"), value: "France" },
+    { label: t("fostering.countries.gabon"), value: "Gabon" },
+    { label: t("fostering.countries.gambia"), value: "Gambia" },
+    { label: t("fostering.countries.georgia"), value: "Georgia" },
+    { label: t("fostering.countries.germany"), value: "Germany" },
+    { label: t("fostering.countries.ghana"), value: "Ghana" },
+    { label: t("fostering.countries.greece"), value: "Greece" },
+    { label: t("fostering.countries.grenada"), value: "Grenada" },
+    { label: t("fostering.countries.guatemala"), value: "Guatemala" },
+    { label: t("fostering.countries.guinea"), value: "Guinea" },
+    { label: t("fostering.countries.guineaBissau"), value: "Guinea-Bissau" },
+    { label: t("fostering.countries.guyana"), value: "Guyana" },
+    { label: t("fostering.countries.haiti"), value: "Haiti" },
+    { label: t("fostering.countries.honduras"), value: "Honduras" },
+    { label: t("fostering.countries.hungary"), value: "Hungary" },
+    { label: t("fostering.countries.iceland"), value: "Iceland" },
+    { label: t("fostering.countries.india"), value: "India" },
+    { label: t("fostering.countries.indonesia"), value: "Indonesia" },
+    { label: t("fostering.countries.iran"), value: "Iran" },
+    { label: t("fostering.countries.iraq"), value: "Iraq" },
+    { label: t("fostering.countries.ireland"), value: "Ireland" },
+    { label: t("fostering.countries.israel"), value: "Israel" },
+    { label: t("fostering.countries.italy"), value: "Italy" },
+    { label: t("fostering.countries.jamaica"), value: "Jamaica" },
+    { label: t("fostering.countries.japan"), value: "Japan" },
+    { label: t("fostering.countries.jordan"), value: "Jordan" },
+    { label: t("fostering.countries.kazakhstan"), value: "Kazakhstan" },
+    { label: t("fostering.countries.kenya"), value: "Kenya" },
+    { label: t("fostering.countries.kiribati"), value: "Kiribati" },
+    { label: t("fostering.countries.kuwait"), value: "Kuwait" },
+    { label: t("fostering.countries.kyrgyzstan"), value: "Kyrgyzstan" },
+    { label: t("fostering.countries.laos"), value: "Laos" },
+    { label: t("fostering.countries.latvia"), value: "Latvia" },
+    { label: t("fostering.countries.lebanon"), value: "Lebanon" },
+    { label: t("fostering.countries.lesotho"), value: "Lesotho" },
+    { label: t("fostering.countries.liberia"), value: "Liberia" },
+    { label: t("fostering.countries.libya"), value: "Libya" },
+    { label: t("fostering.countries.liechtenstein"), value: "Liechtenstein" },
+    { label: t("fostering.countries.lithuania"), value: "Lithuania" },
+    { label: t("fostering.countries.luxembourg"), value: "Luxembourg" },
+    { label: t("fostering.countries.madagascar"), value: "Madagascar" },
+    { label: t("fostering.countries.malawi"), value: "Malawi" },
+    { label: t("fostering.countries.malaysia"), value: "Malaysia" },
+    { label: t("fostering.countries.maldives"), value: "Maldives" },
+    { label: t("fostering.countries.mali"), value: "Mali" },
+    { label: t("fostering.countries.malta"), value: "Malta" },
+    {
+      label: t("fostering.countries.marshallIslands"),
+      value: "Marshall Islands",
+    },
+    { label: t("fostering.countries.mauritania"), value: "Mauritania" },
+    { label: t("fostering.countries.mauritius"), value: "Mauritius" },
+    { label: t("fostering.countries.mexico"), value: "Mexico" },
+    { label: t("fostering.countries.micronesia"), value: "Micronesia" },
+    { label: t("fostering.countries.moldova"), value: "Moldova" },
+    { label: t("fostering.countries.monaco"), value: "Monaco" },
+    { label: t("fostering.countries.mongolia"), value: "Mongolia" },
+    { label: t("fostering.countries.montenegro"), value: "Montenegro" },
+    { label: t("fostering.countries.morocco"), value: "Morocco" },
+    { label: t("fostering.countries.mozambique"), value: "Mozambique" },
+    { label: t("fostering.countries.myanmar"), value: "Myanmar" },
+    { label: t("fostering.countries.namibia"), value: "Namibia" },
+    { label: t("fostering.countries.nauru"), value: "Nauru" },
+    { label: t("fostering.countries.nepal"), value: "Nepal" },
+    { label: t("fostering.countries.netherlands"), value: "Netherlands" },
+    { label: t("fostering.countries.newZealand"), value: "New Zealand" },
+    { label: t("fostering.countries.nicaragua"), value: "Nicaragua" },
+    { label: t("fostering.countries.niger"), value: "Niger" },
+    { label: t("fostering.countries.nigeria"), value: "Nigeria" },
+    { label: t("fostering.countries.northKorea"), value: "North Korea" },
+    {
+      label: t("fostering.countries.northMacedonia"),
+      value: "North Macedonia",
+    },
+    { label: t("fostering.countries.norway"), value: "Norway" },
+    { label: t("fostering.countries.oman"), value: "Oman" },
+    { label: t("fostering.countries.pakistan"), value: "Pakistan" },
+    { label: t("fostering.countries.palau"), value: "Palau" },
+    { label: t("fostering.countries.palestine"), value: "Palestine" },
+    { label: t("fostering.countries.panama"), value: "Panama" },
+    {
+      label: t("fostering.countries.papuaNewGuinea"),
+      value: "Papua New Guinea",
+    },
+    { label: t("fostering.countries.paraguay"), value: "Paraguay" },
+    { label: t("fostering.countries.peru"), value: "Peru" },
+    { label: t("fostering.countries.philippines"), value: "Philippines" },
+    { label: t("fostering.countries.poland"), value: "Poland" },
+    { label: t("fostering.countries.portugal"), value: "Portugal" },
+    { label: t("fostering.countries.qatar"), value: "Qatar" },
+    {
+      label: t("fostering.countries.republicOfTheCongo"),
+      value: "Republic of the Congo",
+    },
+    { label: t("fostering.countries.romania"), value: "Romania" },
+    { label: t("fostering.countries.russia"), value: "Russia" },
+    { label: t("fostering.countries.rwanda"), value: "Rwanda" },
+    {
+      label: t("fostering.countries.saintKittsAndNevis"),
+      value: "Saint Kitts and Nevis",
+    },
+    { label: t("fostering.countries.saintLucia"), value: "SaintLucia" },
+    {
+      label: t("fostering.countries.saintVincentAndTheGrenadines"),
+      value: "Saint Vincent and the Grenadines",
+    },
+    { label: t("fostering.countries.samoa"), value: "Samoa" },
+    { label: t("fostering.countries.sanMarino"), value: "SanMarino" },
+    {
+      label: t("fostering.countries.saoTomeAndPrincipe"),
+      value: "São Tomé and Príncipe",
+    },
+    { label: t("fostering.countries.saudiArabia"), value: "Saudi Arabia" },
+    { label: t("fostering.countries.senegal"), value: "Senegal" },
+    { label: t("fostering.countries.serbia"), value: "Serbia" },
+    { label: t("fostering.countries.seychelles"), value: "Seychelles" },
+    { label: t("fostering.countries.sierraLeone"), value: "Sierra Leone" },
+    { label: t("fostering.countries.singapore"), value: "Singapore" },
+    { label: t("fostering.countries.slovakia"), value: "Slovakia" },
+    { label: t("fostering.countries.slovenia"), value: "Slovenia" },
+    { label: t("fostering.countries.solomonIslands"), value: "SolomonIslands" },
+    { label: t("fostering.countries.somalia"), value: "Somalia" },
+    { label: t("fostering.countries.southAfrica"), value: "South Africa" },
+    { label: t("fostering.countries.southKorea"), value: "South Korea" },
+    { label: t("fostering.countries.southSudan"), value: "South Sudan" },
+    { label: t("fostering.countries.spain"), value: "Spain" },
+    { label: t("fostering.countries.sriLanka"), value: "Sri Lanka" },
+    { label: t("fostering.countries.sudan"), value: "Sudan" },
+    { label: t("fostering.countries.suriname"), value: "Suriname" },
+    { label: t("fostering.countries.sweden"), value: "Sweden" },
+    { label: t("fostering.countries.switzerland"), value: "Switzerland" },
+    { label: t("fostering.countries.syria"), value: "Syria" },
+    { label: t("fostering.countries.tajikistan"), value: "Tajikistan" },
+    { label: t("fostering.countries.tanzania"), value: "Tanzania" },
+    { label: t("fostering.countries.thailand"), value: "Thailand" },
+    {
+      label: t("fostering.countries.eastTimor"),
+      value: "Timor-Leste/East Timor",
+    },
+    { label: t("fostering.countries.togo"), value: "Togo" },
+    { label: t("fostering.countries.tonga"), value: "Tonga" },
+    {
+      label: t("fostering.countries.trinidadAndTobago"),
+      value: "Trinidad and Tobago",
+    },
+    { label: t("fostering.countries.tunisia"), value: "Tunisia" },
+    { label: t("fostering.countries.turkey"), value: "Turkey" },
+    { label: t("fostering.countries.turkmenistan"), value: "Turkmenistan" },
+    { label: t("fostering.countries.tuvalu"), value: "Tuvalu" },
+    { label: t("fostering.countries.uganda"), value: "Uganda" },
+    { label: t("fostering.countries.ukraine"), value: "Ukraine" },
+    { label: t("fostering.countries.uae"), value: "United Arab Emirates" },
+    { label: t("fostering.countries.uk"), value: "United Kingdom" },
+    { label: t("fostering.countries.usa"), value: "United States of America" },
+    { label: t("fostering.countries.uruguay"), value: "Uruguay" },
+    { label: t("fostering.countries.uzbekistan"), value: "Uzbekistan" },
+    { label: t("fostering.countries.vanuatu"), value: "Vanuatu" },
+    { label: t("fostering.countries.venezuela"), value: "Venezuela" },
+    { label: t("fostering.countries.vietnam"), value: "Vietnam" },
+    { label: t("fostering.countries.yemen"), value: "Yemen" },
+    { label: t("fostering.countries.zambia"), value: "Zambia" },
+    { label: t("fostering.countries.zimbabwe"), value: "Zimbabwe" },
   ];
 
   // useState for data
@@ -34,7 +277,7 @@ const Fostering = () => {
     animalExp: string;
     transport: string;
   }>({
-    // initial values
+    // Initial values
     firstName: "",
     lastName: "",
     email: "",
@@ -44,7 +287,7 @@ const Fostering = () => {
     city: "",
     province: "",
     postal: "",
-    country: "",
+    country: "Hungary",
     wayOfReach: "",
     age: "",
     house: "",
@@ -69,15 +312,12 @@ const Fostering = () => {
     });
   };
 
-  const handleCheckboxChange = (
-    category: string,
-    value: string,
-    isChecked: boolean
-  ) => {
+  // Handle the radio buttons
+  const handleRadioChange = (category: string, value: string) => {
     setFormData((prevData) => {
       return {
         ...prevData,
-        [category]: isChecked ? value : "",
+        [category]: value,
       };
     });
   };
@@ -90,13 +330,13 @@ const Fostering = () => {
   };
 
   const isEmailValid = (email: string): boolean => {
-    // Simple email validation regex
+    // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
   const isPhoneNumberValid = (phoneNumber: string): boolean => {
-    // Simple phone number validation regex
+    // Phone number validation regex
     const phoneRegex = /^[0-9+\-() ]*$/; // Change this regex based on your validation criteria
     return phoneRegex.test(phoneNumber);
   };
@@ -148,7 +388,7 @@ const Fostering = () => {
     } else {
       setFormErrors({
         ...formErrors,
-        [fieldName as string]: errors[fieldName],
+        [fieldName]: errors[fieldName],
       });
     }
   };
@@ -156,6 +396,11 @@ const Fostering = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!recaptchaValue) {
+      // Handle case where reCAPTCHA is not completed
+      console.error("reCAPTCHA not completed");
+      return;
+    }
     console.log("Form Data:", formData);
     console.log("Recaptcha Value:", recaptchaValue);
 
@@ -170,7 +415,6 @@ const Fostering = () => {
       "city",
       "province",
       "postal",
-      "country",
       "wayOfReach",
       "age",
       "house",
@@ -180,23 +424,17 @@ const Fostering = () => {
       "transport",
     ];
 
-    const missingFields = requiredFields.filter(
-      (field) =>
+    // Declare errors object
+    const errors: Record<string, string> = {};
+
+    requiredFields.forEach((field) => {
+      if (
         !formData[field as keyof typeof formData] ||
         formData[field as keyof typeof formData].trim() === ""
-    );
-
-    if (missingFields.length > 0) {
-      // Handle case where required fields are not filled
-      console.error("Required fields are missing:", missingFields);
-      return;
-    }
-
-    if (!recaptchaValue) {
-      // Handle case where reCAPTCHA is not completed
-      console.error("reCAPTCHA not completed");
-      return;
-    }
+      ) {
+        errors[field] = `"${field}" is required`;
+      }
+    });
 
     // Prepare the data for the POST request
     const postData = {
@@ -221,13 +459,16 @@ const Fostering = () => {
 
     try {
       // Make the POST request using Axios
-      const response = await axios.post("/api/fostering", postData);
+      const response = await axios.post(
+        "http://localhost:5000/api/fostering",
+        postData
+      );
 
       // Check if the request was successful (status code 2xx)
       if (response.status === 200) {
         // Reset form data, clear errors, and update submission status
         setFormData({
-          // initial values
+          // Initial values
           firstName: "",
           lastName: "",
           email: "",
@@ -249,7 +490,7 @@ const Fostering = () => {
         setFormErrors({});
         setSubmissionStatus("success");
       } else {
-        // Handle the error, e.g., display an error message
+        // Handle the error
         console.error("Error submitting form:", response.statusText);
       }
     } catch (error) {
@@ -257,8 +498,6 @@ const Fostering = () => {
       console.error("Error submitting form:", error);
     }
   };
-  // Set submission status to success
-  // setSubmissionStatus("success");
 
   return (
     <>
@@ -268,7 +507,6 @@ const Fostering = () => {
           <h1>{t("fostering.aboutFostering")}</h1>
           <div>
             <div>
-              {/* Use d-flex to display p1 in one line */}
               <p className="intro d-flex">{t("fostering.p1")}</p>
             </div>
           </div>
@@ -279,7 +517,7 @@ const Fostering = () => {
       <div className="container-fluid bg-light py-5">
         <div className="container">
           <div className="row">
-            {/* Image on the left with reduced margin */}
+            {/* Image on the left */}
             <div className="col-md-6">
               <img
                 src={fosterImage}
@@ -342,12 +580,14 @@ const Fostering = () => {
                 id="email"
                 name="email"
                 required
-                className="form-control"
+                className={`form-control ${
+                  formErrors.email ? "is-invalid" : ""
+                }`}
                 value={formData.email}
                 onChange={(e) => handleEmailChange(e.target.value)}
               />
               {formErrors.email && (
-                <div className="error-message">{formErrors.email}</div>
+                <div className="invalid-feedback">{formErrors.email}</div>
               )}
             </div>
             <div className="col-md-4 ">
@@ -356,12 +596,12 @@ const Fostering = () => {
                 type="tel"
                 id="cell"
                 name="cell"
-                className="form-control"
+                className={`form-control ${formErrors.tel ? "is-invalid" : ""}`}
                 value={formData.cell}
                 onChange={(e) => handleCellChange(e.target.value)}
               />
               {formErrors.cell && (
-                <div className="error-message">{formErrors.cell}</div>
+                <div className="invalid-feedback">{formErrors.cell}</div>
               )}
             </div>
             <div className="col-md-4 me-5 mb-3">
@@ -370,12 +610,12 @@ const Fostering = () => {
                 type="tel"
                 id="homeTel"
                 name="homeTel"
-                className="form-control"
+                className={`form-control ${formErrors.tel ? "is-invalid" : ""}`}
                 value={formData.tel}
                 onChange={(e) => handleTelChange(e.target.value)}
               />
               {formErrors.tel && (
-                <div className="error-message">{formErrors.tel}</div>
+                <div className="invalid-feedback">{formErrors.tel}</div>
               )}
             </div>
             <div className="col-md-4">
@@ -427,17 +667,19 @@ const Fostering = () => {
               />
             </div>
             <div className="col-md-4">
-              <label htmlFor="country">{t("fostering.form.country")}</label>
-              {/* Use Select component for the country dropdown */}
+              <label htmlFor="country">
+                {t("fostering.countries.hungary")}
+              </label>
+              {/* Use Select component for the country dropdown options */}
               <Select
                 options={countries}
                 isSearchable
-                placeholder={t("fostering.form.hungary")} // Define onChange handler to update the selected country in the state
+                placeholder={t("fostering.countries.hungary")} // Define onChange handler to update the selected country in the state
                 onChange={handleCountryChange}
                 styles={{
                   option: (provided) => ({
                     ...provided,
-                    color: "black", // set text color to black
+                    color: "black", // Set text color to black
                   }),
                 }}
               />
@@ -447,55 +689,45 @@ const Fostering = () => {
           {/* Preferred way to reach you */}
           <div className="mb-3">
             <label>{t("fostering.form.wayOfReach")}</label>
-            {/* Checkbox: Email */}
+            {/* Radio: Email */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="email"
                 name="wayOfReach"
                 value="email"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("wayOfReach", "email", e.target.checked)
-                }
+                onChange={() => handleRadioChange("wayOfReach", "email")}
               />
               <label htmlFor="email" className="form-check-label">
                 {t("fostering.form.email2")}
               </label>
             </div>
 
-            {/* Checkbox: Cell */}
+            {/* Radio: Cell */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="cell"
                 name="wayOfReach"
                 value="cell"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("wayOfReach", "cell", e.target.checked)
-                }
+                onChange={() => handleRadioChange("wayOfReach", "cell")}
               />
               <label htmlFor="cell" className="form-check-label">
                 {t("fostering.form.cell2")}
               </label>
             </div>
 
-            {/* Checkbox: Home Tel */}
+            {/* Radio: Home Tel */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="homeTel"
                 name="wayOfReach"
                 value="homeTel"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange(
-                    "wayOfReach",
-                    "homeTel",
-                    e.target.checked
-                  )
-                }
+                onChange={() => handleRadioChange("wayOfReach", "homeTel")}
               />
               <label htmlFor="homeTel" className="form-check-label">
                 {t("fostering.form.tel2")}
@@ -506,81 +738,71 @@ const Fostering = () => {
           {/* Age */}
           <div className="mb-3">
             <label htmlFor="age">{t("fostering.form.age")}</label>
-            {/* Checkbox: Under 18 */}
+            {/* Radio: Under 18 */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="under18"
                 name="age"
                 value="under18"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("age", "under18", e.target.checked)
-                }
+                onChange={() => handleRadioChange("age", "Under 18")}
               />
               <label htmlFor="under18" className="form-check-label">
                 {t("fostering.form.<18")}
               </label>
             </div>
-            {/* Checkbox: 18-29 */}
+            {/* Radio: 18-29 */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="18_29"
                 name="age"
                 value="18_29"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("age", "18_29", e.target.checked)
-                }
+                onChange={() => handleRadioChange("age", "18-29")}
               />
               <label htmlFor="18_29" className="form-check-label">
                 18 - 29
               </label>
             </div>
-            {/* Checkbox: 30-44 */}
+            {/* Radio: 30-44 */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="30_44"
                 name="age"
                 value="30_44"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("age", "30_44", e.target.checked)
-                }
+                onChange={() => handleRadioChange("age", "30-44")}
               />
               <label htmlFor="30_44" className="form-check-label">
                 30 - 44
               </label>
             </div>
-            {/* Checkbox: 45-64 */}
+            {/* Radio: 45-64 */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="45_64"
                 name="age"
                 value="45_64"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("age", "45_64", e.target.checked)
-                }
+                onChange={() => handleRadioChange("age", "45-64")}
               />
               <label htmlFor="45_64" className="form-check-label">
                 45 - 64
               </label>
             </div>
-            {/* Checkbox: 65 and over */}
+            {/* Radio: 65 and over */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="over65"
                 name="age"
                 value="over65"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("age", "over65", e.target.checked)
-                }
+                onChange={() => handleRadioChange("age", "65 and over")}
               />
               <label htmlFor="over65" className="form-check-label">
                 {t("fostering.form.>65")}
@@ -591,33 +813,29 @@ const Fostering = () => {
           {/* Live in a house? */}
           <div className="mb-3">
             <label htmlFor="house">{t("fostering.form.house")}</label>
-            {/* Checkbox: Yes */}
+            {/* Radio: Yes */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="yesHouse"
                 name="house"
                 value="yesHouse"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("house", "yesHouse", e.target.checked)
-                }
+                onChange={() => handleRadioChange("house", "yes")}
               />
               <label htmlFor="house" className="form-check-label">
                 {t("fostering.form.yes")}
               </label>
             </div>
-            {/* Checkbox: No */}
+            {/* Radio: No */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="noHouse"
                 name="house"
                 value="noHouse"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("house", "noHouse", e.target.checked)
-                }
+                onChange={() => handleRadioChange("house", "no")}
               />
               <label htmlFor="house" className="form-check-label">
                 {t("fostering.form.no")}
@@ -630,53 +848,43 @@ const Fostering = () => {
             <label htmlFor="condoApart">
               {t("fostering.form.condo/apartment")}
             </label>
-            {/* Checkbox: Condo */}
+            {/* Radio: Condo */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="condo"
                 name="condoApart"
                 value="condo"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("condoApart", "condo", e.target.checked)
-                }
+                onChange={() => handleRadioChange("condoApart", "condo")}
               />
               <label htmlFor="condoApart" className="form-check-label">
                 {t("fostering.form.condo")}
               </label>
             </div>
-            {/* Checkbox: Apartment */}
+            {/* Radio: Apartment */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="apart"
                 name="condoApart"
                 value="apart"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("condoApart", "apart", e.target.checked)
-                }
+                onChange={() => handleRadioChange("condoApart", "apartment")}
               />
               <label htmlFor="condoApart" className="form-check-label">
                 {t("fostering.form.apartment")}
               </label>
             </div>
-            {/* Checkbox: No */}
+            {/* Radio: No */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="noCondoApart"
                 name="condoApart"
                 value="noCondoApart"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange(
-                    "condoApart",
-                    "noCondoApart",
-                    e.target.checked
-                  )
-                }
+                onChange={() => handleRadioChange("condoApart", "No")}
               />
               <label htmlFor="condoApart" className="form-check-label">
                 {t("fostering.form.no")}
@@ -686,82 +894,71 @@ const Fostering = () => {
 
           {/* Animals allowed? */}
           <div className="mb-3">
-            <label htmlFor="animalAllowed">
-              {t("fostering.form.animalAllowed")}
+            <label htmlFor="animalsAllowed">
+              {t("fostering.form.animalsAllowed")}
             </label>
-            {/* Checkbox: Yes */}
+            {/* Radio: Yes */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="yesAnimal"
-                name="animalAllowed"
-                value="yesAnimal"
+                name="animalsAllowed"
+                value="Animals Allowed"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange(
-                    "animalAllowed",
-                    "yesAnimal",
-                    e.target.checked
-                  )
+                onChange={() =>
+                  handleRadioChange("animalsAllowed", "Animals Allowed")
                 }
               />
-              <label htmlFor="animalAllowed" className="form-check-label">
+              <label htmlFor="animalsAllowed" className="form-check-label">
                 {t("fostering.form.yes")}
               </label>
             </div>
-            {/* Checkbox: No */}
+            {/* Radio: No */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="noAnimal"
-                name="animalAllowed"
-                value="noAnimal"
+                name="animalsAllowed"
+                value="Animals Not Allowed"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange(
-                    "animalAllowed",
-                    "noAnimal",
-                    e.target.checked
-                  )
+                onChange={() =>
+                  handleRadioChange("animalsAllowed", "Animals Not Allowed")
                 }
               />
-              <label htmlFor="animalAllowed" className="form-check-label">
+              <label htmlFor="animalsAllowed" className="form-check-label">
                 {t("fostering.form.no")}
               </label>
             </div>
           </div>
+
           {/* Experience with animals? */}
           <div className="mb-3">
-            <label htmlFor="experience">{t("fostering.form.experience")}</label>
-            {/* Checkbox: Yes */}
+            <label htmlFor="animalExp">{t("fostering.form.experience")}</label>
+            {/* Radio: Yes */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="yesExp"
-                name="experience"
-                value="yesExp"
+                name="animalExp"
+                value="Experienced"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("experience", "yesExp", e.target.checked)
-                }
+                onChange={() => handleRadioChange("animalExp", "Experienced")}
               />
-              <label htmlFor="experience" className="form-check-label">
+              <label htmlFor="animalExp" className="form-check-label">
                 {t("fostering.form.yes")}
               </label>
             </div>
-            {/* Checkbox: No */}
+            {/* Radio: No */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="noExp"
-                name="experience"
-                value="noExp"
+                name="animalExp"
+                value="No Experience"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange("experience", "noExp", e.target.checked)
-                }
+                onChange={() => handleRadioChange("animalExp", "No Experience")}
               />
-              <label htmlFor="experience" className="form-check-label">
+              <label htmlFor="animalExp" className="form-check-label">
                 {t("fostering.form.no")}
               </label>
             </div>
@@ -769,53 +966,45 @@ const Fostering = () => {
 
           {/* Transportation */}
           <div className="mb-3">
-            <label htmlFor="transportation">
+            <label htmlFor="transport">
               {t("fostering.form.transportation")}
             </label>
-            {/* Checkbox: Yes */}
+            {/* Radio: Yes */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="yesTransport"
-                name="transportation"
-                value="yesTransport"
+                name="transport"
+                value="Transportation OK"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange(
-                    "transportation",
-                    "yesTransport",
-                    e.target.checked
-                  )
+                onChange={() =>
+                  handleRadioChange("transport", "Transportation OK")
                 }
               />
-              <label htmlFor="transportation" className="form-check-label">
+              <label htmlFor="transport" className="form-check-label">
                 {t("fostering.form.yes")}
               </label>
             </div>
-            {/* Checkbox: No */}
+            {/* Radio: No */}
             <div className="form-check py-1 mx-2">
               <input
-                type="checkbox"
+                type="radio"
                 id="noTransport"
-                name="transportation"
-                value="noTransport"
+                name="transport"
+                value="No Transportation"
                 className="form-check-input"
-                onChange={(e) =>
-                  handleCheckboxChange(
-                    "transportation",
-                    "noTransport",
-                    e.target.checked
-                  )
+                onChange={() =>
+                  handleRadioChange("transport", "No Transportation")
                 }
               />
-              <label htmlFor="transportation" className="form-check-label">
+              <label htmlFor="transport" className="form-check-label">
                 {t("fostering.form.no")}
               </label>
             </div>
           </div>
 
           <div>
-            {/* we are using the global site key for testing */}
+            {/* We are using the global site key for testing */}
             <ReCAPTCHA
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
               onChange={handleRecaptchaChange}
