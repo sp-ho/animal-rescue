@@ -66,7 +66,7 @@ const Volunteer = () => {
       value.trim() !== "" &&
       !isPhoneNumberValid(value)
     ) {
-      errors[fieldName] = `"${value}" is not a valid Home Tel number`;
+      errors[fieldName] = `"${value}" is not a valid telephone number`;
     }
 
     // Clear the error message if the entered value is valid
