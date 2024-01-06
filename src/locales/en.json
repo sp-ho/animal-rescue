@@ -21,6 +21,7 @@
         "foster": "Become a Foster Home",
         "important": "IMPORTANT",
         "videos": "Videos",
+        "sendPhotos": "Send Us Your Photos",
         "contact": "CONTACT",
         "donate": "DONATE",
         "english": "English",
@@ -587,5 +588,17 @@
         "microchipsSub": "About Microchips",
         "trainTipsSub": "Dog Training and Tips",
         "healthCareSub": "Health Care"
+    },
+
+    "sendPhotos": {
+        "sendPhotos": "Send Us Your Photos",
+        "fName": "First name",
+        "lName": "Last name",
+        "email": "Email",
+        "tel": "Telephone",
+        "subject": "Subject",
+        "comments": "Comments/Questions",
+        "upload": "Upload an image (optional)",
+        "button": "Submit"
     }
 }

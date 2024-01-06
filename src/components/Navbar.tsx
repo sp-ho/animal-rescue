@@ -186,6 +186,11 @@ const Navbar: React.FC = () => {
                     {t("navbar.videos")}
                   </Link>
                 </li>
+                <li>
+                  <Link className="dropdown-item" to="/sendphotos">
+                    {t("navbar.sendPhotos")}
+                  </Link>
+                </li>
               </ul>
             </li>
             <li className="nav-item">

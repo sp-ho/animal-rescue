@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Select from "react-select";
 import fosterImage from "../images/fostering/volunteer.jpg";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -303,6 +303,40 @@ const Fostering = () => {
   // useState for error messages
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
 
+  // useState for reCAPTCHA
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+
+  // useEffect hook for handling form submission success
+  useEffect(() => {
+    console.log("Submission Status:", submissionStatus);
+    if (submissionStatus === "success") {
+      // Reset form data, clear errors, and update submission status
+      setFormData({
+        // Initial values
+        firstName: "",
+        lastName: "",
+        email: "",
+        cell: "",
+        tel: "",
+        address: "",
+        city: "",
+        province: "",
+        postal: "",
+        country: "Hungary",
+        wayOfReach: "",
+        age: "",
+        house: "",
+        condoApart: "",
+        animalsAllowed: "",
+        animalExp: "",
+        transport: "",
+      });
+      // Reset reCAPTCHA
+      setRecaptchaValue(null);
+      setFormErrors({});
+    }
+  }, [submissionStatus]);
+
   const handleCountryChange = (
     selectedOption: { label: string; value: string } | null
   ) => {
@@ -321,9 +355,6 @@ const Fostering = () => {
       };
     });
   };
-
-  // useState for reCAPTCHA
-  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const handleRecaptchaChange = (value: string | null) => {
     setRecaptchaValue(value);
@@ -466,28 +497,6 @@ const Fostering = () => {
 
       // Check if the request was successful (status code 2xx)
       if (response.status === 200) {
-        // Reset form data, clear errors, and update submission status
-        setFormData({
-          // Initial values
-          firstName: "",
-          lastName: "",
-          email: "",
-          cell: "",
-          tel: "",
-          address: "",
-          city: "",
-          province: "",
-          postal: "",
-          country: "",
-          wayOfReach: "",
-          age: "",
-          house: "",
-          condoApart: "",
-          animalsAllowed: "",
-          animalExp: "",
-          transport: "",
-        });
-        setFormErrors({});
         setSubmissionStatus("success");
       } else {
         // Handle the error

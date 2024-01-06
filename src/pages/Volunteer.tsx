@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 
@@ -39,6 +39,25 @@ const Volunteer = () => {
 
   // useState for error messages
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+
+  // useEffect hook for handling form submission success
+  useEffect(() => {
+    if (submissionStatus === "success") {
+      // Reset form data, clear errors, and update submission status
+      setFormData({
+        // Initial values
+        firstName: "",
+        lastName: "",
+        email: "",
+        tel: "",
+        age: "",
+        selectedInterests: [],
+      });
+      // Reset reCAPTCHA
+      setRecaptchaValue(null);
+      setFormErrors({});
+    }
+  }, [submissionStatus]);
 
   const isEmailValid = (email: string): boolean => {
     // Simple email validation regex
@@ -180,17 +199,6 @@ const Volunteer = () => {
 
       // Check if the request was successful (status code 2xx)
       if (response.status === 200) {
-        // Reset form data, clear errors, and update submission status
-        setFormData({
-          // Initial values
-          firstName: "",
-          lastName: "",
-          email: "",
-          tel: "",
-          age: "",
-          selectedInterests: [],
-        });
-        setFormErrors({});
         setSubmissionStatus("success");
       } else {
         // Handle the error

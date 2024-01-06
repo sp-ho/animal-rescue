@@ -17,6 +17,7 @@ import Adoptable from "./pages/Adoptable";
 import AdoptedPhotos from "./pages/AdoptedPhotos";
 import AdoptedVideos from "./pages/AdoptedVideos";
 import Videos from "./pages/Videos";
+import SendPhotos from "./pages/SendPhotos";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/adoptedphotos" element={<AdoptedPhotos />} />
           <Route path="/adoptedvideos" element={<AdoptedVideos />} />
           <Route path="/videos" element={<Videos />} />
+          <Route path="/sendphotos" element={<SendPhotos />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

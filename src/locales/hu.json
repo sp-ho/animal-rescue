@@ -21,6 +21,7 @@
         "foster": "Legyen Nevelőotthon",
         "important": "HASZNOS",
         "videos": "Videók",
+        "sendPhotos": "Küldje el nekünk fotóit",
         "contact": "KAPCSOLAT",
         "donate": "TÁMOGASS MINKET",
         "english": "Angol",
@@ -591,6 +592,18 @@
         "microchipsSub": "A mikrochipekről",
         "trainTipsSub": "Kutyakiképzés és tippek",
         "healthCareSub": "Egészségügy"
+    },
+
+    "sendPhotos": {
+        "sendPhotos": "Küldje el nekünk fotóit",
+        "fName": "Keresztnév",
+        "lName": "Vezetéknév/Családnév",
+        "email": "Email",
+        "tel": "Telefon",
+        "subject": "Tárgy",
+        "comments": "Üzenet/Kérdések",
+        "upload": "Kép feltöltése (nem kötelező)",
+        "button": "Elküldöm"
     }
 }
 

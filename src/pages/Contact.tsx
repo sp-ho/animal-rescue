@@ -119,7 +119,7 @@ const Contact = () => {
       // Perform the actual form submission
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/contact",
+          "http://localhost:5000/api/message",
           formDataInstance
         );
 
@@ -178,7 +178,12 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="contact-heading">{t("contact.contact")}</h2>
+      {/* White background section under the navbar */}
+      <div className="container-fluid bg-white">
+        <div className="container py-5">
+          <h1>{t("contact.contact")}</h1>
+        </div>
+      </div>
       <div className="contact-container">
         <div className="contact-div">
           <div className="columns">
