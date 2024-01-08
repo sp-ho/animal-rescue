@@ -43,7 +43,7 @@ const AdoptedPhotos = () => {
           <div>
             <p className="intro">{t("adopted-photos.intro")}</p>
           </div>
-          <Link to="/" target="_blank">
+          <Link to="/sendphotos" target="_blank">
             <button
               className="btn btn-secondary mt-4 mb-4"
               style={{
