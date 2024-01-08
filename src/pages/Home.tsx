@@ -118,9 +118,9 @@ const Home = () => {
           <div className="col-md-6 mt-5 mb-5">
             {/* YouTube video here */}
             <iframe
-              width="100%"
+              width="90%"
               height="400"
-              src={`https://www.youtube.com/embed/VIDEO_ID`}
+              src="https://www.youtube.com/embed/vtNJoNGZTEw"
               title="YouTube Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

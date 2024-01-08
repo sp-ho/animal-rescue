@@ -331,7 +331,7 @@ const SendPhotos = () => {
               className="form-control"
             />
             {formData.image && (
-              <div className="uploaded-image">
+              <div className="uploaded-image mt-3">
                 <img
                   src={URL.createObjectURL(formData.image)}
                   alt="Uploaded Preview"

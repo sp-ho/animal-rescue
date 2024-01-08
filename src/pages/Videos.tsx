@@ -6,132 +6,132 @@ const Videos = () => {
 
   const breedVideos = [
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "All about the German Shepherd",
+      src: "https://www.youtube.com/embed/MxaJb-fYR4M",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Best German Shepherd puppy training tips",
+      src: "https://www.youtube.com/embed/W2pkvy5t3Bo",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "All you need to know about German Shepherd",
+      src: "https://www.youtube.com/embed/W7eGaraQSqs",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "History of the German Shepherd",
+      src: "https://www.youtube.com/embed/ddv0QaPay94",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "German Shepherd everything you need to know",
+      src: "https://www.youtube.com/embed/p0INBNLqmPE",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "German Shepherd pros and cons",
+      src: "https://www.youtube.com/embed/LQYelPGQnh0",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "10 things only German Shepherd dog owners understand",
+      src: "https://www.youtube.com/embed/irBvSllY10w",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "How to understand German Shepherd body language",
+      src: "https://www.youtube.com/embed/NzucEq0luY0",
     },
   ];
 
   const spayNeuterVideos = [
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Neutering & spaying German Shepherds",
+      src: "https://www.youtube.com/embed/CewaVQot58U",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "How to care dogs after spay neuter",
+      src: "https://www.youtube.com/embed/1B_i3TYByYs",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Post-Spay/Neuter surgery information",
+      src: "https://www.youtube.com/embed/zoNL_jrbNKk",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Post surgical pet care at home",
+      src: "https://www.youtube.com/embed/GWON6u80vNQ",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Spay/neuter patient care: patient prep - Canine",
+      src: "https://www.youtube.com/embed/aESC0VrWIZA",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Dog spay recovery progress day by day & helpful tips",
+      src: "https://www.youtube.com/embed/kz8EMYOoayI",
     },
   ];
 
   const microchipsVideos = [
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Why you should microchip your dog",
+      src: "https://www.youtube.com/embed/J2IJe9mCszA",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Watch a dog get microchipped",
+      src: "https://www.youtube.com/embed/Qo-Ft84bf84",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Science behind your pet's microchip",
+      src: "https://www.youtube.com/embed/TiowQx0ieP8",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "Microchip IDs help return lost pets",
+      src: "https://www.youtube.com/embed/mGTGT4NV95Q",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "How to microchip a dog",
+      src: "https://www.youtube.com/embed/YwLxphE8Tk8",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "How to microchip a puppy",
+      src: "https://www.youtube.com/embed/rt3UcTkN_Jc",
     },
   ];
 
   const trainTipsVideos = [
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "How to train a German Shepherd puppy",
+      src: "https://www.youtube.com/embed/zttUukvfl94",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "German Shepherd god training and mastering the art of attention",
+      src: "https://www.youtube.com/embed/ygn8B2FLcdM",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "How to raise a German shepherd",
+      src: "https://www.youtube.com/embed/t9TxzuXCAyM",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "German Shepherd puppy obedience training",
+      src: "https://www.youtube.com/embed/A8zKTUIXYVI",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "German Shepherd dog jump",
+      src: "https://www.youtube.com/embed/M0D9zMwax-8",
     },
   ];
 
   const healthCareVideos = [
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "German Shepherd health and life expectation",
+      src: "https://www.youtube.com/embed/ROCAt2VCTy0",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "5 most common health problems of German Shepherd",
+      src: "https://www.youtube.com/embed/Va8uUTXTV5I",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "The perfect dog diet - What to feed your dog",
+      src: "https://www.youtube.com/embed/p8ZCGvKb4x8",
     },
     {
-      title: "German shepherd loves the snow",
-      src: "https://www.youtube.com/embed/VIDEO_ID",
+      title: "How much should you feed a German Shepherd",
+      src: "https://www.youtube.com/embed/-7rcvPoOML0",
     },
   ];
 

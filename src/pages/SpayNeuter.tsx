@@ -78,8 +78,8 @@ const SpayNeuter = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_1`}
-                title="YouTube Video 1"
+                src="https://www.youtube.com/embed/CewaVQot58U"
+                title="Neutering & spaying German Shepherds"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -89,8 +89,8 @@ const SpayNeuter = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_2`}
-                title="YouTube Video 2"
+                src="https://www.youtube.com/embed/1B_i3TYByYs"
+                title="How to care dogs after spay neuter"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -100,8 +100,8 @@ const SpayNeuter = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_3`}
-                title="YouTube Video 3"
+                src="https://www.youtube.com/embed/zoNL_jrbNKk"
+                title="Post-Spay/Neuter surgery information"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -111,8 +111,8 @@ const SpayNeuter = () => {
               <iframe
                 width="100%"
                 height="315"
-                src={`https://www.youtube.com/embed/VIDEO_ID_4`}
-                title="YouTube Video 4"
+                src="https://www.youtube.com/embed/GWON6u80vNQ"
+                title="Post surgical pet care at home"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
