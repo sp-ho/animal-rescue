@@ -140,7 +140,9 @@ const Videos = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("videos.videos")}</h1>
+          <h1>
+            <strong>{t("videos.videos")}</strong>
+          </h1>
           <div>
             <p className="intro">
               {t("videos.intro")}

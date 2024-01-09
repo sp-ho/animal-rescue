@@ -12,7 +12,9 @@ const SpayNeuter = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("spay-neuter.aboutSpayNeuter")}</h1>
+          <h1>
+            <strong>{t("spay-neuter.aboutSpayNeuter")}</strong>
+          </h1>
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}
@@ -68,7 +70,10 @@ const SpayNeuter = () => {
 
       {/* Section with black background and 2x2 grid for YouTube videos */}
       <div className="container-fluid bg-dark py-5 text-center">
-        <h3 className="text-center" style={{ color: "white" }}>
+        <h3
+          className="text-center"
+          style={{ fontWeight: "bold", color: "white" }}
+        >
           {t("spay-neuter.videos")}
         </h3>
         <div className="container">
@@ -140,7 +145,9 @@ const SpayNeuter = () => {
 
       {/* Section with 2 columns and white background */}
       <div className="container-fluid mt-5 mb-5">
-        <h3 className="mb-5 text-center">{t("spay-neuter.spayNeuter")}</h3>
+        <h3 className="mb-5 text-center">
+          <strong>{t("spay-neuter.spayNeuter")}</strong>
+        </h3>
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
@@ -171,7 +178,10 @@ const SpayNeuter = () => {
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}
       >
-        <h3 className="mt-5 mb-5" style={{ marginTop: "3rem" }}>
+        <h3
+          className="mt-5 mb-5"
+          style={{ fontWeight: "bold", marginTop: "3rem" }}
+        >
           {t("spay-neuter.becomeFoster")}
         </h3>
         <p className="mt-5">{t("spay-neuter.fosterProcess1")}</p>

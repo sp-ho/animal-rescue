@@ -513,7 +513,9 @@ const Fostering = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white mt-5 mb-5">
         <div className="container mt-5">
-          <h1>{t("fostering.aboutFostering")}</h1>
+          <h1>
+            <strong>{t("fostering.aboutFostering")}</strong>
+          </h1>
           <div>
             <div>
               <p className="intro d-flex">{t("fostering.p1")}</p>
@@ -551,7 +553,9 @@ const Fostering = () => {
       {/* Form Section */}
       <div className="container-fluid bg-dark py-5" style={{ color: "white" }}>
         <form onSubmit={handleSubmit} className="container">
-          <h2>{t("fostering.form.title")}</h2>
+          <h2>
+            <strong>{t("fostering.form.title")}</strong>
+          </h2>
           <br />
           <div className="row mb-3">
             <div className="col-md-4 me-5">
@@ -1022,8 +1026,8 @@ const Fostering = () => {
               {t("contact.submitButton")}
             </button>
             {submissionStatus === "success" && (
-              <div className="success-message">
-                Form submitted successfully!
+              <div className="success-message mt-3">
+                <strong>Form submitted successfully!</strong>
               </div>
             )}
           </div>

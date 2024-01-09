@@ -12,7 +12,9 @@ const Microchips = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("microchips.aboutMicrochips")}</h1>
+          <h1>
+            <strong>{t("microchips.aboutMicrochips")}</strong>
+          </h1>
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}
@@ -81,7 +83,10 @@ const Microchips = () => {
 
       {/* Section with black background and 2x2 grid for YouTube videos */}
       <div className="container-fluid bg-dark py-5 text-center">
-        <h3 className="text-center" style={{ color: "white" }}>
+        <h3
+          className="text-center"
+          style={{ fontWeight: "bold", color: "white" }}
+        >
           {t("microchips.videos")}
         </h3>
         <div className="container">
@@ -153,7 +158,9 @@ const Microchips = () => {
 
       {/* Section with 2 columns and white background */}
       <div className="container-fluid mt-5 mb-5">
-        <h3 className="mb-5 text-center">{t("microchips.spayNeuter")}</h3>
+        <h3 className="mb-5 text-center">
+          <strong>{t("microchips.spayNeuter")}</strong>
+        </h3>
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
@@ -180,7 +187,10 @@ const Microchips = () => {
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}
       >
-        <h3 className="mt-5 mb-5" style={{ marginTop: "3rem" }}>
+        <h3
+          className="mt-5 mb-5"
+          style={{ fontWeight: "bold", marginTop: "3rem" }}
+        >
           {t("microchips.thinkAdopt")}
         </h3>
         <p className="mt-5 mb-5">{t("microchips.adoptionProcess")}</p>

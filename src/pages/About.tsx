@@ -8,7 +8,9 @@ const About = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("aboutUs.aboutUs")}</h1>
+          <h1>
+            <strong>{t("aboutUs.aboutUs")}</strong>
+          </h1>
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}

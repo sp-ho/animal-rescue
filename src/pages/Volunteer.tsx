@@ -215,7 +215,9 @@ const Volunteer = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("volunteer.volunteer")}</h1>
+          <h1>
+            <strong>{t("volunteer.volunteer")}</strong>
+          </h1>
           <div>
             <div>
               <p className="intro d-flex">{t("volunteer.intro")}</p>
@@ -290,7 +292,9 @@ const Volunteer = () => {
       {/* Form Section */}
       <div className="container-fluid bg-dark py-5" style={{ color: "white" }}>
         <form onSubmit={handleSubmit} className="container">
-          <h2>{t("volunteer.form.title")}</h2>
+          <h2>
+            <strong>{t("volunteer.form.title")}</strong>
+          </h2>
           <p>{t("volunteer.form.intro")}</p>
           <br />
           <div className="row mb-3">
@@ -427,8 +431,8 @@ const Volunteer = () => {
               {t("contact.submitButton")}
             </button>
             {submissionStatus === "success" && (
-              <div className="success-message">
-                Form submitted successfully!
+              <div className="success-message mt-3">
+                <strong>Form submitted successfully!</strong>
               </div>
             )}
           </div>

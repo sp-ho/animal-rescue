@@ -31,7 +31,9 @@ const Adoptable = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("adoptable.adoptable")}</h1>
+          <h1>
+            <strong>{t("adoptable.adoptable")}</strong>
+          </h1>
         </div>
       </div>
 

@@ -181,7 +181,9 @@ const Contact = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container py-5">
-          <h1>{t("contact.contact")}</h1>
+          <h1>
+            <strong>{t("contact.contact")}</strong>
+          </h1>
         </div>
       </div>
       <div className="contact-container">
@@ -261,7 +263,9 @@ const Contact = () => {
         {/* Form Section */}
         <div className="form-section">
           <form onSubmit={handleSubmit} className="compact-form">
-            <h2>{t("contact.p2")}</h2>
+            <h2>
+              <strong>{t("contact.p2")}</strong>
+            </h2>
             <br />
             <div className="row mb-3">
               <div className="col-md-6">
@@ -376,8 +380,8 @@ const Contact = () => {
                 {t("contact.submitButton")}
               </button>
               {submissionStatus === "success" && (
-                <div className="success-message">
-                  Form submitted successfully!
+                <div className="success-message mt-3">
+                  <strong>Form submitted successfully!</strong>
                 </div>
               )}
             </div>

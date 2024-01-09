@@ -12,7 +12,9 @@ const Breed = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("breed.aboutBreed")}</h1>
+          <h1>
+            <strong>{t("breed.aboutBreed")}</strong>
+          </h1>
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}
@@ -71,7 +73,10 @@ const Breed = () => {
 
       {/* Section with black background and 2x2 grid for YouTube videos */}
       <div className="container-fluid bg-dark py-5 text-center">
-        <h3 className="text-center" style={{ color: "white" }}>
+        <h3
+          className="text-center"
+          style={{ fontWeight: "bold", color: "white" }}
+        >
           {t("breed.p10")}
         </h3>
         <div className="container">
@@ -143,7 +148,9 @@ const Breed = () => {
 
       {/* Section with 2 columns and white background */}
       <div className="container-fluid mt-5 mb-5">
-        <h3 className="mb-5 text-center">{t("breed.p11")}</h3>
+        <h3 className="mb-5 text-center">
+          <strong>{t("breed.p11")}</strong>
+        </h3>
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
@@ -170,7 +177,10 @@ const Breed = () => {
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}
       >
-        <h3 className="mt-5 mb-5" style={{ marginTop: "3rem" }}>
+        <h3
+          className="mt-5 mb-5"
+          style={{ fontWeight: "bold", marginTop: "3rem" }}
+        >
           {t("breed.p12")}
         </h3>
         <p className="mt-5 mb-5">{t("breed.p13")}</p>

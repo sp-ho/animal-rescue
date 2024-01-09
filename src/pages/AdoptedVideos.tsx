@@ -57,7 +57,9 @@ const AdoptedVideos = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("adopted-videos.adopted")}</h1>
+          <h1>
+            <strong>{t("adopted-videos.adopted")}</strong>
+          </h1>
           <div>
             <p className="intro">
               {t("adopted-videos.intro1")}

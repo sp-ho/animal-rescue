@@ -12,7 +12,9 @@ const Adoption = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("adoption.adoptionProcess")}</h1>
+          <h1>
+            <strong>{t("adoption.adoptionProcess")}</strong>
+          </h1>
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}
@@ -67,7 +69,9 @@ const Adoption = () => {
 
       {/* Section with 2 columns and white background */}
       <div className="container-fluid mt-5 mb-5">
-        <h3 className="mb-5 text-center">{t("adoption.success")}</h3>
+        <h3 className="mb-5 text-center">
+          <strong>{t("adoption.success")}</strong>
+        </h3>
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
@@ -94,7 +98,10 @@ const Adoption = () => {
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}
       >
-        <h3 className="mt-5 mb-5" style={{ marginTop: "3rem" }}>
+        <h3
+          className="mt-5 mb-5"
+          style={{ fontWeight: "bold", marginTop: "3rem" }}
+        >
           {t("adoption.becomeFoster")}
         </h3>
         <p className="mt-5">{t("adoption.fosterProcess1")}</p>

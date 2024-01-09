@@ -43,12 +43,18 @@ const Home = () => {
             wordWrap: "break-word",
           }}
         >
-          <h1>{t("home.line1")}</h1>
-          <h1>{t("home.line2")}</h1>
-          <h1>{t("home.line3")}</h1>
+          <h1>
+            <strong>{t("home.line1")}</strong>
+          </h1>
+          <h1>
+            <strong>{t("home.line2")}</strong>
+          </h1>
+          <h1>
+            <strong>{t("home.line3")}</strong>
+          </h1>
           <Link to="/adoption" target="_blank">
             <button
-              className="btn"
+              className="btn mt-2"
               style={{
                 background: "linear-gradient(45deg, #cc66ff, #3399ff)",
                 backgroundSize: "200% 200%",
@@ -78,7 +84,9 @@ const Home = () => {
               </div>
             </div>
             {/* Subtitle */}
-            <h5 className="text-center mb-3">{t("home.spay-neuter")}</h5>
+            <h5 className="text-center mb-3">
+              <strong>{t("home.spay-neuter")}</strong>
+            </h5>
             {/* Description */}
             <p>{t("home.spay-neuter2")}</p>
           </div>
@@ -91,7 +99,9 @@ const Home = () => {
               </div>
             </div>
             {/* Subtitle */}
-            <h5 className="text-center mb-3">{t("home.dogs-adopted")}</h5>
+            <h5 className="text-center mb-3">
+              <strong>{t("home.dogs-adopted")}</strong>
+            </h5>
             {/* Description */}
             <p>{t("home.dogs-adopted2")}</p>
           </div>
@@ -104,7 +114,9 @@ const Home = () => {
               </div>
             </div>
             {/* Subtitle */}
-            <h5 className="text-center mb-3">{t("home.together")}</h5>
+            <h5 className="text-center mb-3">
+              <strong>{t("home.together")}</strong>
+            </h5>
             {/* Description */}
             <p>{t("home.together2")}</p>
           </div>
@@ -121,7 +133,7 @@ const Home = () => {
               width="90%"
               height="400"
               src="https://www.youtube.com/embed/vtNJoNGZTEw"
-              title="YouTube Video"
+              title="Our Story"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -129,7 +141,9 @@ const Home = () => {
           {/* Column 2 */}
           <div className="col-md-4 d-flex flex-column justify-content-center">
             {/* Subtitle 1 */}
-            <h2 className="mb-4">{t("home.story")}</h2>
+            <h2 className="mb-4">
+              <strong>{t("home.story")}</strong>
+            </h2>
             {/* Subtitle 2 */}
             <p className="mb-4">{t("home.story2")}</p>
             {/* Description */}
@@ -161,7 +175,9 @@ const Home = () => {
           {/* Column 1 - Placeholder for YouTube video */}
           <div className="col-md-5 mb-5 d-flex flex-column justify-content-center">
             {/* Subtitle 1 */}
-            <h2 className="mb-4">{t("home.foster")}</h2>
+            <h2 className="mb-4">
+              <strong>{t("home.foster")}</strong>
+            </h2>
             {/* Subtitle 2 */}
             <p className="mb-4">{t("home.foster2")}</p>
             {/* Description */}
@@ -212,7 +228,7 @@ const Home = () => {
           <div className="col-md-4 mb-4 d-flex flex-column justify-content-center">
             {/* Subtitle 1 */}
             <h2 className="mb-4" style={{ color: "white" }}>
-              {t("home.breed")}
+              <strong>{t("home.breed")}</strong>
             </h2>
             {/* Subtitle 2 */}
             <p className="mb-4" style={{ color: "white" }}>
@@ -244,7 +260,7 @@ const Home = () => {
       {/* Section with 2 columns and white background */}
       <div className="container-fluid mt-5 mb-5">
         <h2 className="mb-5" style={{ marginLeft: "calc(-40vw + 50%)" }}>
-          {t("home.success")}
+          <strong>{t("home.success")}</strong>
         </h2>
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}

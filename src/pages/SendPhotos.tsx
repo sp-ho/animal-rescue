@@ -84,7 +84,7 @@ const SendPhotos = () => {
     const file = e.target.files?.[0] ?? null;
 
     if (file) {
-      // Check if the file format is allowed
+      // Check if the file format are allowed
       const allowedImageFormats = ["image/jpeg", "image/png", "image/jpg"];
 
       if (allowedImageFormats.includes(file.type)) {
@@ -216,7 +216,9 @@ const SendPhotos = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container py-5">
-          <h1>{t("sendPhotos.sendPhotos")}</h1>
+          <h1>
+            <strong>{t("sendPhotos.sendPhotos")}</strong>
+          </h1>
         </div>
       </div>
 
@@ -356,8 +358,8 @@ const SendPhotos = () => {
               {t("sendPhotos.button")}
             </button>
             {submissionStatus === "success" && (
-              <div className="success-message">
-                Form submitted successfully!
+              <div className="success-message mt-3">
+                <strong>Form submitted successfully!</strong>
               </div>
             )}
           </div>

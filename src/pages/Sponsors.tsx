@@ -58,7 +58,9 @@ const Sponsors = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("sponsor.sponsor")}</h1>
+          <h1>
+            <strong>{t("sponsor.sponsor")}</strong>
+          </h1>
         </div>
       </div>
 
@@ -94,7 +96,9 @@ const Sponsors = () => {
       <div className="container-fluid mt-5">
         <div className="row justify-content-center">
           <div className="container text-center">
-            <h3>{t("sponsor.foster")}</h3>
+            <h3>
+              <strong>{t("sponsor.foster")}</strong>
+            </h3>
           </div>
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
@@ -219,7 +223,9 @@ const Sponsors = () => {
       <div className="container-fluid bg-light py-5">
         <div className="row justify-content-center py-5">
           <div className="container text-center">
-            <h3>{t("sponsor.volunteer")}</h3>
+            <h3>
+              <strong>{t("sponsor.volunteer")}</strong>
+            </h3>
           </div>
           {/* Column 1 - Volunteer 1 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
@@ -285,7 +291,9 @@ const Sponsors = () => {
 
             {/* Text on the right */}
             <div className="col-md-6" style={{ color: "white" }}>
-              <h3>{t("sponsor.p1")}</h3>
+              <h3>
+                <strong>{t("sponsor.p1")}</strong>
+              </h3>
               <p>{t("sponsor.p2")}</p>
               <p>{t("sponsor.p3")}</p>
               <p>{t("sponsor.p4")}</p>

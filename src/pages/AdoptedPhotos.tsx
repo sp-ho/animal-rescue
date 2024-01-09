@@ -39,7 +39,9 @@ const AdoptedPhotos = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("adopted-photos.adopted")}</h1>
+          <h1>
+            <strong>{t("adopted-photos.adopted")}</strong>
+          </h1>
           <div>
             <p className="intro">{t("adopted-photos.intro")}</p>
           </div>

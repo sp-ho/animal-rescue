@@ -10,7 +10,9 @@ const Donate = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("donate.donate")}</h1>
+          <h1>
+            <strong>{t("donate.donate")}</strong>
+          </h1>
           <p className="intro">{t("donate.intro")}</p>
         </div>
       </div>
@@ -97,7 +99,9 @@ const Donate = () => {
         <div className="container">
           <div id="donateItems" className="row justify-content-center">
             <div className="col-md-6">
-              <h3>{t("donate-items.donateItems")}</h3>
+              <h3>
+                <strong>{t("donate-items.donateItems")}</strong>
+              </h3>
               <br />
               <p>{t("donate-items.intro")}</p>
               <br />
@@ -179,7 +183,7 @@ const Donate = () => {
           {/* Text on the right */}
           <div className="col-md-4 mb-4 d-flex flex-column justify-content-center">
             <h2 className="mb-4" style={{ color: "white" }}>
-              {t("donate.becomeSponsor")}
+              <strong>{t("donate.becomeSponsor")}</strong>
             </h2>
             <p className="mb-4" style={{ color: "white" }}>
               {t("donate.sponsor")}

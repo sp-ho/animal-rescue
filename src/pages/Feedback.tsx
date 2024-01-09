@@ -9,7 +9,9 @@ const Feedback = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
-          <h1>{t("feedback.feedback")}</h1>
+          <h1>
+            <strong>{t("feedback.feedback")}</strong>
+          </h1>
           <div>
             <p className="intro">{t("feedback.intro")}</p>
           </div>
@@ -95,7 +97,7 @@ const Feedback = () => {
       {/* Section with 2 columns and white background */}
       <div className="container-fluid mt-5 mb-5">
         <h2 className="mb-5" style={{ marginLeft: "calc(-40vw + 50%)" }}>
-          {t("home.success")}
+          <strong>{t("home.success")}</strong>
         </h2>
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
@@ -123,7 +125,10 @@ const Feedback = () => {
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}
       >
-        <h3 className="mt-5 mb-5" style={{ marginTop: "3rem" }}>
+        <h3
+          className="mt-5 mb-5"
+          style={{ fontWeight: "bold", marginTop: "3rem" }}
+        >
           {t("feedback.thinkAdopt")}
         </h3>
         <p className="mt-5 mb-5">{t("feedback.adoptionProcess")}</p>
