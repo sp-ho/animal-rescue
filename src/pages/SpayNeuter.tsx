@@ -118,7 +118,7 @@ const SpayNeuter = () => {
               ></iframe>
             </div>
           </div>
-          <Link to="/" target="_blank">
+          <Link to="/videos" target="_blank">
             <button
               className="btn btn-secondary mt-5"
               style={{

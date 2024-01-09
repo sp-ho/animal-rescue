@@ -121,7 +121,7 @@ const Breed = () => {
               ></iframe>
             </div>
           </div>
-          <Link to="/" target="_blank">
+          <Link to="/videos" target="_blank">
             <button
               className="btn btn-secondary mt-5"
               style={{
@@ -174,21 +174,23 @@ const Breed = () => {
           {t("breed.p12")}
         </h3>
         <p className="mt-5 mb-5">{t("breed.p13")}</p>
-        <button
-          className="btn btn-secondary mb-5"
-          style={{
-            background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
-            backgroundSize: "200% 200%",
-            color: "white",
-            border: "none",
-            padding: "10px 20px",
-            borderRadius: "5px",
-            transition: "0.5s",
-            cursor: "pointer",
-          }}
-        >
-          {t("breed.learnMoreButton")}
-        </button>
+        <Link to="/volunteer" target="_blank">
+          <button
+            className="btn btn-secondary mb-5"
+            style={{
+              background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
+              backgroundSize: "200% 200%",
+              color: "white",
+              border: "none",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              transition: "0.5s",
+              cursor: "pointer",
+            }}
+          >
+            {t("breed.learnMoreButton")}
+          </button>
+        </Link>
       </div>
     </>
   );
