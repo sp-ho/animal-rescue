@@ -11,17 +11,17 @@
         "adoptProcess": "Az Örökbefogadási Folyamat",
         "adoptable":"Örökbefogadható Kutyák",
         "success": "SIKERTÖRTÉNETEK",
-        "adoptedPhotos": "Már Elfogadva - Fotók",
-        "adoptedVideos": "Már Elfogadva -Videók",
-        "feedback": "Visszajelzések Az Örökbefogadóktól",
+        "adoptedPhotos": "Gazdis - Fényképek",
+        "adoptedVideos": "Gazdis - Videók",
+        "feedback": "Gazdis Visszajelzések",
         "involve": "HOGYAN SEGÍTHETSZ",
-        "sponsorsFostersVolunteers": "Oor Szponzorok, Nevelőszülők és Önkéntesek",
+        "sponsorsFostersVolunteers": "Támogatóink",
         "sponsor": "Legyen Szponzor",
         "volunteer": "Legyél Önkéntes",
-        "foster": "Legyen Nevelőotthon",
+        "foster": "Legyél ideiglenes befogadó",
         "important": "HASZNOS",
         "videos": "Videók",
-        "sendPhotos": "Küldje el nekünk fotóit",
+        "sendPhotos": "Küldj egy Gazdis Visszajelzést",
         "contact": "KAPCSOLAT",
         "donate": "TÁMOGASS MINKET",
         "english": "Angol",
@@ -33,27 +33,27 @@
         "line2": "Németjuhászokért",
         "line3": "Alapítvány",
         "adoptButton": "Fogadj Örökbe",
-        "spay-neuter": "Ivartalanít/Semleges program",
-        "spay-neuter2": "Amióta elindultunk, sok kutyát tudtunk műteni ivartalanítási/ivartalanítási programunkon keresztül",
+        "spay-neuter": "Ivartalanítás programunk",
+        "spay-neuter2": "Alapítványunk megnyitása óta sok kutyát tudtunk műteni az ivartalanítási programunkon keresztül",
         "dogs-adopted": "Örökbefogadott kutyák",
-        "dogs-adopted2": "Mióta megnyitottuk kapuinkat, sok kutyának segítettünk szerető otthonra találni",
+        "dogs-adopted2": "Munkánk eredményeképpen sok kutyának segítettünk szerető otthonra találni ",
         "together": "Együtt többet tudunk tenni",
-        "together2": "Az Ön segítségével minden évben többet tudunk elérni",
-        "story": "A mi történetünk",
-        "story2": "A kezdetektől fogva szívünket-lelkünket öntjük a rászoruló kutyák megmentésébe. Ezt kívánjuk folytatni az elkövetkező években is.",
+        "together2": "A segítségeddel minden évben több állatnak tudunk segíteni",
+        "story": "A Történetünk",
+        "story2": "Kezdettől fogva szívünket-lelkünket beleöntjük a rászoruló kutyák megmentéséért. Ezt az elkövetkező években is így folytatjuk.",
         "abUsButton": "RÓLUNK",
-        "foster": "Légy nevelőotthon!",
-        "foster2": "Alapítványunk egyik legfontosabb része, hogy átmenetileg nevelhessük a kutyákat, amíg nem találunk nekik örök otthont.",
+        "foster": "Legyél ideiglenes befogadó!",
+        "foster2": "Alapítványunk egyik legfontosabb része hogy ideiglenesen be tudjunk fogadni kutyákat addig amig gazdát találunk nekik.",
         "fosterButton": "Legyél Ideiglenes Befogadó",
-        "breed": "A fajtáról",
-        "breed2": "Ha többet tud a német juhászkutyákról, beleértve a személyiségüket és a történelmüket, akkor jobban megértheti ezt a fajtát, hogy megtudja, ez a megfelelő kutya-e a családjának.",
-        "breedButton": "A FAJTÁRÓL",
+        "breed": "A Fajták Jellemzői",
+        "breed2": "Ha többet tud a német juhászkutyáról, beleértve a személyiségüket és a történelmüket, akkor jobban megértheti ezt a fajtát, hogy megtudja, ez a megfelelő kutya a családja számára.",
+        "breedButton": "A Fajták Jellemzői",
         "success": "Sikertörténeteink",
-        "success1a": "Huba családtag lett, most van egy testvére Matyi és egy húga Luca. Órákig nézi a szomszéd birkáját.",
+        "success1a": "Huba családtag lett, már tesók a Lucával med Matyival. A szomszéd birkáit órákig nézi.",
         "success1b": "- Gábor",
-        "success2a": "Nyaralásunkon vagyunk, sátorban alszunk és Diego is velünk van.",
+        "success2a": "Nyaralónkban vagyunk, mi sátorban alszunk és Diego is velünk volt.",
         "success2b": "- Annamari & Bence",
-        "success3a": "Köszönjük, hogy bízott bennünk. Mindent megteszünk annak érdekében, hogy Szana boldog élete legyen velünk..",
+        "success3a": "Hálásan köszönöm, hogy bíztál bennünk. Mindent megteszünk azért, hogy Szana boldog legyen.",
         "success3b": "- Edit & Dóra"
     },
 
@@ -67,23 +67,23 @@
         "p6": "Civilként kezdtünk és 1 éven keresztül minden költséget mi álltunk. Szeretnénk elkezdeni most már ivartalanítani, többet panzióztatni, a kutyák orvosi költségébe besegíteni, az ideiglenes befogadókat táppal segíteni, de ez saját erőből már nem megy. ",
         "p7": "Mivel az SZJA 1%-ot sajnos még nem tudjuk igénybe venni, hálásak lennénk, ha támogatnátok az alapítványt. ",
         "p8": "Kérlek segítsetek, hogy segíthessünk! Minden adomány számít. Nagyon köszönjük, ha támogatjátok a munkánkat.",
-        "p9": "Mi Hárman a Németjuhászokért ",
+        "p9": "Mi Hárman a Németjuhászokért",
         "p10": "Számlaszám: 11702081-21453991 ",
-        "p11": "Kárpáti Judit "
+        "p11": "Kárpáti Judit"
     },
 
     "fostering": {
         "aboutFostering": "Legyél Ideiglenes Befogadó",
         "p1": "Életet menthetsz egy kutya ideiglenes befogadásával ",
         "p2": "Ha szereti a kutyákat, de nem képes hosszú távú elköteleződést vállalni hogy örökbefogadjon, miért ne lehetne ideiglenes befogadója valamelyik kutyánknak?",
-        "p3": "A ideiglenes vigyázás a kutyáinkra a szervezetünk egyik legfontosabb és legörömteljesebb része. Ha megnyitja otthonát egy rászoruló állat előtt, az azt jelenti, hogy megmenti annak a kutyának az életét, akár úgy, mivel az utcán volt azelőtt, nagyon nehéz helyzetben volt, vagy esélye sem volt hogy életben maradjon.",
+        "p3": "Az ideiglenes vigyázás a kutyáinkra a szervezetünk egyik legfontosabb és legörömteljesebb része. Ha megnyitja otthonát egy rászoruló állat előtt, az azt jelenti, hogy megmenti annak a kutyának az életét, akár úgy, mivel az utcán volt azelőtt, nagyon nehéz helyzetben volt, vagy esélye sem volt hogy életben maradjon.",
         "p4": "Ha ezekben a helyzetekben nem cselekszünk gyorsan, hogy otthont találjunk azoknak a kutyáknak, akiknek még van esélyük nálunk, akkor lehet, hogy másként esélyük sem lesz. Mi lehetünk az utolsó reménységük, hiszen bár máshol is vannak állatmentők, ők is sok esetben nehézségekbe ütköznek a több állat befogadása miatt mert lehet telt ház van náluk már.",
         "p5": "Egy kutyánk nevelése azt jelenti, hogy otthonában látja vendégül a rád bízott állatot. Amíg egy állat az Ön gondozásában van, szervezetünk biztosítja Önnek az adott kutya táplálékát és gyógyszereit. Ha bármilyen orvosi ellátásra, például kezelésre vagy gyógyszeres kezelésre van szükségük (tabletta vagy folyékony formában), elmagyarázuk Önnek minden részletet, hogy hogyan kell ezt elvégezni. Azt is kérnénk, hogy tájékoztasson minket egészségi állapotukról, és azonnal lépjen kapcsolatba velünk, ha olyan problémát észlel, amely figyelmet igényel. Ha saját állatai is vannak, fontos, hogy meglegyenek az oltásai. ",
         "p6": "Töltse ki az alábbi űrlapot, ha ideiglenes befogadó szeretne lenni!",
         "form" : {
-            "title": "Írjon nekünk",
+            "title": "Küldj nekünk üzenetet",
             "fName": "Keresztnév",
-            "lName": "Vezetéknév",
+            "lName": "Vezetéknév/Családnév",
             "email1": "Email",
             "cell1": "Mobil telefon",
             "tel1": "Otthoni telefon",
@@ -92,12 +92,9 @@
             "prov": "Megye",
             "postal": "Irányítószám",
             "country": "Ország",
-            "hungary": "Magyarország",
-            "canada": "Kanada",
-            "usa": "USA",
             "select": "Válassz Ország",
             "wayOfReach": "Előnyben részesített elérési mód:",
-            "email2": "e-mail",
+            "email2": "email",
             "cell": "mobil",
             "tel2": "otthoni telefon",
             "age": "Hány éves vagy?",
@@ -112,7 +109,7 @@
             "animalsAllowed": "Ha társasházban vagy lakásban él, szabad állatokat tartani az épületben?",
             "experience": "Van tapasztalata állatokkal?",
             "transportation": "Van autója arra az esetre, ha a kutya szállítására lenne szükség?",
-            "button": "Elküldöm"
+            "button": "Küld"
         },
         "countries": {
             "afghanistan": "Afganisztán",
@@ -328,12 +325,12 @@
         "p8b": "22-32 kg (szuka)",
         "p9": "Várható élettartam: ",
         "p9a": "7-14 év",
-        "p10": "Videók a fajtáról",
+        "p10": "Videók a Német Juhász Fajtáról",
         "p11": "Tudjon meg többet örökbefogadási folyamatunkról és hogy hogyan legyen ideiglenes befogadó",
         "videosButton":"További videók megtekintéséhez kattintson ide",
         "p12": "Legyél Önkéntes!",
         "p13": "Ha érdekel a német juhászkutya fajta, és szívesen segítenél nekünk, ha van egy kis szabadidőd, szívesen várunk.",
-        "learnMoreButton": "TUDJ MEG TÖBBET"
+        "learnMoreButton": "További részletek"
     },
 
     "microchips": {
@@ -358,18 +355,18 @@
         "p17": "Személyes adatai biztonságban vannak",
         "p18": "Mivel a személyazonosság-lopás egyre nagyobb problémát jelent a mai társadalomban, biztos lehet benne, hogy a mikrochipen és az adatbázisban tárolt információk nagyon biztonságosak. Magán a chipen az egyedi hivatkozási számon kívül semmilyen adat nem tárolódik. A hivatkozási számmal kapcsolatban megadott adatok a mikrochip szolgáltatója által kezelt és biztonságos adatbázison keresztül érhetők csak el.",
         "videos": "Videók a mikrochipekről",
-        "videosButton": "További videók megtekintéséhez kattintson ide",
-        "spayNeuter": "További információ a fajtáról és arról, hogy miért érdemes ivartalanítani/ivartalanítanig",
+        "videosButton": "Több videó",
+        "spayNeuter": "További információ a fajtáról és hogy miért érdemes ivartalanítani egy kutyát",
         "thinkAdopt": "Örökbefogadáson gondolkodik?",
         "adoptionProcess": "Tájékozódjon örökbefogadási folyamatunkról!",
-        "learnMoreButton": "TUDJ MEG TÖBBET"
+        "learnMoreButton": "További részletek"
     },
 
     "spay-neuter": {
         "aboutSpayNeuter": "Az Ivartalanitásról",
         "intro": "Mik a lehetőségek és miért ivartalanítsunk",
         "p1": "Mit jelent a ivartalanítás?",
-        "p2": "Az „ivartalanítás” olyan sebészeti eljárás, amely megakadályozza az állatok szaporodását. Számos egészségügyi és viselkedési előnnyel járnak az állatok számára a nem kívánt utódok megelőzése mellett.",
+        "p2": "Az 'ivartalanítás' olyan sebészeti eljárás, amely megakadályozza az állatok szaporodását. Számos egészségügyi és viselkedési előnnyel járnak az állatok számára a nem kívánt utódok megelőzése mellett.",
         "p3": "A kedvence ivartalanításának előnyei",
         "p4": "A tanulmányok azt mutatják, hogy az ivartalanított háziállatok átlagosan tovább élnek.",
         "p5": "Az ivartalanítás csökkenti az agresszív viselkedést, ami nyugodtabbá, kevésbé frusztrálttá teszi a kutyáját, és kisebb a valószínűsége annak, hogy harap, vagy megtámad más kutyákat.",
@@ -383,29 +380,29 @@
         "p13": "Minden sebészeti beavatkozás bizonyos kockázatokat rejt magában. Az általános előny azonban a legtöbb állat esetében meghaladja a kockázatot. Kérjük, forduljon állatorvosához, ha bármilyen kérdése van.",
         "p14": "Mikor kell ivartalanítani a kutyámat?",
         "p15": "Kutyák esetében általában hat és fél hónap előtt ajánlott. Forduljon állatorvosához, hogy meghatározza kedvence számára a legjobb időt. A nőstény kutyáknak nem kell egy almuk legyen előtte.",
-        "videos": "Videók a Spay/Neuterről",
-        "videosButton": "További videók megtekintéséhez kattintson ide",
-        "spayNeuter": "További információ a fajtáról és arról, hogy miért érdemes mikrochippel ellátni egy kutyát",
-        "becomeFoster": "Legyen nevelőotthon",
-        "fosterProcess1": "Ha nem biztos benne, hogy készen áll-e egy hosszú távú elköteleződésre,",
-        "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét valamelyik kutyánk számára, hogy átmenetileg nevelje őket, amíg örök otthonra nem talál?",
-        "learnMoreButton": "TUDJ MEG TÖBBET"
+        "videos": "Videók az Ivartalanitásról",
+        "videosButton": "Több videó",
+        "spayNeuter": "További információ a fajtáról és hogy miért érdemes mikrochippel ellátni egy kutyát",
+        "becomeFoster": "Legyél ideiglenes befogadó",
+        "fosterProcess1": "Ha nem biztos abban, hogy készen áll-e egy hosszú távú elköteleződésre,",
+        "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét hogy az egyik kutyánkat befogadja, amig örök otthonra nem talál?",
+        "learnMoreButton": "További részletek"
     },
 
     "adoption": {
         "adoptionProcess": "Az örökbefogadási folyamat",
-        "intro": "Ismerje meg örökbefogadási folyamatunkat!",
+        "intro": "Tájékozódjon örökbefogadási folyamatunkat!",
         "p1": "Nagyon fontos számunkra, hogy minden állat számára megfelelő otthont találjunk. Minden kutyának megvan a maga egyénisége, és szeretnénk gondoskodni arról, hogy a kutya szükségleteit az Ön szükségleteihez igazítsuk, amikor a következő családtagot keresi otthonába.",
         "p2": "Egy nagyon aktív kutyát egy aktív családhoz kell elhelyezni, egy olyan kutyát, amely még mindig nem áll készen arra, hogy gyermekes családba kerüljön, mert például képzésre van szüksége, bizonyos esetekben előfordulhat, hogy gyermek nélküli családhoz kell mennie, hacsak nem továbbképzést biztosítanak. Ezért megvizsgálunk minden fontos elemet, hogy biztosan megtaláljuk a legmegfelelőbbet Önnek és a kérdéses kutyának.",
         "p3": "Örökbefogadásunk szokásos folyamata az, hogy kérjük, kommunikáljon velünk. Írjon nekünk üzenetet, ha szeretne örökbe fogadni. Miután megkaptuk ezeket az információkat, felhívjuk Önt és megbeszéljük Önt, hogy megtudjuk, mi érdekli, milyen típusú kutyát keres, és megbeszéljük a részleteket. Ha van egy adott időpontban örökbefogadható kutyánk, amely megfelel az Ön igényeinek, akkor egy találkozást is meg tudunk szervezni, és nagyszerű, ha úgy gondoljuk, hogy Ön a megfelelő.",
         "p4": "Kérjük, töltse ki kapcsolatfelvételi űrlapunkat, hogy a lehető leghamarabb kapcsolatba tudjunk lépni Önnel. (link a kapcsolatfelvételi űrlaphoz)",
         "p5": "Köszönjük, hogy megkeresett minket.",
-        "contactButton": "LÉPJEN KAPCSOLATBA VELÜNK",
+        "contactButton": "Kapcsolat",
         "success": "Sikertörténeteink",
-        "becomeFoster": "Legyen nevelőotthon",
+        "becomeFoster": "Legyél ideiglenes befogadó",
         "fosterProcess1": "Ha nem biztos benne, hogy készen áll-e egy hosszú távú elköteleződésre,",
-        "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét valamelyik kutyánk számára, hogy átmenetileg nevelje őket, amíg örök otthonra nem talál?",
-        "learnMoreButton": "TUDJ MEG TÖBBET"
+        "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét hogy az egyik kutyánkat befogadja, amig örök otthonra nem talál?",
+        "learnMoreButton": "További részletek"
     },
 
     "donate" : {
@@ -447,7 +444,7 @@
         "p12": "Kutyahordozó",
         "p13": "Fésűk, kefék, körömvágók, szőrvágók kutyák számára",
         "p14": "Kutyajátékok",
-        "p15": "•Nyakörv és póráz minden méretben"
+        "p15": "Nyakörv és póráz minden méretben"
     },
 
     "volunteer": {
@@ -468,16 +465,16 @@
         "p12": "Állatorvosi ellátás (állatorvosoktól és állattechnikusoktól)",
         "p13": "Ne feledje, hogy mivel nagyon korlátozott pénz áll rendelkezésünkre a mentési tevékenységre, az önkéntesség nem fizetett.",
         "form": {
-            "title": "Küldj nekünk üzenetet",
-            "intro": "Töltse ki ezt az űrlapot, és mondja el, miben tudna segíteni:",
+            "title": "Írjon nekünk",
+            "intro": "",
             "fName": "Keresztnév",
-            "lName": "Vezetéknév",
+            "lName": "Vezetéknév/Családnév",
             "email": "Email",
             "tel": "Telefon",
-            "age": "Elmúltál 18 éves?",
-            "radio1": "18 év alatti vagyok",
-            "radio2": "18 évesnél idősebb vagyok",
-            "interests": "Érdekel (válasszon több lehetőséget):",
+            "age": "18 évnél idősebb vagy?",
+            "radio1": "18 éven alul vagyok",
+            "radio2": "18 év felett vagyok",
+            "interests": "Ezekben szeretnék segíteni (válasszon több lehetőséget):",
             "option1": "Állatok szállítása",
             "option2": "A szükséges tárgyak szállítása",
             "option3": "Állatápolás",
@@ -488,25 +485,25 @@
             "option8": "Legyen nevelőotthon",
             "option9": "Beteg állatok gondozása",
             "option10": "Állatorvosi ellátás (állatorvosoktól és állattechnikusoktól)",
-            "button": "Elküldöm"
+            "button": "Küld"
         }
     },
 
     "sponsor": {
-        "sponsor": "Szponzoraink",
-        "foster": "Nevelőink",
+        "sponsor": "Támogatóink",
+        "foster": "Ideiglenes Befogadóink!",
         "volunteer": "Önkénteseink",
-        "p1": "Legyen szponzor",
+        "p1": "Szponzoraink",
         "p2": "Sokféle módon segíthet nekünk akár vállalati szponzorként, akár egyéni szponzorként.",
         "p3": "Vállalati szponzorainknak lehetőségünk nyílik arra, hogy weboldalunkon elhelyezhessük logóját és cégnevét, valamint megemlítsük közösségi média platformjainkon, hogy hírt adjunk szervezetéről. Így hűséges ügyfélszolgálatunktól további online és személyes forgalmat kap webhelye és üzletei felé.",
         "p4": "Egyéni szponzoraink esetében az Ön nevét is fel tudjuk tüntetni weboldalunkon, ha érdekli, hogy ezeket az információkat online is közöljük. Az egyéni szponzorálás magában foglalhatja szervezetünknek nyújtott pénzbeli hozzájárulást és/vagy egy vagy több kutya havi szponzorálását az orvosi számláik, az élelmezés és/vagy egyéb költségeik rövid vagy hosszabb ideig történő kifizetésére.",
         "p5": "Csapatunk és kutyáink minden támogatását nagyra értékelni fogják, mivel ez segít elérni céljainkat, hogy az állatoknak mindenkor szükséges gondoskodást nyújtsunk, és minél több német juhásznak találjunk szerető otthont.",
         "p6": "Kérjük, vegye fel velünk a kapcsolatot még ma, ha vállalati vagy egyéni szponzorrá szeretne válni. (vigye őket a Kapcsolat oldalra)",
-        "contactButton": "LÉPJEN KAPCSOLATBA VELÜNK"
+        "contactButton": "Kapcsolat"
     },
 
     "contact": {
-        "contact": "Lépjen kapcsolatba velünk",
+        "contact": "Kapcsolat",
         "p1": "Kövess minket itt is",
         "p2": "Írjon nekünk",
         "p3": "Keresztnév:",
@@ -516,11 +513,11 @@
         "p7": "Telefon:",
         "p8": "Üzenet/Kérdések:",
         "p9": "Kép feltöltése (nem kötelező):",
-        "submitButton": "Elküldöm"
+        "submitButton": "Küld"
     },
 
     "feedback": {
-        "feedback": "Visszajelzések az örökbefogadóktól",
+        "feedback": "Gazdis Visszajelzések",
         "intro": "Íme néhány szó örökbefogadóinktól",
         "p1": "Huba családtag lett, már tesók a Lucával meg Matyival. A szomszéd birkáit órákig nézi, csak simire jön ?? Holnap megyünk dokihoz utolsó oltásra. Kapott szép nyakörvet. Imádom, nagyon bujós. Szépen eszik. Jaaa es a rosszcsondkodást Lucámtol simán tanulja ????",
         "p2": "- Gábor",
@@ -534,7 +531,7 @@
         "success": "Sikertörténeteink",
         "thinkAdopt": "Örökbefogadáson gondolkodik?",
         "adoptionProcess": "Tájékozódjon örökbefogadási folyamatunkról!",
-        "learnMoreButton": "TUDJ MEG TÖBBET"
+        "learnMoreButton": "További részletek"
     },
 
     "adoptable": {
@@ -566,36 +563,35 @@
     },
 
     "adopted-photos": {
-        "adopted" : "Már elfogadva - Fotók",
+        "adopted" : "Gazdis - Fényképek",
         "intro": "Íme néhány kép azokról a kutyákról, akiket megmentettünk és már örök otthonra találtunk. Nyugodtan küldje el nekünk fogadott kutyáiról készült fotóit, hogy megoszthassuk azokat itt a weboldalunkon.",
-        "sendPhotoButton": "Küldje el nekünk fotóit",
-        "morePhotosButton": "Kattintson ide, ha további képeket szeretne megtekinteni a Flickr-en"
+        "sendPhotoButton": "Küldj egy Gazdis Visszajelzések",
+        "morePhotosButton": "Több fénykép a Flickr oldalunkon"
     },
 
     "adopted-videos": {
-        "adopted" : "Már elfogadva -Videók",
-        "intro1": "Íme néhány videó azokról a kutyákról, amelyeket megmentettünk, és már örök otthonra találtunk. Kövess minket ",
-        "intro2": " további videók megtekintéséhez.",
-        "learnMoreButton": "TUDJ MEG TÖBBET"
+        "adopted" : "Gazdis - Videók",
+        "intro1": "Íme néhány videó azokról a kutyákról, amelyeket megmentettünk, és már otthonra találtunk. További videók megtekintéséhez kövessen minket a ",
+        "intro2": " is."
     },
 
     "videos": {
         "videos": "Videók",
-        "intro": "További videók megtekintése: ",
-        "breedLink": "A fajtáról",
-        "spayNeuterLink": "Spay/Neuter",
-        "microchipsLink": "A mikrochipekről",
-        "trainTips": "Kutyakiképzés és tippek",
-        "healthCareLink": "Egészségügy",
-        "breedSub": "A fajtáról",
-        "spayNeuterSub": "A Spay/ivartalanításról",
-        "microchipsSub": "A mikrochipekről",
-        "trainTipsSub": "Kutyakiképzés és tippek",
-        "healthCareSub": "Egészségügy"
+        "intro": "Több videók: ",
+        "breedLink": "A Fajták Jellemzői",
+        "spayNeuterLink": "Az Ivartalanitásról",
+        "microchipsLink": "A Mikrochipekről",
+        "trainTips": "Kutyakiképzés és Tippek",
+        "healthCareLink": "A Kutya Egészségéről",
+        "breedSub": "Fajták Jellemzői",
+        "spayNeuterSub": "Az Ivartalanitásról",
+        "microchipsSub": "A Mikrochipekről",
+        "trainTipsSub": "Kutyakiképzés és Tippek",
+        "healthCareSub": "A Kutya Egészségéről"
     },
 
     "sendPhotos": {
-        "sendPhotos": "Küldje el nekünk fotóit",
+        "sendPhotos": "Küldj egy Gazdis Visszajelzést",
         "fName": "Keresztnév",
         "lName": "Vezetéknév/Családnév",
         "email": "Email",
@@ -603,7 +599,7 @@
         "subject": "Tárgy",
         "comments": "Üzenet/Kérdések",
         "upload": "Kép feltöltése (nem kötelező)",
-        "button": "Elküldöm"
+        "button": "Küld"
     }
 }
 
