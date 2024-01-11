@@ -137,19 +137,7 @@ const Microchips = () => {
             </div>
           </div>
           <Link to="/videos" target="_blank">
-            <button
-              className="btn btn-secondary mt-5"
-              style={{
-                background: "linear-gradient(45deg, #cc66ff, #3399ff)",
-                backgroundSize: "200% 200%",
-                color: "white",
-                border: "none",
-                padding: "10px 20px",
-                borderRadius: "5px",
-                transition: "0.5s",
-                cursor: "pointer",
-              }}
-            >
+            <button className="button-style mt-5">
               {t("microchips.videosButton")}
             </button>
           </Link>
@@ -195,19 +183,7 @@ const Microchips = () => {
         </h3>
         <p className="mt-5 mb-5">{t("microchips.adoptionProcess")}</p>
         <Link to="/adoption" target="_blank">
-          <button
-            className="btn btn-secondary mb-5"
-            style={{
-              background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
-              backgroundSize: "200% 200%",
-              color: "white",
-              border: "none",
-              padding: "10px 20px",
-              borderRadius: "5px",
-              transition: "0.5s",
-              cursor: "pointer",
-            }}
-          >
+          <button className="button-style mb-5">
             {t("microchips.learnMoreButton")}
           </button>
         </Link>

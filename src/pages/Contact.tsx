@@ -376,7 +376,7 @@ const Contact = () => {
                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                 onChange={handleRecaptchaChange}
               />
-              <button type="submit" className="btn btn-secondary">
+              <button type="submit" className="btn btn-primary">
                 {t("contact.submitButton")}
               </button>
               {submissionStatus === "success" && (

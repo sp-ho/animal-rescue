@@ -427,7 +427,7 @@ const Volunteer = () => {
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
               onChange={handleRecaptchaChange}
             />
-            <button type="submit" className="btn btn-secondary mt-3">
+            <button type="submit" className="btn btn-primary mt-3">
               {t("contact.submitButton")}
             </button>
             {submissionStatus === "success" && (

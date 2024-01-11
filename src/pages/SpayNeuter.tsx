@@ -124,19 +124,7 @@ const SpayNeuter = () => {
             </div>
           </div>
           <Link to="/videos" target="_blank">
-            <button
-              className="btn btn-secondary mt-5"
-              style={{
-                background: "linear-gradient(45deg, #cc66ff, #3399ff)",
-                backgroundSize: "200% 200%",
-                color: "white",
-                border: "none",
-                padding: "10px 20px",
-                borderRadius: "5px",
-                transition: "0.5s",
-                cursor: "pointer",
-              }}
-            >
+            <button className="button-style mt-5">
               {t("spay-neuter.videosButton")}
             </button>
           </Link>
@@ -187,19 +175,7 @@ const SpayNeuter = () => {
         <p className="mt-5">{t("spay-neuter.fosterProcess1")}</p>
         <p className="mb-5">{t("spay-neuter.fosterProcess2")}</p>
         <Link to="/fostering" target="_blank">
-          <button
-            className="btn btn-secondary mb-5"
-            style={{
-              background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
-              backgroundSize: "200% 200%",
-              color: "white",
-              border: "none",
-              padding: "10px 20px",
-              borderRadius: "5px",
-              transition: "0.5s",
-              cursor: "pointer",
-            }}
-          >
+          <button className="button-style mb-5">
             {t("spay-neuter.learnMoreButton")}
           </button>
         </Link>

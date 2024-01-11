@@ -300,19 +300,7 @@ const Sponsors = () => {
               <p>{t("sponsor.p5")}</p>
               <p>{t("sponsor.p6")}</p>
               <Link to="/contact" target="_blank">
-                <button
-                  className="btn btn-secondary mb-5"
-                  style={{
-                    background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
-                    backgroundSize: "200% 200%",
-                    color: "white",
-                    border: "none",
-                    padding: "10px 20px",
-                    borderRadius: "5px",
-                    transition: "0.5s",
-                    cursor: "pointer",
-                  }}
-                >
+                <button className="button-style mb-5">
                   {t("sponsor.contactButton")}
                 </button>
               </Link>

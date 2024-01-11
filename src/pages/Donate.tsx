@@ -61,7 +61,7 @@ const Donate = () => {
                       duration={500}
                       offset={-50}
                     >
-                      <p
+                      <span
                         style={{
                           color: "#007bff",
                           textDecoration: "underline",
@@ -80,7 +80,7 @@ const Donate = () => {
                         }}
                       >
                         {t("donate.link")}
-                      </p>
+                      </span>
                     </ScrollLink>
                   </p>
                 </li>
@@ -189,20 +189,7 @@ const Donate = () => {
               {t("donate.sponsor")}
             </p>
             <Link to="/sponsors" target="_blank">
-              <button
-                className="btn btn-secondary"
-                style={{
-                  maxWidth: "200px",
-                  background: "linear-gradient(45deg, #cc66ff, #3399ff)",
-                  backgroundSize: "200% 200%",
-                  color: "white",
-                  border: "none",
-                  padding: "10px 20px",
-                  borderRadius: "5px",
-                  transition: "0.5s",
-                  cursor: "pointer",
-                }}
-              >
+              <button className="button-style">
                 {t("donate.moreInfoButton")}
               </button>
             </Link>

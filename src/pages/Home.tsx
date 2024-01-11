@@ -53,19 +53,7 @@ const Home = () => {
             <strong>{t("home.line3")}</strong>
           </h1>
           <Link to="/adoption" target="_blank">
-            <button
-              className="btn mt-2"
-              style={{
-                background: "linear-gradient(45deg, #cc66ff, #3399ff)",
-                backgroundSize: "200% 200%",
-                color: "white",
-                border: "none",
-                padding: "10px 20px",
-                borderRadius: "5px",
-                transition: "0.5s",
-                cursor: "pointer",
-              }}
-            >
+            <button className="button-style mt-2">
               {t("home.adoptButton")}
             </button>
           </Link>
@@ -148,22 +136,7 @@ const Home = () => {
             <p className="mb-4">{t("home.story2")}</p>
             {/* Description */}
             <Link to="/about" target="_blank">
-              <button
-                className="btn"
-                style={{
-                  maxWidth: "150px",
-                  background: "linear-gradient(90deg, #cc66ff, #3399ff)",
-                  backgroundSize: "200% 200%",
-                  color: "white",
-                  border: "none",
-                  padding: "10px 20px",
-                  borderRadius: "5px",
-                  transition: "0.5s",
-                  cursor: "pointer",
-                }}
-              >
-                {t("home.abUsButton")}
-              </button>
+              <button className="button-style">{t("home.abUsButton")}</button>
             </Link>
           </div>
         </div>
@@ -182,22 +155,7 @@ const Home = () => {
             <p className="mb-4">{t("home.foster2")}</p>
             {/* Description */}
             <Link to="/fostering" target="_blank">
-              <button
-                className="btn"
-                style={{
-                  maxWidth: "300px",
-                  background: "linear-gradient(45deg, #cc66ff, #3399ff)",
-                  backgroundSize: "200% 200%",
-                  color: "white",
-                  border: "none",
-                  padding: "10px 20px",
-                  borderRadius: "5px",
-                  transition: "0.5s",
-                  cursor: "pointer",
-                }}
-              >
-                {t("home.fosterButton")}
-              </button>
+              <button className="button-style">{t("home.fosterButton")}</button>
             </Link>
           </div>
           {/* Column 2 */}
@@ -236,22 +194,7 @@ const Home = () => {
             </p>
             {/* Description */}
             <Link to="/breed" target="_blank">
-              <button
-                className="btn btn-secondary"
-                style={{
-                  maxWidth: "200px",
-                  background: "linear-gradient(45deg, #cc66ff, #3399ff)",
-                  backgroundSize: "200% 200%",
-                  color: "white",
-                  border: "none",
-                  padding: "10px 20px",
-                  borderRadius: "5px",
-                  transition: "0.5s",
-                  cursor: "pointer",
-                }}
-              >
-                {t("home.breedButton")}
-              </button>
+              <button className="button-style">{t("home.breedButton")}</button>
             </Link>
           </div>
         </div>

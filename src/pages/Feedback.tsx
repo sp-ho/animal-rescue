@@ -133,19 +133,7 @@ const Feedback = () => {
         </h3>
         <p className="mt-5 mb-5">{t("feedback.adoptionProcess")}</p>
         <Link to="/adoption" target="_blank">
-          <button
-            className="btn btn-secondary mb-5"
-            style={{
-              background: "linear-gradient(90deg,  #cc66ff, #3399ff)",
-              backgroundSize: "200% 200%",
-              color: "white",
-              border: "none",
-              padding: "10px 20px",
-              borderRadius: "5px",
-              transition: "0.5s",
-              cursor: "pointer",
-            }}
-          >
+          <button className="button-style mb-5">
             {t("feedback.learnMoreButton")}
           </button>
         </Link>
