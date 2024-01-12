@@ -27,7 +27,7 @@ const Adoption = () => {
       {/* Grey background section with more padding */}
       <div className="container-fluid mt-5 bg-light py-5">
         <div className="container">
-          <div className="row">
+          <div className="row py-5">
             {/* Image on the left with reduced margin */}
             <div className="col-md-6">
               <img
@@ -60,7 +60,7 @@ const Adoption = () => {
         <h3 className="mb-5 text-center">
           <strong>{t("adoption.success")}</strong>
         </h3>
-        <div className="row justify-content-center">
+        <div className="row py-2 justify-content-center">
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}

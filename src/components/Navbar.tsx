@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
 import hungarian from "../images/hungary.png";
 import english from "../images/canada.png";
@@ -66,23 +66,8 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/fostering">
-                    {t("navbar.abFoster")}
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/breed">
-                    {t("navbar.abBreed")}
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/microchips">
-                    {t("navbar.abMicrochips")}
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/spayneuter">
-                    {t("navbar.abSpayNeuter")}
+                  <Link className="dropdown-item" to="/sponsors">
+                    {t("navbar.sponsorsFostersVolunteers")}
                   </Link>
                 </li>
               </ul>
@@ -135,6 +120,11 @@ const Navbar: React.FC = () => {
                     {t("navbar.feedback")}
                   </Link>
                 </li>
+                <li>
+                  <Link className="dropdown-item" to="/sendphotos">
+                    {t("navbar.sendPhotos")}
+                  </Link>
+                </li>
               </ul>
             </li>
             {/* Get Involved dropdown */}
@@ -149,12 +139,17 @@ const Navbar: React.FC = () => {
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/sponsors">
-                    {t("navbar.sponsorsFostersVolunteers")}
+                  <Link className="dropdown-item" to="/fostering">
+                    {t("navbar.abFoster")}
                   </Link>
                 </li>
+
                 <li>
-                  <Link className="dropdown-item" to="/sponsors">
+                  <Link
+                    smooth
+                    className="dropdown-item"
+                    to="/sponsors#beSponsor"
+                  >
                     {t("navbar.sponsor")}
                   </Link>
                 </li>
@@ -182,13 +177,23 @@ const Navbar: React.FC = () => {
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/videos">
-                    {t("navbar.videos")}
+                  <Link className="dropdown-item" to="/breed">
+                    {t("navbar.abBreed")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/sendphotos">
-                    {t("navbar.sendPhotos")}
+                  <Link className="dropdown-item" to="/microchips">
+                    {t("navbar.abMicrochips")}
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/spayneuter">
+                    {t("navbar.abSpayNeuter")}
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/videos">
+                    {t("navbar.videos")}
                   </Link>
                 </li>
               </ul>

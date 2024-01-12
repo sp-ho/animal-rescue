@@ -527,7 +527,7 @@ const Fostering = () => {
       {/* Grey background section with more padding */}
       <div className="container-fluid bg-light py-5">
         <div className="container">
-          <div className="row">
+          <div className="row py-5">
             {/* Image on the left */}
             <div className="col-md-6">
               <img
@@ -680,9 +680,7 @@ const Fostering = () => {
               />
             </div>
             <div className="col-md-4">
-              <label htmlFor="country">
-                {t("fostering.countries.hungary")}
-              </label>
+              <label htmlFor="country">{t("fostering.form.country")}</label>
               {/* Use Select component for the country dropdown options */}
               <Select
                 options={countries}

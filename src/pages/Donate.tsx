@@ -1,6 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import donateImage1 from "../images/donate/donate.jpg";
+import donateImage2 from "../images/donate/donations.jpg";
+import sponsorImage from "../images/sponsors/become-a-sponsor.jpg";
 
 const Donate = () => {
   const { t } = useTranslation();
@@ -24,7 +27,7 @@ const Donate = () => {
             {/* Image on the left  */}
             <div className="col-md-6">
               <img
-                src="https://via.placeholder.com/500"
+                src={donateImage1}
                 alt="Donate"
                 className="img-fluid rounded"
                 style={{ maxWidth: "100%" }}
@@ -158,7 +161,7 @@ const Donate = () => {
             </div>
             <div className="col-md-6">
               <img
-                src="https://via.placeholder.com/500"
+                src={donateImage2}
                 alt="Donate"
                 className="img-fluid rounded"
                 style={{ maxWidth: "100%" }}
@@ -174,10 +177,10 @@ const Donate = () => {
           {/* Image on the left  */}
           <div className="col-md-5 mb-5 mt-5">
             <img
-              src="https://via.placeholder.com/500"
+              src={sponsorImage}
               alt="Become a Sponsor"
               className="img-fluid rounded"
-              style={{ width: "80%" }}
+              style={{ width: "100%" }}
             />
           </div>
           {/* Text on the right */}

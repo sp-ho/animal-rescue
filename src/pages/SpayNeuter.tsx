@@ -27,7 +27,7 @@ const SpayNeuter = () => {
       {/* Grey background section with more padding */}
       <div className="container-fluid mt-5 bg-light py-5">
         <div className="container">
-          <div className="row justify-content-center">
+          <div className="row py-5 justify-content-center">
             {/* Image on the right with reduced margin */}
             <div className="col-md-6">
               <p>

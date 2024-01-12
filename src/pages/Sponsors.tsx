@@ -16,6 +16,7 @@ import timeaSmallImage from "../images/volunteers/ivan-timea-volunteer.jpg";
 import timeaImage from "../images/volunteers/ivan-timea.jpg";
 import eraSmallImage from "../images/volunteers/kozma-era-volunteer.jpg";
 import eraImage from "../images/volunteers/kozma-era-modified.jpg";
+import sponsorImage from "../images/sponsors/become-a-sponsor.jpg";
 
 const Sponsors = () => {
   const { t } = useTranslation();
@@ -282,7 +283,7 @@ const Sponsors = () => {
             {/* Image on the left with reduced margin */}
             <div className="col-md-6">
               <img
-                src="https://via.placeholder.com/500"
+                src={sponsorImage}
                 alt="Become a sponsor"
                 className="img-fluid rounded"
                 style={{ maxWidth: "100%", height: "auto", marginBottom: 10 }}
@@ -300,7 +301,7 @@ const Sponsors = () => {
               <p>{t("sponsor.p5")}</p>
               <p>{t("sponsor.p6")}</p>
               <Link to="/contact" target="_blank">
-                <button className="button-style mb-5">
+                <button id="beSponsor" className="button-style mb-5">
                   {t("sponsor.contactButton")}
                 </button>
               </Link>
