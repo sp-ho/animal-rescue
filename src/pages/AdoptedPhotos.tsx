@@ -85,6 +85,19 @@ import mango2 from "../images/adopted/mango/mango2.jpg";
 import mango3 from "../images/adopted/mango/mango3.jpg";
 import mango4 from "../images/adopted/mango/mango4.jpg";
 import mango5 from "../images/adopted/mango/mango5.jpg";
+import matyi1 from "../images/adopted/matyi/matyi-1.jpg";
+import matyi2 from "../images/adopted/matyi/matyi-2.jpg";
+import matyi3 from "../images/adopted/matyi/matyi-3.jpg";
+import matyi4 from "../images/adopted/matyi/matyi-4.jpg";
+import matyi5 from "../images/adopted/matyi/matyi-5.jpg";
+import matyi6 from "../images/adopted/matyi/matyi-6.jpg";
+import matyi7 from "../images/adopted/matyi/matyi-7.jpg";
+import matyi8 from "../images/adopted/matyi/matyi-8.jpg";
+import matyi9 from "../images/adopted/matyi/matyi-9.jpg";
+import matyi10 from "../images/adopted/matyi/matyi-10.jpg";
+import matyi11 from "../images/adopted/matyi/matyi-11.jpg";
+import matyi12 from "../images/adopted/matyi/matyi-12.jpg";
+import matyi13 from "../images/adopted/matyi/matyi-13.jpg";
 import mollyHerceg1 from "../images/adopted/molly_herceg/molly-es-herceg-1.jpg";
 import mollyHerceg3 from "../images/adopted/molly_herceg/molly-es-herceg-3.jpg";
 import mollyHerceg4 from "../images/adopted/molly_herceg/molly-es-herceg-4.jpg";
@@ -136,6 +149,16 @@ import tony8 from "../images/adopted/tony/tony8.jpg";
 import tony9 from "../images/adopted/tony/tony9.jpg";
 import tony10 from "../images/adopted/tony/tony10.jpg";
 import tony11 from "../images/adopted/tony/tony11.jpg";
+import wilson1 from "../images/adopted/wilson/wilson-1.jpg";
+import wilson2 from "../images/adopted/wilson/wilson-2.jpg";
+import wilson3 from "../images/adopted/wilson/wilson-3.jpg";
+import wilson4 from "../images/adopted/wilson/wilson-4.jpg";
+import wilson5 from "../images/adopted/wilson/wilson-5.jpg";
+import wilson7 from "../images/adopted/wilson/wilson-7.jpg";
+import wilson9 from "../images/adopted/wilson/wilson-9.jpg";
+import wilson10 from "../images/adopted/wilson/wilson-10.jpg";
+import wilson11 from "../images/adopted/wilson/wilson-11.jpg";
+import wilson12 from "../images/adopted/wilson/wilson-12.jpg";
 
 interface Dog {
   id: string;
@@ -166,15 +189,34 @@ const AdoptedPhotos = () => {
     {
       id: "Wilson",
       photos: [
-        { id: "wilson1", src: "https://via.placeholder.com/150" },
-        { id: "wilson2", src: "https://via.placeholder.com/150" },
+        { id: "wilson1", src: wilson1 },
+        { id: "wilson2", src: wilson2 },
+        { id: "wilson3", src: wilson3 },
+        { id: "wilson4", src: wilson4 },
+        { id: "wilson5", src: wilson5 },
+        { id: "wilson7", src: wilson7 },
+        { id: "wilson9", src: wilson9 },
+        { id: "wilson10", src: wilson10 },
+        { id: "wilson11", src: wilson11 },
+        { id: "wilson12", src: wilson12 },
       ],
     },
     {
       id: "Matyi",
       photos: [
-        { id: "matyi1", src: "https://via.placeholder.com/150" },
-        { id: "matyi2", src: "https://via.placeholder.com/150" },
+        { id: "matyi1", src: matyi1 },
+        { id: "matyi2", src: matyi2 },
+        { id: "matyi3", src: matyi3 },
+        { id: "matyi4", src: matyi4 },
+        { id: "matyi5", src: matyi5 },
+        { id: "matyi6", src: matyi6 },
+        { id: "matyi7", src: matyi7 },
+        { id: "matyi8", src: matyi8 },
+        { id: "matyi9", src: matyi9 },
+        { id: "matyi10", src: matyi10 },
+        { id: "matyi11", src: matyi11 },
+        { id: "matyi12", src: matyi12 },
+        { id: "matyi13", src: matyi13 },
       ],
     },
     {
