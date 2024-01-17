@@ -62,22 +62,32 @@ const Adoption = () => {
         </h3>
         <div className="row py-2 justify-content-center">
           {/* Column 1 - Placeholder for image */}
-          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
+          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
-            <img
-              src={successImage1}
-              alt="dog-german-shepherd"
-              style={{ width: "90%", borderRadius: "15px" }}
-            />
+            <Link to="/adopted-photos" target="_blank">
+              <img
+                src={successImage1}
+                alt="dog-german-shepherd"
+                style={{ width: "600px", borderRadius: "15px" }}
+              />
+              <div className="hover-overlay">
+                <p>{t("adoption.photos")}</p>
+              </div>
+            </Link>
           </div>
           {/* Column 2 */}
-          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
+          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
-            <img
-              src={successImage2}
-              alt="microchips"
-              style={{ width: "90%", borderRadius: "15px" }}
-            />
+            <Link to="/adopted-videos" target="_blank">
+              <img
+                src={successImage2}
+                alt="microchips"
+                style={{ width: "600px", borderRadius: "15px" }}
+              />
+              <div className="hover-overlay">
+                <p>{t("adoption.videos")}</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

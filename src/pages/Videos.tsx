@@ -231,7 +231,7 @@ const Videos = () => {
             {breedVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-6 mt-5 mb-4 d-flex justify-content-center"
+                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe
@@ -257,7 +257,7 @@ const Videos = () => {
             {spayNeuterVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-6 mt-5 mb-4 d-flex justify-content-center"
+                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe
@@ -283,7 +283,7 @@ const Videos = () => {
             {microchipsVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-6 mt-5 mb-4 d-flex justify-content-center"
+                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe
@@ -309,7 +309,7 @@ const Videos = () => {
             {trainTipsVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-6 mt-5 mb-4 d-flex justify-content-center"
+                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe
@@ -335,7 +335,7 @@ const Videos = () => {
             {healthCareVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-6 mt-5 mb-4 d-flex justify-content-center"
+                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe

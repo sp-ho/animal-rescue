@@ -33,17 +33,17 @@ function App() {
           <Route path="/fostering" element={<Fostering />} />
           <Route path="/breed" element={<Breed />} />
           <Route path="/microchips" element={<Microchips />} />
-          <Route path="/spayneuter" element={<SpayNeuter />} />
+          <Route path="/spay-neuter" element={<SpayNeuter />} />
           <Route path="/adoption" element={<Adoption />} />
           <Route path="/adoptable" element={<Adoptable />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path="/adoptedphotos" element={<AdoptedPhotos />} />
-          <Route path="/adoptedvideos" element={<AdoptedVideos />} />
+          <Route path="/adopted-photos" element={<AdoptedPhotos />} />
+          <Route path="/adopted-videos" element={<AdoptedVideos />} />
           <Route path="/videos" element={<Videos />} />
-          <Route path="/sendphotos" element={<SendPhotos />} />
+          <Route path="/send-photos" element={<SendPhotos />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

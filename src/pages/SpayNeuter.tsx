@@ -151,7 +151,7 @@ const SpayNeuter = () => {
           {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="microchips" target="_blank">
+            <Link to="/microchips" target="_blank">
               <img
                 src={microchipsImage}
                 alt="microchips"

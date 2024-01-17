@@ -3,7 +3,6 @@
         "home": "FÖOLDAL",
         "about": "RÓLUNK",
         "abUs": "Rólunk",
-        "abFoster": "Legyél Ideiglenes Befogadó",
         "abBreed": "Fajták Jellemzői",
         "abMicrochips": "A Mikrochipekről",
         "abSpayNeuter": "Az Ivartalanitásról",
@@ -49,6 +48,8 @@
         "breed2": "Ha többet tud a német juhászkutyáról, beleértve a személyiségüket és a történelmüket, akkor jobban megértheti ezt a fajtát, hogy megtudja, ez a megfelelő kutya a családja számára.",
         "breedButton": "A Fajták Jellemzői",
         "success": "Sikertörténeteink",
+        "photos": "Fényképek",
+        "videos": "Videók",
         "success1a": "Huba családtag lett, már tesók a Lucával med Matyival. A szomszéd birkáit órákig nézi.",
         "success1b": "- Gábor",
         "success2a": "Nyaralónkban vagyunk, mi sátorban alszunk és Diego is velünk volt.",
@@ -399,6 +400,8 @@
         "p5": "Köszönjük, hogy megkeresett minket.",
         "contactButton": "Kapcsolat",
         "success": "Sikertörténeteink",
+        "photos": "Fényképek",
+        "videos": "Videók",
         "becomeFoster": "Legyél ideiglenes befogadó",
         "fosterProcess1": "Ha nem biztos benne, hogy készen áll-e egy hosszú távú elköteleződésre,",
         "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét hogy az egyik kutyánkat befogadja, amig örök otthonra nem talál?",
@@ -519,7 +522,7 @@
     "feedback": {
         "feedback": "Gazdis Visszajelzések",
         "intro": "Íme néhány szó örökbefogadóinktól",
-        "p1": "Huba családtag lett, már tesók a Lucával meg Matyival. A szomszéd birkáit órákig nézi, csak simire jön ?? Holnap megyünk dokihoz utolsó oltásra. Kapott szép nyakörvet. Imádom, nagyon bujós. Szépen eszik. Jaaa es a rosszcsondkodást Lucámtol simán tanulja ????",
+        "p1": "Huba családtag lett, már tesók a Lucával meg Matyival. A szomszéd birkáit órákig nézi, csak simire jön. Holnap megyünk dokihoz utolsó oltásra. Kapott szép nyakörvet. Imádom, nagyon bujós. Szépen eszik. Jaaa es a rosszcsondkodást Lucámtol simán tanulja.",
         "p2": "- Gábor",
         "p3": "Nyaralónkban vagyunk, mi sátorban alszunk és Diego is velünk volt.",
         "p4": "- Annamari & Bence",
@@ -531,6 +534,8 @@
         "p10": "Eddig mindig tenyésztőtől vettünk kutyust. Egy ismerősöm hívta fel a figyelmemet erre a lehetőségre hogy örökbe fogadhatnánk. Akkor láttam meg a Te posztodat. Örömmel láttam, hogy gyorsan válaszoltál, és Lettike helyett ajánlottad Szanát. Ez olyan jól esett, már azt hittem, hogy alkalmatlannak találnak minket gazdinak. Pedig mi tényleg családtagnak tekintjük őket. Hálásan köszönöm, hogy bíztál bennünk. Mindent megteszünk azért, hogy Szana boldog legyen.",
         "p11": "Edit & Dóra",
         "success": "Sikertörténeteink",
+        "photos": "Fényképek",
+        "videos": "Videók",
         "thinkAdopt": "Örökbefogadáson gondolkodik?",
         "adoptionProcess": "Tájékozódjon örökbefogadási folyamatunkról!",
         "learnMoreButton": "További részletek"
@@ -538,6 +543,20 @@
 
     "adoptable": {
         "adoptable": "Örökbefogadható kutyák",
+        "prev": "Előző",
+        "next": "Következő",
+        "lena": {
+            "p1": "Léna gazdit keres 🤗",
+            "p2": "Léna egy gyönyörű 2 éves németjuhász kislány 🤗😍",
+            "p3": "Igazi családi kutya🤗. Szereti a gyerekeket, màs kutyákkal jól kijön.",
+            "p4": "Játékos nagyon és jól motiválható. 🤗🤗",
+            "p5": "Nagyon okos kutya. Behívható, könnyen tanul, lelkes, kedves, szófogadó igazából róla tényleg csak jót tudunk írni 🤗😍",
+            "p6": "Minden oltása megvan, szivféreg negatív, ívartalan, chipes ✅",
+            "p7": "Útlevelet tudunk intézni ❗️",
+            "p8": "Helyileg: Bács Kiskun megye, Bugac ",
+            "p9": "Kontakt: Kárpáti Judit",
+            "p10": "Részletes bemutatkozó üzenetet kérek ❗️"
+        },
         "kelly": {
             "p1": "Kelly gazdit keres ❤️❤️❤️",
             "p2": "Gyönyörű fekete gyémánt Kelly németjuhász kislány. ❤️ Fajtáján belül is mese szép ❤️❤️❤️",

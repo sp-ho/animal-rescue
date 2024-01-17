@@ -74,24 +74,26 @@ const AdoptedVideos = () => {
 
       {/* Grid for videos */}
       <div className="container-fluid bg-light mt-5 py-5 video-grid">
-        <div className="row d-flex justify-content-center">
-          {videos.map((video) => (
-            <div
-              key={video.title}
-              className="col-md-5 mt-5 mb-4 d-flex justify-content-center"
-            >
-              <div className="video-cell">
-                <iframe
-                  width="550px"
-                  height="300px"
-                  src={video.src}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+        <div className="container">
+          <div className="row d-flex justify-content-center">
+            {videos.map((video) => (
+              <div
+                key={video.title}
+                className="col-md-5 me-5 mx-4 mb-4 d-flex justify-content-center"
+              >
+                <div className="video-cell">
+                  <iframe
+                    width="600px"
+                    height="300px"
+                    src={video.src}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>

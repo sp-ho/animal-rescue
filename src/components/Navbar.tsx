@@ -106,12 +106,12 @@ const Navbar: React.FC = () => {
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/adoptedphotos">
+                  <Link className="dropdown-item" to="/adopted-photos">
                     {t("navbar.adoptedPhotos")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/adoptedvideos">
+                  <Link className="dropdown-item" to="/adopted-videos">
                     {t("navbar.adoptedVideos")}
                   </Link>
                 </li>
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/sendphotos">
+                  <Link className="dropdown-item" to="/send-photos">
                     {t("navbar.sendPhotos")}
                   </Link>
                 </li>
@@ -138,12 +138,6 @@ const Navbar: React.FC = () => {
                 {t("navbar.involve")}
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <Link className="dropdown-item" to="/fostering">
-                    {t("navbar.abFoster")}
-                  </Link>
-                </li>
-
                 <li>
                   <Link
                     smooth
@@ -187,7 +181,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/spayneuter">
+                  <Link className="dropdown-item" to="/spay-neuter">
                     {t("navbar.abSpayNeuter")}
                   </Link>
                 </li>

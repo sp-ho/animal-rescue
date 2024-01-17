@@ -153,20 +153,24 @@ const Microchips = () => {
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <img
-              src={dogImage}
-              alt="german-shepherd-dog"
-              style={{ width: "90%", borderRadius: "15px" }}
-            />
+            <Link to="/breed" target="_blank">
+              <img
+                src={dogImage}
+                alt="german-shepherd-dog"
+                style={{ width: "90%", borderRadius: "15px" }}
+              />
+            </Link>
           </div>
           {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <img
-              src={spayNeuterImage}
-              alt="spay-neuter"
-              style={{ width: "90%", borderRadius: "15px" }}
-            />
+            <Link to="/spay-neuter" target="_blank">
+              <img
+                src={spayNeuterImage}
+                alt="spay-neuter"
+                style={{ width: "90%", borderRadius: "15px" }}
+              />
+            </Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,12 @@
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import lena1 from "../images/adoptable/lena-1.jpg";
+import lena2 from "../images/adoptable/lena-2.jpg";
+import lena3 from "../images/adoptable/lena-3.jpg";
+import lena4 from "../images/adoptable/lena-4.jpg";
 import kelly1 from "../images/adoptable/kelly1-web-res.jpg";
 import kelly2 from "../images/adoptable/kelly2-web-res.jpg";
 import cezar1 from "../images/adoptable/cezar1.jpg";
@@ -13,17 +18,48 @@ import cezar5 from "../images/adoptable/cezar5.jpg";
 const Adoptable = () => {
   const { t } = useTranslation();
 
+  // Slider reference for each adoptable dog
+  const lenaSliderRef = useRef<Slider | null>(null);
+  const kellySliderRef = useRef<Slider | null>(null);
+  const cezarSliderRef = useRef<Slider | null>(null);
+
   // Images for the carousel
+  const lenaImages = [lena1, lena2, lena3, lena4];
   const kellyImages = [kelly1, kelly2];
   const cesarImages = [cezar1, cezar2, cezar3, cezar4, cezar5];
 
   // Settings of image carousel
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+
+  // Handlers on Prev and Next buttons for each adoptable dog
+  const handleKellyNext = () => {
+    kellySliderRef.current?.slickNext();
+  };
+
+  const handleKellyPrev = () => {
+    kellySliderRef.current?.slickPrev();
+  };
+
+  const handleCezarNext = () => {
+    cezarSliderRef.current?.slickNext();
+  };
+
+  const handleCezarPrev = () => {
+    cezarSliderRef.current?.slickPrev();
+  };
+
+  const handleLenaNext = () => {
+    lenaSliderRef.current?.slickNext();
+  };
+
+  const handleLenaPrev = () => {
+    lenaSliderRef.current?.slickPrev();
   };
 
   return (
@@ -39,12 +75,67 @@ const Adoptable = () => {
 
       {/* Grey background section with image carousel and text */}
       <div className="container-fluid bg-light mt-5 mb-5 py-5">
-        <div className="container mt-5">
+        <div className="container mt-5 mb-5">
           <div className="row">
             {/* Column 1: Image carousel */}
             <div className="col-md-4">
               <div style={{ textAlign: "center" }}>
-                <Slider {...settings}>
+                <Slider ref={lenaSliderRef} {...settings}>
+                  {lenaImages.map((imageUrl, index) => (
+                    <div key={`lena${index + 1}`}>
+                      <img
+                        src={imageUrl}
+                        alt={`Lena ${index + 1}`}
+                        className="img-fluid rounded"
+                        style={{
+                          maxWidth: "100%",
+                          height: "600px",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </div>
+                  ))}
+                </Slider>
+                <div style={{ marginTop: "10px" }}>
+                  <button
+                    onClick={handleLenaPrev}
+                    className="button-style me-2"
+                  >
+                    &lt; {t("adoptable.prev")}
+                  </button>
+                  <button onClick={handleLenaNext} className="button-style">
+                    {t("adoptable.next")} &gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Text on the right */}
+            <div className="col-md-7 mt-5 py-5">
+              <h3>{t("adoptable.lena.p1")}</h3>
+              <br />
+              <p>{t("adoptable.lena.p2")}</p>
+              <p>{t("adoptable.lena.p3")}</p>
+              <p>{t("adoptable.lena.p4")}</p>
+              <p>{t("adoptable.lena.p5")}</p>
+              <p>{t("adoptable.lena.p6")}</p>
+              <p>{t("adoptable.lena.p7")}</p>
+              <p>{t("adoptable.lena.p8")}</p>
+              <p>{t("adoptable.lena.p9")}</p>
+              <p>{t("adoptable.lena.p10")}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* White background section with image carousel and text */}
+      <div className="container-fluid mt-5 mb-5 py-5">
+        <div className="container">
+          <div className="row">
+            {/* Column 1: Image carousel */}
+            <div className="col-md-4">
+              <div style={{ textAlign: "center" }}>
+                <Slider ref={kellySliderRef} {...settings}>
                   {kellyImages.map((imageUrl, index) => (
                     <div key={`kelly${index + 1}`}>
                       <img
@@ -60,6 +151,17 @@ const Adoptable = () => {
                     </div>
                   ))}
                 </Slider>
+                <div style={{ marginTop: "10px" }}>
+                  <button
+                    onClick={handleKellyPrev}
+                    className="button-style me-2"
+                  >
+                    &lt; {t("adoptable.prev")}
+                  </button>
+                  <button onClick={handleKellyNext} className="button-style">
+                    {t("adoptable.next")} &gt;
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -80,14 +182,14 @@ const Adoptable = () => {
         </div>
       </div>
 
-      {/* White background section with image carousel and text */}
-      <div className="container-fluid mt-5 mb-5 py-5">
-        <div className="container">
+      {/* Grey background section with image carousel and text */}
+      <div className="container-fluid bg-light mt-5 py-5">
+        <div className="container py-5">
           <div className="row">
             {/* Column 1: Image carousel */}
             <div className="col-md-5">
               <div style={{ textAlign: "center" }}>
-                <Slider {...settings}>
+                <Slider ref={cezarSliderRef} {...settings}>
                   {cesarImages.map((imageUrl, index) => (
                     <div key={`cezar${index + 1}`}>
                       <img
@@ -99,6 +201,17 @@ const Adoptable = () => {
                     </div>
                   ))}
                 </Slider>
+                <div style={{ marginTop: "10px" }}>
+                  <button
+                    onClick={handleCezarPrev}
+                    className="button-style me-2"
+                  >
+                    &lt; {t("adoptable.prev")}
+                  </button>
+                  <button onClick={handleCezarNext} className="button-style">
+                    {t("adoptable.next")} &gt;
+                  </button>
+                </div>
               </div>
             </div>
 

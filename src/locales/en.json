@@ -3,7 +3,6 @@
         "home": "HOME",
         "about": "ABOUT",
         "abUs": "About Us",
-        "abFoster": "About Fostering",
         "abBreed": "About the Breed",
         "abMicrochips": "About Microchips",
         "abSpayNeuter": "About Spaying & Neutering",
@@ -49,6 +48,8 @@
         "breed2": "Knowing more about German Shepherds, including their personality and history, will help you understand this breed better to see if this is the right dog for your family.",
         "breedButton": "ABOUT THE BREED",
         "success": "Our Success Stories",
+        "photos": "View Photos",
+        "videos": "View Videos",
         "success1a": "Huba became a family member, he has a brother, Matyi, and a sister, Luca, now. He is looking at the neighbor's sheep for hours.",
         "success1b": "- Gábor",
         "success2a": "We are on our vacation, we are sleeping in a tent and Diego is with us as well.",
@@ -399,6 +400,8 @@
         "p5": "Thank you for reaching out to us.",
         "contactButton": "CONTACT US",
         "success": "Our Success Stories",
+        "photos": "View Photos",
+        "videos": "View Videos",
         "becomeFoster": "Become a Foster Home",
         "fosterProcess1": "If you are not sure whether you are ready for a long-term commitment, have you considered opening your home & heart",
         "fosterProcess2": "for one of our dogs to foster them temporarily till they find a forever home?",
@@ -519,7 +522,7 @@
     "feedback": {
         "feedback": "Feedback from adopters",
         "intro": "Here are some words from our adopters",
-        "p1": "Huba became a family member, he has a brother, Matyi, and a sister, Luca, now. He is looking at the neighbor’s sheep for hours, he only comes to be petted. ?? We are going to the doctor tomorrow so that he can get his last vaccination. He got a nice collar. I love him, he loves to be close to me. He eats nicely as well. Also he learns all the mischief from Luca ????",
+        "p1": "Huba became a family member, he has a brother, Matyi, and a sister, Luca, now. He is looking at the neighbor’s sheep for hours, he only comes to be petted. We are going to the doctor tomorrow so that he can get his last vaccination. He got a nice collar. I love him, he loves to be close to me. He eats nicely as well. Also he learns all the mischief from Luca.",
         "p2": "- Gábor",
         "p3": "We are on our vacation, we are sleeping in a tent and Diego is with us as well.",
         "p4": " - Annamari & Bence",
@@ -531,6 +534,8 @@
         "p10": "So far we have always bought a dog from a breeder. An acquaintance of mine drew my attention to this possibility to adopt one instead. Then I saw your post. I was pleased to see that you responded quickly and recommended Szana instead of Lettike. It felt so good, I already thought we would be found to be unfit to adopt a dog. When in fact we really consider them family members. We will do everything to make sure Szana will have a happy life with us. ",
         "p11": "Edit & Dóra ",
         "success": "Our Success Stories",
+        "photos": "View Photos",
+        "videos": "View Videos",
         "thinkAdopt": "Thinking about Adopting?",
         "adoptionProcess": "Find out about our adoption process!",
         "learnMoreButton": "LEARN MORE"
@@ -538,6 +543,20 @@
 
     "adoptable": {
         "adoptable": "Adoptable Dogs",
+        "prev": "Prev",
+        "next": "Next",
+        "lena": {
+            "p1": "Léna is looking for her forever home 🤗",
+            "p2": "Léna is a beautiful 2 years old German Shepherd girl 🤗😍",
+            "p3": "A real family dog. She loves children and gets along well with dogs.",
+            "p4": "She loves to play and can be well motivated. 🤗🤗",
+            "p5": "She is a very smart dog. She can be called inside, she learns easily, she is enthusiastic, kind, responsive, in fact, we can only write good things about her 🤗😍",
+            "p6": "She has all her vaccinations up to date, she is heartworm negative, spayed and microchipped ✅",
+            "p7": "We can arrange a passport ❗️",
+            "p8": "Locally: Bács Kiskun County, Bugac",
+            "p9": "Contact: Judit Kárpáti",
+            "p10": "I would like a detailed introductory message ❗️"
+        },
         "kelly": {
             "p1": "Kelly is looking for her forever home ❤️❤️❤️",
             "p2": "Beautiful black diamond Kelly German Shepherd girl. ❤️ She stands out even within her own breed. ",

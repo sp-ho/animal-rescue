@@ -62,9 +62,6 @@ import dolly8 from "../images/adopted/dolly/dolly8.jpg";
 import dolly9 from "../images/adopted/dolly/dolly9.jpg";
 import dolly10 from "../images/adopted/dolly/dolly10.jpg";
 import dolly11 from "../images/adopted/dolly/dolly11.jpg";
-import huba1 from "../images/adopted/huba/huba1.jpg";
-import huba2 from "../images/adopted/huba/huba2.jpg";
-import huba3 from "../images/adopted/huba/huba3.jpg";
 import jazmin1 from "../images/adopted/jazmin/jazmin-1.jpg";
 import jazmin2 from "../images/adopted/jazmin/jazmin-2.jpg";
 import jazmin3 from "../images/adopted/jazmin/jazmin-3.jpg";
@@ -98,6 +95,14 @@ import matyi10 from "../images/adopted/matyi/matyi-10.jpg";
 import matyi11 from "../images/adopted/matyi/matyi-11.jpg";
 import matyi12 from "../images/adopted/matyi/matyi-12.jpg";
 import matyi13 from "../images/adopted/matyi/matyi-13.jpg";
+import mexi1 from "../images/adopted/mexi/mexi-1.jpg";
+import mexi2 from "../images/adopted/mexi/mexi-2.jpg";
+import mexi3 from "../images/adopted/mexi/mexi-3.jpg";
+import mexi4 from "../images/adopted/mexi/mexi-4.jpg";
+import mia1 from "../images/adopted/mia/mia-1.jpg";
+import mia2 from "../images/adopted/mia/mia-2.jpg";
+import mia3 from "../images/adopted/mia/mia-3.jpg";
+import mia4 from "../images/adopted/mia/mia-4.jpg";
 import mollyHerceg1 from "../images/adopted/molly_herceg/molly-es-herceg-1.jpg";
 import mollyHerceg3 from "../images/adopted/molly_herceg/molly-es-herceg-3.jpg";
 import mollyHerceg4 from "../images/adopted/molly_herceg/molly-es-herceg-4.jpg";
@@ -149,6 +154,10 @@ import tony8 from "../images/adopted/tony/tony8.jpg";
 import tony9 from "../images/adopted/tony/tony9.jpg";
 import tony10 from "../images/adopted/tony/tony10.jpg";
 import tony11 from "../images/adopted/tony/tony11.jpg";
+import trixi1 from "../images/adopted/trixi/trixi-1.jpg";
+import trixi2 from "../images/adopted/trixi/trixi-2.jpg";
+import trixi3 from "../images/adopted/trixi/trixi-3.jpg";
+import trixi4 from "../images/adopted/trixi/trixi-4.jpg";
 import wilson1 from "../images/adopted/wilson/wilson-1.jpg";
 import wilson2 from "../images/adopted/wilson/wilson-2.jpg";
 import wilson3 from "../images/adopted/wilson/wilson-3.jpg";
@@ -248,10 +257,12 @@ const AdoptedPhotos = () => {
       ],
     },
     {
-      id: "Maya",
+      id: "Mia",
       photos: [
-        { id: "maya1", src: "https://via.placeholder.com/150" },
-        { id: "maya2", src: "https://via.placeholder.com/150" },
+        { id: "mia1", src: mia1 },
+        { id: "mia2", src: mia2 },
+        { id: "mia3", src: mia3 },
+        { id: "mia4", src: mia4 },
       ],
     },
     {
@@ -283,8 +294,10 @@ const AdoptedPhotos = () => {
     {
       id: "Trixi",
       photos: [
-        { id: "trixi1", src: "https://via.placeholder.com/150" },
-        { id: "trixi2", src: "https://via.placeholder.com/150" },
+        { id: "trixi1", src: trixi1 },
+        { id: "trixi2", src: trixi2 },
+        { id: "trixi3", src: trixi3 },
+        { id: "trixi4", src: trixi4 },
       ],
     },
     {
@@ -444,11 +457,12 @@ const AdoptedPhotos = () => {
       ],
     },
     {
-      id: "Huba",
+      id: "Mexi",
       photos: [
-        { id: "huba2", src: huba2 },
-        { id: "huba1", src: huba1 },
-        { id: "huba3", src: huba3 },
+        { id: "mexi2", src: mexi2 },
+        { id: "mexi1", src: mexi1 },
+        { id: "mexi3", src: mexi3 },
+        { id: "mexi4", src: mexi4 },
       ],
     },
   ];
@@ -474,7 +488,7 @@ const AdoptedPhotos = () => {
           <div>
             <p className="intro">{t("adopted-photos.intro")}</p>
           </div>
-          <Link to="/sendphotos" target="_blank">
+          <Link to="/send-photos" target="_blank">
             <button className="button-style mt-4 mb-4">
               {t("adopted-photos.sendPhotoButton")}
             </button>

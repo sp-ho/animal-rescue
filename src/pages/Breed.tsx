@@ -143,20 +143,24 @@ const Breed = () => {
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <img
-              src={adoptImage1}
-              alt="adopting-dog"
-              style={{ width: "90%", borderRadius: "15px" }}
-            />
+            <Link to="/adoption" target="_blank">
+              <img
+                src={adoptImage1}
+                alt="adopting-dog"
+                style={{ width: "90%", borderRadius: "15px" }}
+              />
+            </Link>
           </div>
           {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <img
-              src={adoptImage2}
-              alt="foster-a-dog"
-              style={{ width: "90%", borderRadius: "15px" }}
-            />
+            <Link to="/fostering" target="_blank">
+              <img
+                src={adoptImage2}
+                alt="foster-a-dog"
+                style={{ width: "90%", borderRadius: "15px" }}
+              />
+            </Link>
           </div>
         </div>
       </div>
