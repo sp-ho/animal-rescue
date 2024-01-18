@@ -246,13 +246,13 @@ const Videos = () => {
         {/* About the Breed */}
         <div className="container">
           <h3 id="breed">
-            <strong>{t("videos.breedSub")}</strong>
+            s<strong>{t("videos.breedSub")}</strong>
           </h3>
           <div className="row d-flex justify-content-center">
             {breedVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
+                className="col-sm-6 col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe
@@ -278,7 +278,7 @@ const Videos = () => {
             {spayNeuterVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
+                className="col-sm-6 col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe
@@ -304,7 +304,7 @@ const Videos = () => {
             {microchipsVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
+                className="col-sm-6 col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe
@@ -330,7 +330,7 @@ const Videos = () => {
             {trainTipsVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
+                className="col-sm-6 col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe
@@ -356,7 +356,7 @@ const Videos = () => {
             {healthCareVideos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
+                className="col-6 col-sm-6 col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe

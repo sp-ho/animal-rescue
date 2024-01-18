@@ -613,6 +613,7 @@ const Fostering = () => {
                 id="email"
                 name="email"
                 required
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 className={`form-control ${
                   formErrors.email ? "is-invalid" : ""
                 }`}
@@ -629,7 +630,9 @@ const Fostering = () => {
                 type="tel"
                 id="cell"
                 name="cell"
-                className={`form-control ${formErrors.tel ? "is-invalid" : ""}`}
+                className={`form-control ${
+                  formErrors.cell ? "is-invalid" : ""
+                }`}
                 value={formData.cell}
                 onChange={(e) => handleCellChange(e.target.value)}
               />

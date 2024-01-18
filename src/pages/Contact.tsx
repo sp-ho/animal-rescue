@@ -12,7 +12,6 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import validateFormData from "../components/FormValidator";
 import axios from "axios";
 
 const Contact = () => {
@@ -56,6 +55,39 @@ const Contact = () => {
   // useState for submission status
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
 
+  // Add state variables for email and telephone validation
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [telephoneError, setTelephoneError] = useState<string | null>(null);
+
+  // Additional state variable for image upload validation
+  const [imageError, setImageError] = useState<string | null>(null);
+
+  const isValidEmail = (email: string) => {
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isValidTelephone = (telephone: string) => {
+    // Telephone validation
+    const telephoneRegex = /^[0-9+\-() ]*$/;
+    return telephoneRegex.test(telephone);
+  };
+
+  const validateEmail = (email: string) => {
+    if (!isValidEmail(email)) {
+      return "Invalid email address";
+    }
+    return null;
+  };
+
+  const validateTelephone = (telephone: string) => {
+    if (!isValidTelephone(telephone)) {
+      return "Invalid telephone number";
+    }
+    return null;
+  };
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -64,11 +96,36 @@ const Contact = () => {
     // log for debug
     // console.log(`Updating ${name} with value: ${value}`);
 
+    // Clear previous validation errors when the user types
+    setEmailError(null);
+    setTelephoneError(null);
+
     setFormData({ ...formData, [name]: value });
+
+    // Validate email and telephone and update error states
+    if (name === "email") {
+      const emailErrors = validateEmail(value);
+      if (emailErrors) {
+        setEmailError(emailErrors);
+      }
+    } else if (name === "telephone") {
+      const telephoneErrors = validateTelephone(value);
+      if (telephoneErrors) {
+        setTelephoneError(telephoneErrors);
+      }
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] ?? null;
+
+    // Reset both image and image error when a new image is selected
+    setFormData({
+      ...formData,
+      image: null,
+      imagePreview: null,
+    });
+    setImageError(null);
 
     if (file) {
       // Check if the file format is allowed
@@ -78,13 +135,14 @@ const Contact = () => {
         setFormData({
           ...formData,
           image: file,
+          imagePreview: URL.createObjectURL(file),
         });
+      } else {
+        // Set an error message if the file format is not allowed
+        setImageError(
+          "Invalid image format. Please upload a jpg, jpeg, or png file."
+        );
       }
-    } else {
-      setFormData({
-        ...formData,
-        image: null,
-      });
     }
   };
 
@@ -130,7 +188,61 @@ const Contact = () => {
     // log for debug
     // console.log("Form Data Instance:", formDataInstance);
 
-    const errors = validateFormData(formDataInstance);
+    const errors: Record<string, string> = {};
+
+    // Check required fields
+    const requiredFields = [
+      "firstName",
+      "lastName",
+      "email",
+      "subject",
+      "comments",
+    ];
+    requiredFields.forEach((field) => {
+      if (!formData[field as keyof typeof formData]) {
+        errors[field] = `"${field}" is required`;
+      }
+    });
+
+    // Validate email format
+    const email = formData.email;
+    if (!isValidEmail(email)) {
+      errors["email"] = `"${email}" is not a valid email address`;
+    }
+
+    // Validate telephone format
+    const telephone = formData.telephone;
+    if (telephone && !isValidTelephone(telephone)) {
+      errors["telephone"] = `"${telephone}" is not a valid telephone number`;
+    }
+
+    // Validate image if provided
+    const image = formData.image;
+    if (image) {
+      const imageSize = image.size / (1024 * 1024); // in MB
+      const allowedImageFormats = ["image/jpeg", "image/png", "image/jpg"];
+
+      if (image.type != null) {
+        if (!allowedImageFormats.includes(image.type)) {
+          errors["image"] =
+            "Invalid image format. Please upload a jpg, jpeg, or png file.";
+        }
+
+        if (imageSize > 5) {
+          errors["image"] =
+            "Image size exceeds the maximum allowed limit of 5MB.";
+        }
+      }
+    }
+
+    // Update error states
+    if (errors.email) {
+      setEmailError(errors.email);
+    }
+
+    if (errors.telephone) {
+      setTelephoneError(errors.telephone);
+    }
 
     if (Object.keys(errors).length === 0) {
       // Include reCAPTCHA value in the form data
@@ -288,6 +400,7 @@ const Contact = () => {
             </h2>
             <br />
             <div className="row mb-3">
+              {/* First Name */}
               <div className="col-md-6">
                 <label htmlFor="firstName">{t("contact.p3")}</label>
                 <input
@@ -300,6 +413,7 @@ const Contact = () => {
                   className="form-control"
                 />
               </div>
+              {/* Last Name */}
               <div className="col-md-6">
                 <label htmlFor="lastName">{t("contact.p4")}</label>
                 <input
@@ -320,11 +434,15 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
+                  pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="form-control"
+                  className={`form-control ${emailError ? "is-invalid" : ""}`}
                 />
+                {emailError && (
+                  <div className="invalid-feedback">{emailError}</div>
+                )}
               </div>
               <div className="col-md-6">
                 <label htmlFor="telephone">{t("contact.p7")}</label>
@@ -334,8 +452,13 @@ const Contact = () => {
                   name="telephone"
                   value={formData.telephone}
                   onChange={handleInputChange}
-                  className="form-control"
+                  className={`form-control ${
+                    telephoneError ? "is-invalid" : ""
+                  }`}
                 />
+                {telephoneError && (
+                  <div className="invalid-feedback">{telephoneError}</div>
+                )}
               </div>
             </div>
 
@@ -374,8 +497,12 @@ const Contact = () => {
                 onChange={handleFileChange}
                 className="form-control"
               />
+
               {formData.image && (
                 <div className="uploaded-image">
+                  {imageError && (
+                    <div className="invalid-feedback">{imageError}</div>
+                  )}
                   <img
                     src={URL.createObjectURL(formData.image)}
                     alt="Uploaded Preview"

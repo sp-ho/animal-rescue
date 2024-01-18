@@ -99,7 +99,7 @@ const AdoptedVideos = () => {
             {videos.map((video) => (
               <div
                 key={video.title}
-                className="col-md-5 me-5 mx-4 mb-4 d-flex justify-content-center"
+                className="col-6 col-sm-6 col-md-5 me-5 mx-4 mt-5 mb-4 d-flex justify-content-center"
               >
                 <div className="video-cell">
                   <iframe

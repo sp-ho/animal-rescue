@@ -28,11 +28,12 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar navbar-expand-lg ">
-      <div
-        className="container-fluid"
-        onContextMenu={(e) => e.preventDefault()}
-      >
-        <Link className="navbar-brand" to={`/?lang=${currentLanguage}`}>
+      <div className="container-fluid">
+        <Link
+          className="navbar-brand"
+          to={`/?lang=${currentLanguage}`}
+          onContextMenu={(e) => e.preventDefault()}
+        >
           <img
             src={currentLanguage === "en" ? enLogo : huLogo} // Change logo language
             alt="Logo"

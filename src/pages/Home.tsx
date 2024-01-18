@@ -237,7 +237,7 @@ const Home = () => {
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
           <div
-            className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container"
+            className="col-sm-6 col-md-5 mb-4 d-flex align-items-center justify-content-center image-container"
             onContextMenu={(e) => e.preventDefault()}
           >
             {/* Image */}
@@ -245,7 +245,10 @@ const Home = () => {
               <img
                 src={adoptedImage1}
                 alt="Already Adopted Dog 1"
-                style={{ width: "600px", borderRadius: "15px" }}
+                style={{
+                  width: "600px",
+                  borderRadius: "15px",
+                }}
               />
               <div className="hover-overlay">
                 <p>{t("home.photos")}</p>
@@ -254,7 +257,7 @@ const Home = () => {
           </div>
           {/* Column 2 */}
           <div
-            className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container"
+            className="col-sm-6 col-md-5 mb-4 d-flex align-items-center justify-content-center image-container"
             onContextMenu={(e) => e.preventDefault()}
           >
             {/* Image */}
