@@ -260,7 +260,7 @@ const Videos = () => {
                 <div className="video-cell">
                   <iframe
                     width="150%"
-                    height="120%"
+                    height="140%"
                     src={video.src}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -273,7 +273,7 @@ const Videos = () => {
         </div>
 
         {/* About Spaying/Neutering */}
-        <div className="container py-5">
+        <div className="container py-5 mt-5">
           <h3 id="spayNeuter">
             <strong>{t("videos.spayNeuterSub")}</strong>
           </h3>
@@ -289,7 +289,7 @@ const Videos = () => {
                 <div className="video-cell">
                   <iframe
                     width="150%"
-                    height="120%"
+                    height="140%"
                     src={video.src}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -302,7 +302,7 @@ const Videos = () => {
         </div>
 
         {/* About Microchips */}
-        <div className="container">
+        <div className="container mt-5">
           <h3 id="microchips">
             <strong>{t("videos.microchipsSub")}</strong>
           </h3>
