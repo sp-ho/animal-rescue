@@ -182,7 +182,7 @@ const Navbar: React.FC = () => {
                   {/* Become a Sponsor */}
                   <Link
                     smooth
-                    to="/sponsors#beSponsor"
+                    to={`/sponsors?lang=${currentLanguage}#beSponsor`}
                     onClick={() => {
                       handleLanguageChange("/sponsors#beSponsor");
                     }}
