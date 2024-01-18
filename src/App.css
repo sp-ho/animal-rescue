@@ -62,9 +62,9 @@ h1 {
   color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  width: 100%;
+  width: 85%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-55.5%);
 }
 
 .hover-overlay p {
@@ -75,7 +75,7 @@ h1 {
 .hover-overlay p::after {
   content: "";
   display: block;
-  width: 80px; /* Adjust the line width as needed */
+  width: 90%; /* Adjust the line width as needed */
   height: 2px; /* Adjust the line height as needed */
   background-color: white;
   position: absolute;
@@ -88,9 +88,9 @@ h1 {
   opacity: 0.9;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 100%) {
   .hover-overlay {
-    width: 600px;
+    width: 100%;
   }
 }
 

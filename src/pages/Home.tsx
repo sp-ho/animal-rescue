@@ -246,7 +246,7 @@ const Home = () => {
                 src={adoptedImage1}
                 alt="Already Adopted Dog 1"
                 style={{
-                  width: "600px",
+                  width: "90%",
                   borderRadius: "15px",
                 }}
               />
@@ -265,7 +265,7 @@ const Home = () => {
               <img
                 src={adoptedImage2}
                 alt="Already Adopted Dog 2"
-                style={{ width: "600px", borderRadius: "15px" }}
+                style={{ width: "90%", borderRadius: "15px" }}
               />
               <div className="hover-overlay">
                 <p>{t("home.videos")}</p>
