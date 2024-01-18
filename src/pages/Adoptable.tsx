@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,7 +17,8 @@ import cezar4 from "../images/adoptable/cezar4.jpg";
 import cezar5 from "../images/adoptable/cezar5.jpg";
 
 const Adoptable = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   // Slider reference for each adoptable dog
   const lenaSliderRef = useRef<Slider | null>(null);
@@ -62,6 +64,24 @@ const Adoptable = () => {
     lenaSliderRef.current?.slickPrev();
   };
 
+  // Use i18n to persist language
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/adoptable?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
+
   return (
     <>
       {/* White background section under the navbar */}
@@ -79,7 +99,10 @@ const Adoptable = () => {
           <div className="row">
             {/* Column 1: Image carousel */}
             <div className="col-md-4">
-              <div style={{ textAlign: "center" }}>
+              <div
+                style={{ textAlign: "center" }}
+                onContextMenu={(e) => e.preventDefault()}
+              >
                 <Slider ref={lenaSliderRef} {...settings}>
                   {lenaImages.map((imageUrl, index) => (
                     <div key={`lena${index + 1}`}>
@@ -134,7 +157,10 @@ const Adoptable = () => {
           <div className="row">
             {/* Column 1: Image carousel */}
             <div className="col-md-4">
-              <div style={{ textAlign: "center" }}>
+              <div
+                style={{ textAlign: "center" }}
+                onContextMenu={(e) => e.preventDefault()}
+              >
                 <Slider ref={kellySliderRef} {...settings}>
                   {kellyImages.map((imageUrl, index) => (
                     <div key={`kelly${index + 1}`}>
@@ -188,7 +214,10 @@ const Adoptable = () => {
           <div className="row">
             {/* Column 1: Image carousel */}
             <div className="col-md-5">
-              <div style={{ textAlign: "center" }}>
+              <div
+                style={{ textAlign: "center" }}
+                onContextMenu={(e) => e.preventDefault()}
+              >
                 <Slider ref={cezarSliderRef} {...settings}>
                   {cesarImages.map((imageUrl, index) => (
                     <div key={`cezar${index + 1}`}>

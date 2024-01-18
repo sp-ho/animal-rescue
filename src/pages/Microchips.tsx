@@ -1,11 +1,31 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import dogImage from "../images/microchips/german-shepherd-dog.jpg";
 import microchipsImage from "../images/microchips/microchips-for-dogs.jpg";
 import spayNeuterImage from "../images/microchips/spay-neuter.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Microchips = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  // Use i18n to persist language
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/microchips?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
 
   return (
     <>
@@ -57,7 +77,7 @@ const Microchips = () => {
             </div>
 
             {/* Text on the right */}
-            <div className="col-md-6">
+            <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={microchipsImage}
                 alt="microchips-for-dogs"
@@ -136,7 +156,7 @@ const Microchips = () => {
               ></iframe>
             </div>
           </div>
-          <Link to="/videos" target="_blank">
+          <Link to={"/videos?lang=" + i18n.language} target="_blank">
             <button className="button-style mt-5">
               {t("microchips.videosButton")}
             </button>
@@ -145,7 +165,10 @@ const Microchips = () => {
       </div>
 
       {/* Section with 2 columns and white background */}
-      <div className="container-fluid mt-5 mb-5">
+      <div
+        className="container-fluid mt-5 mb-5"
+        onContextMenu={(e) => e.preventDefault()}
+      >
         <h3 className="mb-5 text-center">
           <strong>{t("microchips.spayNeuter")}</strong>
         </h3>
@@ -153,7 +176,7 @@ const Microchips = () => {
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="/breed" target="_blank">
+            <Link to={"/breed?lang=" + i18n.language} target="_blank">
               <img
                 src={dogImage}
                 alt="german-shepherd-dog"
@@ -164,7 +187,7 @@ const Microchips = () => {
           {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="/spay-neuter" target="_blank">
+            <Link to={"/spay-neuter?lang=" + i18n.language} target="_blank">
               <img
                 src={spayNeuterImage}
                 alt="spay-neuter"
@@ -186,7 +209,7 @@ const Microchips = () => {
           {t("microchips.thinkAdopt")}
         </h3>
         <p className="mt-5 mb-5">{t("microchips.adoptionProcess")}</p>
-        <Link to="/adoption" target="_blank">
+        <Link to={"/adoption?lang=" + i18n.language} target="_blank">
           <button className="button-style mb-5">
             {t("microchips.learnMoreButton")}
           </button>

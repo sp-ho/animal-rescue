@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
 import hungarian from "../images/hungary.png";
@@ -9,18 +10,29 @@ import enLogo from "../images/logos/M3N-website logo-english.png";
 const Navbar: React.FC = () => {
   const { i18n } = useTranslation(); // Access the i18n object
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng); // Change the language
+    window.history.pushState({}, "", `?lang=${lng}`);
   };
 
   // Determine the current language
   const currentLanguage = i18n.language;
 
+  // Handle language change and navigation manually
+  const handleLanguageChange = (path: string) => {
+    const langPath = `/${currentLanguage}${path}`;
+    navigate(langPath);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg ">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to={"/"}>
+      <div
+        className="container-fluid"
+        onContextMenu={(e) => e.preventDefault()}
+      >
+        <Link className="navbar-brand" to={`/?lang=${currentLanguage}`}>
           <img
             src={currentLanguage === "en" ? enLogo : huLogo} // Change logo language
             alt="Logo"
@@ -45,7 +57,7 @@ const Navbar: React.FC = () => {
                 className="navbarLink nav-link active"
                 aria-current="page"
                 style={{ color: "#0047AB", fontWeight: "bold" }}
-                to={"/"}
+                to={`/?lang=${currentLanguage}`}
               >
                 {t("navbar.home")}
               </Link>
@@ -61,12 +73,18 @@ const Navbar: React.FC = () => {
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/about">
+                  <Link
+                    className="dropdown-item"
+                    to={`/about?lang=${currentLanguage}`}
+                  >
                     {t("navbar.abUs")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/sponsors">
+                  <Link
+                    className="dropdown-item"
+                    to={`/sponsors?lang=${currentLanguage}`}
+                  >
                     {t("navbar.sponsorsFostersVolunteers")}
                   </Link>
                 </li>
@@ -83,12 +101,18 @@ const Navbar: React.FC = () => {
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/adoption">
+                  <Link
+                    className="dropdown-item"
+                    to={`/adoption?lang=${currentLanguage}`}
+                  >
                     {t("navbar.adoptProcess")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/adoptable">
+                  <Link
+                    className="dropdown-item"
+                    to={`/adoptable?lang=${currentLanguage}`}
+                  >
                     {t("navbar.adoptable")}
                   </Link>
                 </li>
@@ -106,22 +130,34 @@ const Navbar: React.FC = () => {
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/adopted-photos">
+                  <Link
+                    className="dropdown-item"
+                    to={`/adopted-photos?lang=${currentLanguage}`}
+                  >
                     {t("navbar.adoptedPhotos")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/adopted-videos">
+                  <Link
+                    className="dropdown-item"
+                    to={`/adopted-videos?lang=${currentLanguage}`}
+                  >
                     {t("navbar.adoptedVideos")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/feedback">
+                  <Link
+                    className="dropdown-item"
+                    to={`/feedback?lang=${currentLanguage}`}
+                  >
                     {t("navbar.feedback")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/send-photos">
+                  <Link
+                    className="dropdown-item"
+                    to={`/send-photos?lang=${currentLanguage}`}
+                  >
                     {t("navbar.sendPhotos")}
                   </Link>
                 </li>
@@ -138,22 +174,56 @@ const Navbar: React.FC = () => {
                 {t("navbar.involve")}
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
+                <li
+                  style={{
+                    paddingBottom: "5px",
+                  }}
+                >
+                  {/* Become a Sponsor */}
                   <Link
                     smooth
-                    className="dropdown-item"
                     to="/sponsors#beSponsor"
+                    onClick={() => {
+                      handleLanguageChange("/sponsors#beSponsor");
+                    }}
+                    style={{
+                      textDecoration: "none",
+                      color: "#000",
+                      paddingLeft: "16px",
+                      paddingTop: "10px",
+                      fontWeight: "normal",
+                      display: "block",
+                    }}
+                    // Add hover styles
+                    onMouseEnter={(e) => {
+                      // Explicitly cast EventTarget to HTMLElement
+                      const target = e.target as HTMLElement;
+                      target.style.backgroundColor = "#f8f9fa";
+                    }}
+                    onMouseLeave={(e) => {
+                      // Explicitly cast EventTarget to HTMLElement
+                      const target = e.target as HTMLElement;
+                      target.style.backgroundColor = "transparent";
+                    }}
                   >
                     {t("navbar.sponsor")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/volunteer">
+                  {/* Become a Volunteer */}
+                  <Link
+                    className="dropdown-item"
+                    to={`/volunteer?lang=${currentLanguage}`}
+                  >
                     {t("navbar.volunteer")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/fostering">
+                  {/* Become a Foster */}
+                  <Link
+                    className="dropdown-item"
+                    to={`/fostering?lang=${currentLanguage}`}
+                  >
                     {t("navbar.foster")}
                   </Link>
                 </li>
@@ -171,22 +241,34 @@ const Navbar: React.FC = () => {
               </span>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/breed">
+                  <Link
+                    className="dropdown-item"
+                    to={`/breed?lang=${currentLanguage}`}
+                  >
                     {t("navbar.abBreed")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/microchips">
+                  <Link
+                    className="dropdown-item"
+                    to={`/microchips?lang=${currentLanguage}`}
+                  >
                     {t("navbar.abMicrochips")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/spay-neuter">
+                  <Link
+                    className="dropdown-item"
+                    to={`/spay-neuter?lang=${currentLanguage}`}
+                  >
                     {t("navbar.abSpayNeuter")}
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/videos">
+                  <Link
+                    className="dropdown-item"
+                    to={`/videos?lang=${currentLanguage}`}
+                  >
                     {t("navbar.videos")}
                   </Link>
                 </li>
@@ -196,7 +278,7 @@ const Navbar: React.FC = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                to={"/contact"}
+                to={`/contact?lang=${currentLanguage}`}
               >
                 {t("navbar.contact")}
               </Link>
@@ -205,7 +287,7 @@ const Navbar: React.FC = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                to={"/donate"}
+                to={`/donate?lang=${currentLanguage}`}
               >
                 {t("navbar.donate")}
               </Link>

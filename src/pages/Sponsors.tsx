@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import consultsosImage from "../images/sponsors/consultation-sos.png";
 import netvetImage from "../images/sponsors/net-vet-logo.png";
 import panzipetImage from "../images/sponsors/panzi-pet-logo.png";
@@ -19,7 +19,26 @@ import eraImage from "../images/volunteers/kozma-era-modified.jpg";
 import sponsorImage from "../images/sponsors/become-a-sponsor.jpg";
 
 const Sponsors = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  // Use i18n to persist language
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/sponsors?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
 
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
@@ -76,7 +95,7 @@ const Sponsors = () => {
                 </Link>
               </div>
               {/* Image */}
-              <div>
+              <div onContextMenu={(e) => e.preventDefault()}>
                 <Link to={sponsor.link} target="_blank">
                   <img
                     className="mx-auto mt-3"
@@ -95,7 +114,10 @@ const Sponsors = () => {
 
       {/* Fosters */}
       <div className="container-fluid mt-5">
-        <div className="row justify-content-center">
+        <div
+          className="row justify-content-center"
+          onContextMenu={(e) => e.preventDefault()}
+        >
           <div className="container text-center">
             <h3>
               <strong>{t("sponsor.foster")}</strong>
@@ -222,7 +244,10 @@ const Sponsors = () => {
 
       {/* Volunteers */}
       <div className="container-fluid bg-light py-5">
-        <div className="row justify-content-center py-5">
+        <div
+          className="row justify-content-center py-5"
+          onContextMenu={(e) => e.preventDefault()}
+        >
           <div className="container text-center">
             <h3>
               <strong>{t("sponsor.volunteer")}</strong>
@@ -281,7 +306,7 @@ const Sponsors = () => {
         <div className="container mt-5">
           <div className="row">
             {/* Image on the left with reduced margin */}
-            <div className="col-md-6">
+            <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={sponsorImage}
                 alt="Become a sponsor"
@@ -300,7 +325,7 @@ const Sponsors = () => {
               <p>{t("sponsor.p4")}</p>
               <p>{t("sponsor.p5")}</p>
               <p>{t("sponsor.p6")}</p>
-              <Link to="/contact" target="_blank">
+              <Link to={"/contact?lang=" + i18n.language} target="_blank">
                 <button id="beSponsor" className="button-style mb-5">
                   {t("sponsor.contactButton")}
                 </button>

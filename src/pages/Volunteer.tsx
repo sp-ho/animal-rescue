@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 
 const Volunteer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   // Define interests with corresponding translations
   const interests = [
@@ -42,6 +43,22 @@ const Volunteer = () => {
 
   // useEffect hook for handling form submission success
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/volunteer?lang=${lang}`, { replace: true });
+
+    // Update the fields if submission is successful
     if (submissionStatus === "success") {
       // Reset form data, clear errors, and update submission status
       setFormData({
@@ -57,7 +74,7 @@ const Volunteer = () => {
       setRecaptchaValue(null);
       setFormErrors({});
     }
-  }, [submissionStatus]);
+  }, [i18n, navigate, submissionStatus]);
 
   const isEmailValid = (email: string): boolean => {
     // Simple email validation regex
@@ -271,7 +288,10 @@ const Volunteer = () => {
                 <li>
                   <p>
                     {t("volunteer.p10")}{" "}
-                    <Link to="/fostering" target="_blank">
+                    <Link
+                      to={"/fostering?lang=" + i18n.language}
+                      target="_blank"
+                    >
                       {t("volunteer.link")}
                     </Link>
                   </p>

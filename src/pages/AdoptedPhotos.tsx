@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import astor1 from "../images/adopted/astor/astor-1.jpg";
 import astor2 from "../images/adopted/astor/astor-2.jpg";
@@ -175,9 +175,28 @@ interface Dog {
 }
 
 const AdoptedPhotos = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedDog, setSelectedDog] = useState<Dog | null>(null);
+
+  // Use i18n to persist language
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/adopted-photos?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
 
   // Array of images
   const dogs: Dog[] = [
@@ -488,7 +507,7 @@ const AdoptedPhotos = () => {
           <div>
             <p className="intro">{t("adopted-photos.intro")}</p>
           </div>
-          <Link to="/send-photos" target="_blank">
+          <Link to={"/send-photos?lang=" + i18n.language} target="_blank">
             <button className="button-style mt-4 mb-4">
               {t("adopted-photos.sendPhotoButton")}
             </button>
@@ -497,7 +516,10 @@ const AdoptedPhotos = () => {
       </div>
 
       {/* Grid for images */}
-      <div className="container mt-4 image-grid">
+      <div
+        className="container mt-4 image-grid"
+        onContextMenu={(e) => e.preventDefault()}
+      >
         {dogs.map((dog) => (
           <button
             key={dog.id}
@@ -522,7 +544,10 @@ const AdoptedPhotos = () => {
         contentLabel="Additional Photos Modal"
       >
         {selectedDog && (
-          <div className="additional-photos-container">
+          <div
+            className="additional-photos-container"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <h2>{selectedDog.id}</h2>
             {selectedDog.photos.map((photo) => (
               <img

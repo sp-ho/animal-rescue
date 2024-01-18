@@ -2,10 +2,30 @@ import { useTranslation } from "react-i18next";
 import fosterImage from "../images/adoption/foster-a-dog.jpg";
 import successImage1 from "../images/adoption/success-stories-kutya.jpg";
 import successImage2 from "../images/adoption/success-stories-kutyaink.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Adoption = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  // Use i18n to persist language
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/adoption?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
 
   return (
     <>
@@ -29,7 +49,7 @@ const Adoption = () => {
         <div className="container">
           <div className="row py-5">
             {/* Image on the left with reduced margin */}
-            <div className="col-md-6">
+            <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={fosterImage}
                 alt="About Us"
@@ -45,7 +65,7 @@ const Adoption = () => {
               <p>{t("adoption.p3")}</p>
               <p>{t("adoption.p4")}</p>
               <p>{t("adoption.p5")}</p>
-              <Link to="/contact" target="_blank">
+              <Link to={"/contact?lang=" + i18n.language} target="_blank">
                 <button className="button-style mb-5">
                   {t("adoption.contactButton")}
                 </button>
@@ -60,11 +80,14 @@ const Adoption = () => {
         <h3 className="mb-5 text-center">
           <strong>{t("adoption.success")}</strong>
         </h3>
-        <div className="row py-2 justify-content-center">
+        <div
+          className="row py-2 justify-content-center"
+          onContextMenu={(e) => e.preventDefault()}
+        >
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
-            <Link to="/adopted-photos" target="_blank">
+            <Link to={"/adopted-photos?lang=" + i18n.language} target="_blank">
               <img
                 src={successImage1}
                 alt="dog-german-shepherd"
@@ -78,7 +101,7 @@ const Adoption = () => {
           {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
-            <Link to="/adopted-videos" target="_blank">
+            <Link to={"/adopted-videos?lang=" + i18n.language} target="_blank">
               <img
                 src={successImage2}
                 alt="microchips"
@@ -104,7 +127,7 @@ const Adoption = () => {
         </h3>
         <p className="mt-5">{t("adoption.fosterProcess1")}</p>
         <p className="mb-5">{t("adoption.fosterProcess2")}</p>
-        <Link to="/fostering" target="_blank">
+        <Link to={"/fostering?lang=" + i18n.language} target="_blank">
           <button className="button-style mb-5">
             {t("adoption.learnMoreButton")}
           </button>

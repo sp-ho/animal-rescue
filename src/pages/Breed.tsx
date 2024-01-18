@@ -1,11 +1,31 @@
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import breedImage from "../images/breed/about-the-breed.jpg";
 import adoptImage1 from "../images/breed/adopting-dog.jpg";
 import adoptImage2 from "../images/adoption/foster-a-dog.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Breed = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  // Use i18n to persist language
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/breed?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
 
   return (
     <>
@@ -29,7 +49,7 @@ const Breed = () => {
         <div className="container">
           <div className="row py-5 justify-content-center">
             {/* Image on the left with reduced margin */}
-            <div className="col-md-6">
+            <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={breedImage}
                 alt="About Fostering"
@@ -126,7 +146,7 @@ const Breed = () => {
               ></iframe>
             </div>
           </div>
-          <Link to="/videos" target="_blank">
+          <Link to={"/videos?lang=" + i18n.language} target="_blank">
             <button className="button-style mt-5">
               {t("breed.videosButton")}
             </button>
@@ -139,11 +159,14 @@ const Breed = () => {
         <h3 className="mb-5 text-center">
           <strong>{t("breed.p11")}</strong>
         </h3>
-        <div className="row justify-content-center">
+        <div
+          className="row justify-content-center"
+          onContextMenu={(e) => e.preventDefault()}
+        >
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="/adoption" target="_blank">
+            <Link to={"/adoption?lang=" + i18n.language} target="_blank">
               <img
                 src={adoptImage1}
                 alt="adopting-dog"
@@ -154,7 +177,7 @@ const Breed = () => {
           {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="/fostering" target="_blank">
+            <Link to={"/fostering?lang=" + i18n.language} target="_blank">
               <img
                 src={adoptImage2}
                 alt="foster-a-dog"
@@ -176,7 +199,7 @@ const Breed = () => {
           {t("breed.p12")}
         </h3>
         <p className="mt-5 mb-5">{t("breed.p13")}</p>
-        <Link to="/volunteer" target="_blank">
+        <Link to={"/volunteer?lang=" + i18n.language} target="_blank">
           <button className="button-style mb-5">
             {t("breed.learnMoreButton")}
           </button>

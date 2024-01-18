@@ -1,11 +1,31 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import neuterSpayImage from "../images/spay_neuter/neuter-spay.jpg";
 import microchipsImage from "../images/spay_neuter/microchips.jpg";
 import dogImage from "../images/spay_neuter/dog-german-shepherd.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SpayNeuter = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  // Use i18n to persist language
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/spay-neuter?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
 
   return (
     <>
@@ -48,7 +68,7 @@ const SpayNeuter = () => {
             </div>
 
             {/* Text on the right */}
-            <div className="col-md-6">
+            <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={neuterSpayImage}
                 alt="neuter-spay"
@@ -123,7 +143,7 @@ const SpayNeuter = () => {
               ></iframe>
             </div>
           </div>
-          <Link to="/videos" target="_blank">
+          <Link to={"/videos?lang=" + i18n.language} target="_blank">
             <button className="button-style mt-5">
               {t("spay-neuter.videosButton")}
             </button>
@@ -132,7 +152,10 @@ const SpayNeuter = () => {
       </div>
 
       {/* Section with 2 columns and white background */}
-      <div className="container-fluid mt-5 mb-5">
+      <div
+        className="container-fluid mt-5 mb-5"
+        onContextMenu={(e) => e.preventDefault()}
+      >
         <h3 className="mb-5 text-center">
           <strong>{t("spay-neuter.spayNeuter")}</strong>
         </h3>
@@ -140,7 +163,7 @@ const SpayNeuter = () => {
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="/breed" target="_blank">
+            <Link to={"/breed?lang=" + i18n.language} target="_blank">
               <img
                 src={dogImage}
                 alt="dog-german-shepherd"
@@ -151,7 +174,7 @@ const SpayNeuter = () => {
           {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
             {/* Image */}
-            <Link to="/microchips" target="_blank">
+            <Link to={"/microchips?lang=" + i18n.language} target="_blank">
               <img
                 src={microchipsImage}
                 alt="microchips"
@@ -174,7 +197,7 @@ const SpayNeuter = () => {
         </h3>
         <p className="mt-5">{t("spay-neuter.fosterProcess1")}</p>
         <p className="mb-5">{t("spay-neuter.fosterProcess2")}</p>
-        <Link to="/fostering" target="_blank">
+        <Link to={"/fostering?lang=" + i18n.language} target="_blank">
           <button className="button-style mb-5">
             {t("spay-neuter.learnMoreButton")}
           </button>

@@ -1,8 +1,30 @@
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import aboutUsImage from "../images/german-shepherds-foundation.jpg";
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  // Use i18n to persist language
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+    // Update URL with the current language
+    navigate(`/about?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
+
   return (
     <>
       {/* White background section under the navbar */}
@@ -25,7 +47,7 @@ const About = () => {
         <div className="container">
           <div className="row">
             {/* Image on the left with reduced margin */}
-            <div className="col-md-6">
+            <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={aboutUsImage}
                 alt="About Us"

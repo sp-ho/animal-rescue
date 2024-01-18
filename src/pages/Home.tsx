@@ -1,3 +1,8 @@
+import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { useEffect } from "react";
 import backgroundImage from "../images/german-shepherd-dog.jpg";
 import breedImage from "../images/home/about-the-breed.jpg";
 import adoptedImage1 from "../images/home/already-adopted-dogs1.jpg";
@@ -6,17 +11,34 @@ import fosterImage from "../images/home/become-a-foster-home.jpg";
 import dogCircleImage1 from "../images/home/dog-circle1.jpg";
 import dogCircleImage2 from "../images/home/dog-circle2.jpg";
 import dogCircleImage3 from "../images/home/dog-circle3.jpg";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") ?? "en"; // default to English
+
+    // Change language and update URL
+    i18n.changeLanguage(lang, (err, translatedText) => {
+      if (err) {
+        console.log("Something went wrong loading language", err);
+      } else {
+        // Log the translated text to ensure 't' is used
+        console.log(translatedText);
+      }
+    });
+
+    // Update URL with the current language
+    navigate(`/?lang=${lang}`, { replace: true });
+  }, [i18n, navigate]);
+
   return (
     <div>
       {/* Big Image */}
       <div
+        className="disable-right-click"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
@@ -29,6 +51,7 @@ const Home = () => {
           position: "relative",
           textAlign: "center",
         }}
+        onContextMenu={(e) => e.preventDefault()}
       >
         {/* Text and Button */}
         <div
@@ -52,7 +75,7 @@ const Home = () => {
           <h1>
             <strong>{t("home.line3")}</strong>
           </h1>
-          <Link to="/adoption" target="_blank">
+          <Link to={"/adoption?lang=" + i18n.language} target="_blank">
             <button className="button-style mt-2">
               {t("home.adoptButton")}
             </button>
@@ -135,7 +158,7 @@ const Home = () => {
             {/* Subtitle 2 */}
             <p className="mb-4">{t("home.story2")}</p>
             {/* Description */}
-            <Link to="/about" target="_blank">
+            <Link to={"/about?lang=" + i18n.language} target="_blank">
               <button className="button-style">{t("home.abUsButton")}</button>
             </Link>
           </div>
@@ -154,12 +177,15 @@ const Home = () => {
             {/* Subtitle 2 */}
             <p className="mb-4">{t("home.foster2")}</p>
             {/* Description */}
-            <Link to="/fostering" target="_blank">
+            <Link to={"/fostering?lang=" + i18n.language} target="_blank">
               <button className="button-style">{t("home.fosterButton")}</button>
             </Link>
           </div>
           {/* Column 2 */}
-          <div className="col-md-5 mb-4">
+          <div
+            className="col-md-5 mb-4"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             {/* Image */}
             <img
               src={fosterImage}
@@ -174,7 +200,10 @@ const Home = () => {
       <div className="container-fluid bg-dark mt-5 mb-5">
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
-          <div className="col-md-5 mb-5 mt-5">
+          <div
+            className="col-md-5 mb-5 mt-5"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             {/* Image */}
             <img
               src={breedImage}
@@ -193,7 +222,7 @@ const Home = () => {
               {t("home.breed2")}
             </p>
             {/* Description */}
-            <Link to="/breed" target="_blank">
+            <Link to={"/breed?lang=" + i18n.language} target="_blank">
               <button className="button-style">{t("home.breedButton")}</button>
             </Link>
           </div>
@@ -207,9 +236,12 @@ const Home = () => {
         </h2>
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
-          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
+          <div
+            className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             {/* Image */}
-            <Link to="/adopted-photos" target="_blank">
+            <Link to={"/adopted-photos?lang=" + i18n.language} target="_blank">
               <img
                 src={adoptedImage1}
                 alt="Already Adopted Dog 1"
@@ -221,9 +253,12 @@ const Home = () => {
             </Link>
           </div>
           {/* Column 2 */}
-          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
+          <div
+            className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             {/* Image */}
-            <Link to="/adopted-videos" target="_blank">
+            <Link to={"/adopted-videos?lang=" + i18n.language} target="_blank">
               <img
                 src={adoptedImage2}
                 alt="Already Adopted Dog 2"
@@ -243,8 +278,8 @@ const Home = () => {
           {/* Column 1 */}
           <div className="col-md-3 mb-5 mt-5">
             <div className="text-center mb-3">
-              {/* Check icon in a circle */}
-              <div>
+              {/* Dog icon in a circle */}
+              <div onContextMenu={(e) => e.preventDefault()}>
                 <img
                   src={dogCircleImage1}
                   alt="Dog Circle 1"
@@ -262,8 +297,8 @@ const Home = () => {
           {/* Column 2 */}
           <div className="col-md-3 mb-4 mt-5">
             <div className="text-center mb-3">
-              {/* Check icon in a circle */}
-              <div>
+              {/* Dog icon in a circle */}
+              <div onContextMenu={(e) => e.preventDefault()}>
                 <img
                   src={dogCircleImage2}
                   alt="Dog Circle 2"
@@ -281,8 +316,8 @@ const Home = () => {
           {/* Column 3 */}
           <div className="col-md-3 mb-4 mt-5">
             <div className="text-center mb-3">
-              {/* Check icon in a circle */}
-              <div>
+              {/* Dog icon in a circle */}
+              <div onContextMenu={(e) => e.preventDefault()}>
                 <img
                   src={dogCircleImage3}
                   alt="Dog Circle 3"
