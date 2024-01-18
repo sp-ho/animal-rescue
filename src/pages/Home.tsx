@@ -58,7 +58,7 @@ const Home = () => {
           style={{
             position: "absolute",
             top: "25%",
-            right: "200px",
+            right: "100px",
             transform: "translateY(-50%)",
             textAlign: "left",
             maxWidth: "60%",
