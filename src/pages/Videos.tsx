@@ -246,7 +246,7 @@ const Videos = () => {
         {/* About the Breed */}
         <div className="container">
           <h3 id="breed">
-            s<strong>{t("videos.breedSub")}</strong>
+            <strong>{t("videos.breedSub")}</strong>
           </h3>
           <div className="row d-flex justify-content-center">
             {breedVideos.map((video) => (
