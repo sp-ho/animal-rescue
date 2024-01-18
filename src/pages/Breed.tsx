@@ -164,7 +164,7 @@ const Breed = () => {
           onContextMenu={(e) => e.preventDefault()}
         >
           {/* Column 1 - Placeholder for image */}
-          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
+          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
             <Link to={"/adoption?lang=" + i18n.language} target="_blank">
               <img
@@ -172,10 +172,13 @@ const Breed = () => {
                 alt="adopting-dog"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              <div className="hover-overlay">
+                <p>{t("adoption.adoptionProcess")}</p>
+              </div>
             </Link>
           </div>
           {/* Column 2 */}
-          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
+          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
             <Link to={"/fostering?lang=" + i18n.language} target="_blank">
               <img
@@ -183,6 +186,9 @@ const Breed = () => {
                 alt="foster-a-dog"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              <div className="hover-overlay">
+                <p>{t("fostering.aboutFostering")}</p>
+              </div>
             </Link>
           </div>
         </div>

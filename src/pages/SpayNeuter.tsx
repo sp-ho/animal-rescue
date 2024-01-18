@@ -161,7 +161,7 @@ const SpayNeuter = () => {
         </h3>
         <div className="row justify-content-center">
           {/* Column 1 - Placeholder for image */}
-          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
+          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
             <Link to={"/breed?lang=" + i18n.language} target="_blank">
               <img
@@ -169,10 +169,13 @@ const SpayNeuter = () => {
                 alt="dog-german-shepherd"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              <div className="hover-overlay">
+                <p>{t("breed.aboutBreed")}</p>
+              </div>
             </Link>
           </div>
           {/* Column 2 */}
-          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center">
+          <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
             <Link to={"/microchips?lang=" + i18n.language} target="_blank">
               <img
@@ -180,6 +183,9 @@ const SpayNeuter = () => {
                 alt="microchips"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              <div className="hover-overlay">
+                <p>{t("microchips.aboutMicrochips")}</p>
+              </div>
             </Link>
           </div>
         </div>
