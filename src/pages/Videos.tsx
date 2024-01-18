@@ -246,7 +246,7 @@ const Videos = () => {
         {/* About the Breed */}
         <div className="container">
           <h3 id="breed">
-            <strong>{t("videos.breedSub")}</strong>
+            s<strong>{t("videos.breedSub")}</strong>
           </h3>
           <div className="row d-flex justify-content-center">
             {breedVideos.map((video) => (
@@ -256,8 +256,8 @@ const Videos = () => {
               >
                 <div className="video-cell">
                   <iframe
-                    width="600px"
-                    height="350px"
+                    width="100%"
+                    height="auto"
                     src={video.src}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
