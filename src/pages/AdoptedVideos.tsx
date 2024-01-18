@@ -94,7 +94,7 @@ const AdoptedVideos = () => {
 
       {/* Grid for videos */}
       <div className="container-fluid bg-light mt-5 py-5 video-grid">
-        <div className="container" style={{ marginLeft: "-80px" }}>
+        <div className="container" style={{ marginLeft: "-50px" }}>
           <div className="row d-flex justify-content-center">
             {videos.map((video) => (
               <div

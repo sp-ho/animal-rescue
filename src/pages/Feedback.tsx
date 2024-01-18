@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
-import astorImage from "../images/adopted/astor/astor-1.jpg";
-import batorImage from "../images/adopted/bator/bator-1.jpg";
+import astorImage from "../images/adopted/astor/astor-1_modified.jpg";
+import batorImage from "../images/adopted/bator/bator-1_modified.jpg";
 import danteImage from "../images/adopted/dante/dante1.jpg";
 import hubaImage from "../images/adopted/huba/huba2_modified.jpg";
 import diegoImage from "../images/adopted/diego/diego2_modified.jpg";
@@ -173,7 +173,7 @@ const Feedback = () => {
               <img
                 src={astorImage}
                 alt="Already Adopted Dog 1"
-                style={{ width: "600px", borderRadius: "15px" }}
+                style={{ width: "90%", borderRadius: "15px" }}
               />
               <div className="hover-overlay">
                 <p>{t("feedback.photos")}</p>
@@ -187,7 +187,7 @@ const Feedback = () => {
               <img
                 src={batorImage}
                 alt="Already Adopted Dog 2"
-                style={{ width: "600px", borderRadius: "15px" }}
+                style={{ width: "90%", borderRadius: "15px" }}
               />
               <div className="hover-overlay">
                 <p>{t("feedback.videos")}</p>

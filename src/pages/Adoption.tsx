@@ -91,7 +91,7 @@ const Adoption = () => {
               <img
                 src={successImage1}
                 alt="dog-german-shepherd"
-                style={{ width: "600px", borderRadius: "15px" }}
+                style={{ width: "90%", borderRadius: "15px" }}
               />
               <div className="hover-overlay">
                 <p>{t("adoption.photos")}</p>
@@ -105,7 +105,7 @@ const Adoption = () => {
               <img
                 src={successImage2}
                 alt="microchips"
-                style={{ width: "600px", borderRadius: "15px" }}
+                style={{ width: "90%", borderRadius: "15px" }}
               />
               <div className="hover-overlay">
                 <p>{t("adoption.videos")}</p>
