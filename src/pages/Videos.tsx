@@ -248,7 +248,10 @@ const Videos = () => {
           <h3 id="breed">
             <strong>{t("videos.breedSub")}</strong>
           </h3>
-          <div className="row d-flex justify-content-center">
+          <div
+            className="row d-flex justify-content-center"
+            style={{ marginLeft: "-100px" }}
+          >
             {breedVideos.map((video) => (
               <div
                 key={video.title}
@@ -274,7 +277,10 @@ const Videos = () => {
           <h3 id="spayNeuter">
             <strong>{t("videos.spayNeuterSub")}</strong>
           </h3>
-          <div className="row d-flex justify-content-center">
+          <div
+            className="row d-flex justify-content-center"
+            style={{ marginLeft: "-100px" }}
+          >
             {spayNeuterVideos.map((video) => (
               <div
                 key={video.title}
@@ -300,7 +306,10 @@ const Videos = () => {
           <h3 id="microchips">
             <strong>{t("videos.microchipsSub")}</strong>
           </h3>
-          <div className="row d-flex justify-content-center">
+          <div
+            className="row d-flex justify-content-center"
+            style={{ marginLeft: "-100px" }}
+          >
             {microchipsVideos.map((video) => (
               <div
                 key={video.title}
@@ -322,11 +331,14 @@ const Videos = () => {
         </div>
 
         {/* Dog Training and Tips */}
-        <div className="container py-5">
+        <div className="container mt-5 py-5">
           <h3 id="trainTips">
             <strong>{t("videos.trainTipsSub")}</strong>
           </h3>
-          <div className="row d-flex justify-content-center">
+          <div
+            className="row d-flex justify-content-center"
+            style={{ marginLeft: "-100px" }}
+          >
             {trainTipsVideos.map((video) => (
               <div
                 key={video.title}
@@ -348,11 +360,14 @@ const Videos = () => {
         </div>
 
         {/* Health Care */}
-        <div className="container">
+        <div className="container mt-5 mb-5">
           <h3 id="healthCare">
             <strong>{t("videos.healthCareSub")}</strong>
           </h3>
-          <div className="row d-flex justify-content-center">
+          <div
+            className="row d-flex justify-content-center"
+            style={{ marginLeft: "-100px" }}
+          >
             {healthCareVideos.map((video) => (
               <div
                 key={video.title}

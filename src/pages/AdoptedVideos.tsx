@@ -94,7 +94,7 @@ const AdoptedVideos = () => {
 
       {/* Grid for videos */}
       <div className="container-fluid bg-light mt-5 py-5 video-grid">
-        <div className="container">
+        <div className="container" style={{ marginLeft: "-80px" }}>
           <div className="row d-flex justify-content-center">
             {videos.map((video) => (
               <div
@@ -103,8 +103,8 @@ const AdoptedVideos = () => {
               >
                 <div className="video-cell">
                   <iframe
-                    width="600px"
-                    height="300px"
+                    width="150%"
+                    height="140%"
                     src={video.src}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
