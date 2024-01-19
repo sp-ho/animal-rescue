@@ -22,6 +22,11 @@ const Sponsors = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
+
   // Use i18n to persist language
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -325,7 +330,7 @@ const Sponsors = () => {
               <p>{t("sponsor.p4")}</p>
               <p>{t("sponsor.p5")}</p>
               <p>{t("sponsor.p6")}</p>
-              <Link to={"/contact?lang=" + i18n.language} target="_blank">
+              <Link to={`/contact`} onClick={handleButtonClick("/contact")}>
                 <button id="beSponsor" className="button-style mb-5">
                   {t("sponsor.contactButton")}
                 </button>
@@ -359,7 +364,16 @@ const Sponsors = () => {
             <img src={lightboxImage} alt="Larger View" />
 
             {/* Close button */}
-            <button onClick={closeLightbox}>CLOSE</button>
+            <button
+              onClick={closeLightbox}
+              style={{
+                color: "black",
+                backgroundColor: "#F5B7B1",
+                borderRadius: "5px",
+              }}
+            >
+              {t("sponsor.close")}
+            </button>
           </div>
         </div>
       )}

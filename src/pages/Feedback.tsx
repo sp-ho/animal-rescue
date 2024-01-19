@@ -14,6 +14,11 @@ const Feedback = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
+
   // Use i18n to persist language
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -208,7 +213,7 @@ const Feedback = () => {
           {t("feedback.thinkAdopt")}
         </h3>
         <p className="mt-5 mb-5">{t("feedback.adoptionProcess")}</p>
-        <Link to={"/adoption?lang=" + i18n.language} target="_blank">
+        <Link to={`/adoption`} onClick={handleButtonClick("/adoption")}>
           <button className="button-style mb-5">
             {t("feedback.learnMoreButton")}
           </button>

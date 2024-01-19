@@ -10,6 +10,11 @@ const Donate = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
+
   // Use i18n to persist language
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -214,7 +219,7 @@ const Donate = () => {
             <p className="mb-4" style={{ color: "white" }}>
               {t("donate.sponsor")}
             </p>
-            <Link to={"/sponsors?lang=" + i18n.language} target="_blank">
+            <Link to={`/sponsors`} onClick={handleButtonClick("/sponsors")}>
               <button className="button-style">
                 {t("donate.moreInfoButton")}
               </button>

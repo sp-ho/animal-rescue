@@ -9,6 +9,11 @@ const Microchips = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
+
   // Use i18n to persist language
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -156,7 +161,7 @@ const Microchips = () => {
               ></iframe>
             </div>
           </div>
-          <Link to={"/videos?lang=" + i18n.language} target="_blank">
+          <Link to={`/videos`} onClick={handleButtonClick("/videos")}>
             <button className="button-style mt-5">
               {t("microchips.videosButton")}
             </button>
@@ -176,7 +181,7 @@ const Microchips = () => {
           {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
             {/* Image */}
-            <Link to={"/breed?lang=" + i18n.language} target="_blank">
+            <Link to={"/breed?lang=" + i18n.language}>
               <img
                 src={dogImage}
                 alt="german-shepherd-dog"
@@ -215,7 +220,7 @@ const Microchips = () => {
           {t("microchips.thinkAdopt")}
         </h3>
         <p className="mt-5 mb-5">{t("microchips.adoptionProcess")}</p>
-        <Link to={"/adoption?lang=" + i18n.language} target="_blank">
+        <Link to={`/adoption`} onClick={handleButtonClick("/adoption")}>
           <button className="button-style mb-5">
             {t("microchips.learnMoreButton")}
           </button>

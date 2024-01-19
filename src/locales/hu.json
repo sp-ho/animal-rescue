@@ -50,7 +50,7 @@
         "success": "Sikertörténeteink",
         "photos": "Fényképek",
         "videos": "Videók",
-        "success1a": "Huba családtag lett, már tesók a Lucával med Matyival. A szomszéd birkáit órákig nézi.",
+        "success1a": "Huba családtag lett, már tesók a Lucával meg Matyival. A szomszéd birkáit órákig nézi.",
         "success1b": "- Gábor",
         "success2a": "Nyaralónkban vagyunk, mi sátorban alszunk és Diego is velünk volt.",
         "success2b": "- Annamari & Bence",
@@ -328,7 +328,7 @@
         "p9a": "7-14 év",
         "p10": "Videók a Német Juhász Fajtáról",
         "p11": "Tudjon meg többet örökbefogadási folyamatunkról és hogy hogyan legyen ideiglenes befogadó",
-        "videosButton":"További videók megtekintéséhez kattintson ide",
+        "videosButton":"Több videó",
         "p12": "Legyél Önkéntes!",
         "p13": "Ha érdekel a német juhászkutya fajta, és szívesen segítenél nekünk, ha van egy kis szabadidőd, szívesen várunk.",
         "learnMoreButton": "További részletek"
@@ -392,7 +392,7 @@
 
     "adoption": {
         "adoptionProcess": "Az örökbefogadási folyamat",
-        "intro": "Tájékozódjon örökbefogadási folyamatunkat!",
+        "intro": "Tájékozódjon örökbefogadási folyamatunkról!",
         "p1": "Nagyon fontos számunkra, hogy minden állat számára megfelelő otthont találjunk. Minden kutyának megvan a maga egyénisége, és szeretnénk gondoskodni arról, hogy a kutya szükségleteit az Ön szükségleteihez igazítsuk, amikor a következő családtagot keresi otthonába.",
         "p2": "Egy nagyon aktív kutyát egy aktív családhoz kell elhelyezni, egy olyan kutyát, amely még mindig nem áll készen arra, hogy gyermekes családba kerüljön, mert például képzésre van szüksége, bizonyos esetekben előfordulhat, hogy gyermek nélküli családhoz kell mennie, hacsak nem továbbképzést biztosítanak. Ezért megvizsgálunk minden fontos elemet, hogy biztosan megtaláljuk a legmegfelelőbbet Önnek és a kérdéses kutyának.",
         "p3": "Örökbefogadásunk szokásos folyamata az, hogy kérjük, kommunikáljon velünk. Írjon nekünk üzenetet, ha szeretne örökbe fogadni. Miután megkaptuk ezeket az információkat, felhívjuk Önt és megbeszéljük Önt, hogy megtudjuk, mi érdekli, milyen típusú kutyát keres, és megbeszéljük a részleteket. Ha van egy adott időpontban örökbefogadható kutyánk, amely megfelel az Ön igényeinek, akkor egy találkozást is meg tudunk szervezni, és nagyszerű, ha úgy gondoljuk, hogy Ön a megfelelő.",
@@ -403,8 +403,8 @@
         "photos": "Fényképek",
         "videos": "Videók",
         "becomeFoster": "Legyél ideiglenes befogadó",
-        "fosterProcess1": "Ha nem biztos benne, hogy készen áll-e egy hosszú távú elköteleződésre,",
-        "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét hogy az egyik kutyánkat befogadja, amig örök otthonra nem talál?",
+        "fosterProcess1": "Ha nem biztos abban, hogy készen áll-e egy hosszú távú elkötelezettségre,",
+        "fosterProcess2": "gondolt-e arra, hogy megnyitja otthonát és szívét hogy az egyik kutyánkat átmenetileg befogadja, amig örök otthonra nem talál?",
         "learnMoreButton": "További részletek"
     },
 
@@ -425,7 +425,7 @@
         "link": "Adományozható tárgyak",
         "p12": "Lehet keresztszülő egy vagy több gondozásunkban lévő állatunknak. Ha nincs abban a helyzetben, hogy örökbe fogadhassa valamelyik kutyánkat, de szívét megérintette egy állat története, akit megmentettünk, akkor lehetősége van keresztszülővé válni, hogy egy hónapig vagy még tovább támogassa a kutyát.",
         "p13": "Mivel az állatok orvosi ellátása drága, és költséges a kennelek beszerzése, még a használtak is, a számláink gyorsan felhalmozódhatnak, hogy bármilyen új állatot befogadhassunk, amelyhez támogatásukra van szükségünk. Minden amit nekünk ad segíteni fog abban, hogy a gondozásunkba vett kutyákat ellássuk mindennel amire szükségük van. Köszönjük hogy ránk gondol pénz vagy tárgyi támogatásával.",
-        "becomeSponsor": "Legyan Szponzor",
+        "becomeSponsor": "Legyen Szponzor",
         "sponsor": "Küldetésünk megvalósításában helyi, nemzeti és nemzetközi vállalatokra és egyéni szponzorokra támaszkodunk.",
         "moreInfoButton": "Több informáciö"
     },
@@ -501,8 +501,9 @@
         "p3": "Vállalati szponzorainknak lehetőségünk nyílik arra, hogy weboldalunkon elhelyezhessük logóját és cégnevét, valamint megemlítsük közösségi média platformjainkon, hogy hírt adjunk szervezetéről. Így hűséges ügyfélszolgálatunktól további online és személyes forgalmat kap webhelye és üzletei felé.",
         "p4": "Egyéni szponzoraink esetében az Ön nevét is fel tudjuk tüntetni weboldalunkon, ha érdekli, hogy ezeket az információkat online is közöljük. Az egyéni szponzorálás magában foglalhatja szervezetünknek nyújtott pénzbeli hozzájárulást és/vagy egy vagy több kutya havi szponzorálását az orvosi számláik, az élelmezés és/vagy egyéb költségeik rövid vagy hosszabb ideig történő kifizetésére.",
         "p5": "Csapatunk és kutyáink minden támogatását nagyra értékelni fogják, mivel ez segít elérni céljainkat, hogy az állatoknak mindenkor szükséges gondoskodást nyújtsunk, és minél több német juhásznak találjunk szerető otthont.",
-        "p6": "Kérjük, vegye fel velünk a kapcsolatot még ma, ha vállalati vagy egyéni szponzorrá szeretne válni. (vigye őket a Kapcsolat oldalra)",
-        "contactButton": "Kapcsolat"
+        "p6": "Kérjük, vegye fel velünk a kapcsolatot még ma, ha vállalati vagy egyéni szponzorrá szeretne válni.",
+        "contactButton": "Kapcsolat",
+        "close": "Bezár"
     },
 
     "contact": {
@@ -587,14 +588,15 @@
 
     "adopted-photos": {
         "adopted" : "Gazdis - Fényképek",
-        "intro": "Íme néhány kép azokról a kutyákról, akiket megmentettünk és már örök otthonra találtunk. Nyugodtan küldje el nekünk fogadott kutyáiról készült fotóit, hogy megoszthassuk azokat itt a weboldalunkon.",
+        "intro": "Íme néhány kép azokról a kutyákról, akiket megmentettünk és már örök otthonra találtak. Nyugodtan küldje el nekünk örökbe fogadott kutyáiról készült fotóit, hogy megoszthassuk azokat itt a honlapunkon.",
         "sendPhotoButton": "Küldj egy Gazdis Visszajelzések",
         "morePhotosButton": "Több fénykép a Flickr oldalunkon"
     },
 
     "adopted-videos": {
         "adopted" : "Gazdis - Videók",
-        "intro1": "Íme néhány videó azokról a kutyákról, amelyeket megmentettünk, és már otthonra találtunk. További videók megtekintéséhez kövessen minket a ",
+        "intro1": "Íme néhány videó azokról a kutyákról, amelyeket megmentettünk, és már otthonra találtak. További videók megtekintéséhez kövessen minket a ",
+        "youtube": "YouTubeon is.",
         "intro2": " is."
     },
 

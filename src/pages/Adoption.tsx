@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import fosterImage from "../images/adoption/foster-a-dog.jpg";
+import fosterImageHu from "../images/spay_neuter/dog-german-shepherd.jpg";
 import successImage1 from "../images/adoption/success-stories-kutya.jpg";
 import successImage2 from "../images/adoption/success-stories-kutyaink.jpg";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,6 +9,11 @@ import { useEffect } from "react";
 const Adoption = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
 
   // Use i18n to persist language
   useEffect(() => {
@@ -51,7 +57,7 @@ const Adoption = () => {
             {/* Image on the left with reduced margin */}
             <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
-                src={fosterImage}
+                src={i18n.language === "hu" ? fosterImageHu : fosterImage}
                 alt="About Us"
                 className="img-fluid rounded"
                 style={{ maxWidth: "90%", height: "auto", marginBottom: 10 }}
@@ -65,7 +71,7 @@ const Adoption = () => {
               <p>{t("adoption.p3")}</p>
               <p>{t("adoption.p4")}</p>
               <p>{t("adoption.p5")}</p>
-              <Link to={"/contact?lang=" + i18n.language} target="_blank">
+              <Link to={`/contact`} onClick={handleButtonClick("/contact")}>
                 <button className="button-style mb-5">
                   {t("adoption.contactButton")}
                 </button>
@@ -127,7 +133,7 @@ const Adoption = () => {
         </h3>
         <p className="mt-5">{t("adoption.fosterProcess1")}</p>
         <p className="mb-5">{t("adoption.fosterProcess2")}</p>
-        <Link to={"/fostering?lang=" + i18n.language} target="_blank">
+        <Link to={`/fostering`} onClick={handleButtonClick("/fostering")}>
           <button className="button-style mb-5">
             {t("adoption.learnMoreButton")}
           </button>

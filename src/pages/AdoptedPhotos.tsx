@@ -180,6 +180,11 @@ const AdoptedPhotos = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedDog, setSelectedDog] = useState<Dog | null>(null);
 
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
+
   // Use i18n to persist language
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -507,7 +512,7 @@ const AdoptedPhotos = () => {
           <div>
             <p className="intro">{t("adopted-photos.intro")}</p>
           </div>
-          <Link to={"/send-photos?lang=" + i18n.language} target="_blank">
+          <Link to={`/send-photos`} onClick={handleButtonClick("/send-photos")}>
             <button className="button-style mt-4 mb-4">
               {t("adopted-photos.sendPhotoButton")}
             </button>

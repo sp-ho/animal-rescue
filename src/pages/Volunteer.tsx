@@ -8,6 +8,11 @@ const Volunteer = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
+
   // Define interests with corresponding translations
   const interests = [
     { id: 1, text: t("volunteer.form.option1") },
@@ -289,8 +294,8 @@ const Volunteer = () => {
                   <p>
                     {t("volunteer.p10")}{" "}
                     <Link
-                      to={"/fostering?lang=" + i18n.language}
-                      target="_blank"
+                      to={`/fostering`}
+                      onClick={handleButtonClick("/fostering")}
                     >
                       {t("volunteer.link")}
                     </Link>
@@ -300,7 +305,7 @@ const Volunteer = () => {
                   <p>{t("volunteer.p11")}</p>
                 </li>
                 <li>
-                  <p>{t("volunteer.p11")}</p>
+                  <p>{t("volunteer.p12")}</p>
                 </li>
               </ul>
               <p>{t("volunteer.p13")}</p>

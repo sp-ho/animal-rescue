@@ -9,6 +9,11 @@ const Breed = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
+
   // Use i18n to persist language
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -146,7 +151,7 @@ const Breed = () => {
               ></iframe>
             </div>
           </div>
-          <Link to={"/videos?lang=" + i18n.language} target="_blank">
+          <Link to={`/videos`} onClick={handleButtonClick("/videos")}>
             <button className="button-style mt-5">
               {t("breed.videosButton")}
             </button>
@@ -205,7 +210,7 @@ const Breed = () => {
           {t("breed.p12")}
         </h3>
         <p className="mt-5 mb-5">{t("breed.p13")}</p>
-        <Link to={"/volunteer?lang=" + i18n.language} target="_blank">
+        <Link to={`/volunteer`} onClick={handleButtonClick("/volunteer")}>
           <button className="button-style mb-5">
             {t("breed.learnMoreButton")}
           </button>

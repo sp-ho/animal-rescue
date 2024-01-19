@@ -84,7 +84,7 @@ const AdoptedVideos = () => {
             <p className="intro">
               {t("adopted-videos.intro1")}
               <Link to="http://bit.ly/3trNey7" target="_blank">
-                YouTube
+                {t("adopted-videos.youtube")}
               </Link>
               {t("adopted-videos.intro2")}
             </p>

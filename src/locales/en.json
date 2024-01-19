@@ -501,8 +501,9 @@
         "p3": "For our corporate sponsors we will be able to add your logo and company name on our website and mention you on our social media platforms to spread the word about your organization. This way you will receive additional online and in person traffic to your website and stores from our loyal support base.",
         "p4": "For our individual sponsors, we will be able to list your names on our website as well if you are interested in having us include that information online. Individual sponsorship could include monetary contribution to our organization and/or monthly sponsorship of one or more dogs to pay for their medical bills, food and/or other expenses for a short or longer period of time.",
         "p5": "Every support you provide will be greatly appreciated by our team and our dogs as it will help achieve our goals to provide the care the animals need at all times and to find loving homes for as many German shepherds as possible.",
-        "p6": "Please contact us today to become a corporate sponsor or an individual sponsor. (lead them to Contact page)",
-        "contactButton": "CONTACT US"
+        "p6": "Please contact us today to become a corporate sponsor or an individual sponsor.",
+        "contactButton": "CONTACT US",
+        "close": "CLOSE"
     },
 
     "contact": {
@@ -595,6 +596,7 @@
     "adopted-videos": {
         "adopted" : "Already Adopted - Videos",
         "intro1": "Here are some videos of the dogs we rescued and have already found a forever home. Follow us on ",
+        "youtube": "Youtube",
         "intro2": " to see more videos."
     },
 
