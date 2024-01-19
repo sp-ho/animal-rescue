@@ -16,6 +16,11 @@ const Home = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
+  const handleButtonClick = (destination: string) => () => {
+    // Set the hash part of the URL to an empty string
+    window.location.href = `${destination}?lang=${i18n.language}#`;
+  };
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const lang = params.get("lang") ?? "en"; // default to English
@@ -75,7 +80,7 @@ const Home = () => {
           <h1>
             <strong>{t("home.line3")}</strong>
           </h1>
-          <Link to={"/adoption?lang=" + i18n.language} target="_blank">
+          <Link to={`/adoption`} onClick={handleButtonClick("/doption")}>
             <button className="button-style mt-2">
               {t("home.adoptButton")}
             </button>
@@ -158,7 +163,7 @@ const Home = () => {
             {/* Subtitle 2 */}
             <p className="mb-4">{t("home.story2")}</p>
             {/* Description */}
-            <Link to={"/about?lang=" + i18n.language} target="_blank">
+            <Link to={`/about`} onClick={handleButtonClick("/about")}>
               <button className="button-style">{t("home.abUsButton")}</button>
             </Link>
           </div>
@@ -177,7 +182,7 @@ const Home = () => {
             {/* Subtitle 2 */}
             <p className="mb-4">{t("home.foster2")}</p>
             {/* Description */}
-            <Link to={"/fostering?lang=" + i18n.language} target="_blank">
+            <Link to={`/fostering`} onClick={handleButtonClick("/fostering")}>
               <button className="button-style">{t("home.fosterButton")}</button>
             </Link>
           </div>
@@ -222,7 +227,7 @@ const Home = () => {
               {t("home.breed2")}
             </p>
             {/* Description */}
-            <Link to={"/breed?lang=" + i18n.language} target="_blank">
+            <Link to={`/breed`} onClick={handleButtonClick("/breed")}>
               <button className="button-style">{t("home.breedButton")}</button>
             </Link>
           </div>
