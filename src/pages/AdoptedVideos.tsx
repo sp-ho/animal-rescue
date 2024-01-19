@@ -77,10 +77,12 @@ const AdoptedVideos = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("adopted-videos.adopted")}</strong>
           </h1>
           <div>
+            {/* Intro and Youtube link */}
             <p className="intro">
               {t("adopted-videos.intro1")}
               <Link to="http://bit.ly/3trNey7" target="_blank">

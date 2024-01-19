@@ -590,7 +590,8 @@
         "adopted" : "Already Adopted - Photos",
         "intro": "Here are some pictures of the dogs we rescued and have already found a forever home. Feel free to send us your photos of your adopted dogs so that we can share them here on our website.",
         "sendPhotoButton": "Send us your photos",
-        "morePhotosButton": "Click here to view more photos on Flickr"
+        "morePhotosButton": "Click here to view more photos on Flickr",
+        "close": "Close"
     },
 
     "adopted-videos": {

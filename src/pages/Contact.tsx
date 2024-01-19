@@ -313,6 +313,7 @@ const Contact = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container py-5">
+          {/* Header */}
           <h1>
             <strong>{t("contact.contact")}</strong>
           </h1>
@@ -321,7 +322,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-div">
           <div className="columns">
-            {/* Left Section */}
+            {/* Left Section : Email */}
             <div className="left-section">
               <div className="contact-section">
                 <FontAwesomeIcon
@@ -338,7 +339,7 @@ const Contact = () => {
               <p>judit.valent@gmail.com</p>
             </div>
 
-            {/* Right Section */}
+            {/* Right Section : Social Media */}
             <div className="right-section">
               <div className="contact-section">
                 <FontAwesomeIcon
@@ -428,6 +429,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="row mb-3">
+              {/* Email */}
               <div className="col-md-6">
                 <label htmlFor="email">{t("contact.p5")}</label>
                 <input
@@ -444,6 +446,7 @@ const Contact = () => {
                   <div className="invalid-feedback">{emailError}</div>
                 )}
               </div>
+              {/* Telephone */}
               <div className="col-md-6">
                 <label htmlFor="telephone">{t("contact.p7")}</label>
                 <input
@@ -462,6 +465,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Subject */}
             <div className="mb-3">
               <label htmlFor="subject">{t("contact.p6")}</label>
               <input
@@ -475,6 +479,7 @@ const Contact = () => {
               />
             </div>
 
+            {/* Comments/Questions */}
             <div className="mb-3">
               <label htmlFor="comments">{t("contact.p8")}</label>
               <textarea
@@ -487,6 +492,7 @@ const Contact = () => {
               />
             </div>
 
+            {/* Upload Image */}
             <div className="mb-3">
               <label htmlFor="image">{t("contact.p9")}</label>
               <input
@@ -517,12 +523,14 @@ const Contact = () => {
               )}
             </div>
 
+            {/* ReCAPTCHA v2 */}
             <div>
               {/* We are using the global site key for testing */}
               <ReCAPTCHA
                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                 onChange={handleRecaptchaChange}
               />
+              {/* Submit button */}
               <button type="submit" className="btn btn-primary">
                 {t("contact.submitButton")}
               </button>

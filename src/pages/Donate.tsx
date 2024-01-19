@@ -38,9 +38,11 @@ const Donate = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("donate.donate")}</strong>
           </h1>
+          {/* Intro */}
           <p className="intro">{t("donate.intro")}</p>
         </div>
       </div>
@@ -76,11 +78,13 @@ const Donate = () => {
                   <p>{t("donate.p9")}</p>
                 </li>
                 <li>
+                  {/* GoFundMe */}
                   <Link to="https://bit.ly/38Trm8x" target="_blank">
                     <p>{t("donate.p10")}</p>
                   </Link>
                 </li>
                 <li>
+                  {/* Items you may donate */}
                   <p>
                     {t("donate.p11")}
                     <ScrollLink
@@ -122,7 +126,7 @@ const Donate = () => {
         </div>
       </div>
 
-      {/* White background section */}
+      {/* White background section - Items You May DOnate */}
       <div className="container-fluid mt-5 py-5">
         <div className="container">
           <div id="donateItems" className="row justify-content-center">
@@ -133,6 +137,7 @@ const Donate = () => {
               <br />
               <p>{t("donate-items.intro")}</p>
               <br />
+              {/* Food items you may donate to us */}
               <p>
                 <strong>{t("donate-items.p1")}</strong>
               </p>
@@ -154,6 +159,7 @@ const Donate = () => {
                 </li>
                 <br />
               </ul>
+              {/* Dog accessories and toys */}
               <p>
                 <strong>{t("donate-items.p7")}</strong>
               </p>
@@ -196,7 +202,7 @@ const Donate = () => {
         </div>
       </div>
 
-      {/* Black background section */}
+      {/* Dark background section */}
       <div className="container-fluid bg-dark mt-5 py-5">
         <div className="row justify-content-center">
           {/* Image on the left  */}
@@ -219,6 +225,7 @@ const Donate = () => {
             <p className="mb-4" style={{ color: "white" }}>
               {t("donate.sponsor")}
             </p>
+            {/* More Information button */}
             <Link to={`/sponsors`} onClick={handleButtonClick("/sponsors")}>
               <button className="button-style">
                 {t("donate.moreInfoButton")}

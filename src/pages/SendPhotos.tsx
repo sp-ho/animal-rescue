@@ -49,14 +49,14 @@ const SendPhotos = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
 
   const isEmailValid = (email: string): boolean => {
-    // Simple email validation regex
+    // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
   const isPhoneNumberValid = (phoneNumber: string): boolean => {
-    // Simple phone number validation regex
-    const phoneRegex = /^[0-9+\-() ]*$/; // Change this regex based on your validation criteria
+    // Phone number validation regex
+    const phoneRegex = /^[0-9+\-() ]*$/;
     return phoneRegex.test(phoneNumber);
   };
 
@@ -328,6 +328,7 @@ const SendPhotos = () => {
             />
           </div>
 
+          {/* Comment/Questions */}
           <div className="col-md-6 mb-3">
             <label htmlFor="comments">{t("sendPhotos.comments")}</label>
             <textarea
@@ -368,12 +369,14 @@ const SendPhotos = () => {
             )}
           </div>
 
+          {/* ReCAPTCHA v2 */}
           <div>
             {/* We are using the global site key for testing */}
             <ReCAPTCHA
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
               onChange={handleRecaptchaChange}
             />
+            {/* Submit button */}
             <button type="submit" className="btn btn-primary mt-3">
               {t("sendPhotos.button")}
             </button>

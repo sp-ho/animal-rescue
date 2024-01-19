@@ -87,17 +87,19 @@ const Adoptable = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("adoptable.adoptable")}</strong>
           </h1>
         </div>
       </div>
 
+      {/* Adoptable dog 1 */}
       {/* Grey background section with image carousel and text */}
       <div className="container-fluid bg-light mt-5 mb-5 py-5">
         <div className="container mt-5 mb-5">
           <div className="row">
-            {/* Column 1: Image carousel */}
+            {/* Image carousel on the left */}
             <div className="col-md-4">
               <div
                 style={{ textAlign: "center" }}
@@ -151,11 +153,12 @@ const Adoptable = () => {
         </div>
       </div>
 
+      {/* Adoptable dog 2 */}
       {/* White background section with image carousel and text */}
       <div className="container-fluid mt-5 mb-5 py-5">
         <div className="container">
           <div className="row">
-            {/* Column 1: Image carousel */}
+            {/* Image carousel on the left */}
             <div className="col-md-4">
               <div
                 style={{ textAlign: "center" }}
@@ -208,11 +211,12 @@ const Adoptable = () => {
         </div>
       </div>
 
+      {/* Adoptable dog 3 */}
       {/* Grey background section with image carousel and text */}
       <div className="container-fluid bg-light mt-5 py-5">
         <div className="container py-5">
           <div className="row">
-            {/* Column 1: Image carousel */}
+            {/* Image carousel on the left */}
             <div className="col-md-5">
               <div
                 style={{ textAlign: "center" }}

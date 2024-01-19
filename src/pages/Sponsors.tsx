@@ -95,12 +95,13 @@ const Sponsors = () => {
           {sponsorImages.map((sponsor) => (
             <div key={sponsor.name} className="col-md-3 mb-4 text-center">
               <div className="mb-2">
+                {/* Links to sponsors' websites */}
                 <Link to={sponsor.link} target="_blank">
                   {sponsor.name}
                 </Link>
               </div>
-              {/* Image */}
               <div onContextMenu={(e) => e.preventDefault()}>
+                {/* Logos of sponsors */}
                 <Link to={sponsor.link} target="_blank">
                   <img
                     className="mx-auto mt-3"
@@ -128,7 +129,7 @@ const Sponsors = () => {
               <strong>{t("sponsor.foster")}</strong>
             </h3>
           </div>
-          {/* Column 1 - Placeholder for image */}
+          {/* Foster 1 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
             <div
@@ -150,7 +151,7 @@ const Sponsors = () => {
             </div>
             <p>Andor Batiz</p>
           </div>
-          {/* Column 2 */}
+          {/* Foster 2 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
             <div
@@ -178,7 +179,8 @@ const Sponsors = () => {
             </div>
             <p>Iványi Erika</p>
           </div>
-          {/* Column 3 */}
+
+          {/* Foster 3 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
             <div
@@ -200,7 +202,8 @@ const Sponsors = () => {
             </div>
             <p>Gál Csaba</p>
           </div>
-          {/* Column 4 */}
+
+          {/* Foster 4 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
             <div
@@ -222,7 +225,8 @@ const Sponsors = () => {
             </div>
             <p>Németh József</p>
           </div>
-          {/* Column 5 */}
+
+          {/* Foster 5 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
             <div
@@ -258,7 +262,7 @@ const Sponsors = () => {
               <strong>{t("sponsor.volunteer")}</strong>
             </h3>
           </div>
-          {/* Column 1 - Volunteer 1 */}
+          {/* Volunteer 1 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
             <div
@@ -281,7 +285,7 @@ const Sponsors = () => {
             <p>Ivan Timea</p>
           </div>
 
-          {/* Column 2 - Volunteer 2 */}
+          {/* Volunteer 2 */}
           <div className="col-md-2 mb-4 text-center mt-5 py-5">
             {/* Image */}
             <div
@@ -306,11 +310,11 @@ const Sponsors = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns with black background */}
+      {/* Dark background section with 2 columns */}
       <div className="container-fluid bg-dark py-5">
         <div className="container mt-5">
           <div className="row">
-            {/* Image on the left with reduced margin */}
+            {/* Image on the left */}
             <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={sponsorImage}
@@ -340,7 +344,7 @@ const Sponsors = () => {
         </div>
       </div>
 
-      {/* Lightbox */}
+      {/* Lightbox for larger view of images */}
       {lightboxImage && (
         <div
           className="lightbox"

@@ -42,23 +42,25 @@ const Feedback = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("feedback.feedback")}</strong>
           </h1>
+          {/* Intro */}
           <div>
             <p className="intro">{t("feedback.intro")}</p>
           </div>
         </div>
       </div>
 
-      {/* Section with 3 x 3 grid and grey background */}
+      {/*Grey background section with 2 x 3 grid */}
       <div
         className="container-fluid bg-light mt-5 mb-5 py-5"
         onContextMenu={(e) => e.preventDefault()}
       >
         {/* Row 1 */}
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for image */}
+          {/* Ági */}
           <div className="col-md-3 mb-4 mx-3 mt-5">
             <div className="text-center">
               {/* Image */}
@@ -69,13 +71,14 @@ const Feedback = () => {
                 style={{ width: "50%", borderRadius: "50%" }}
               />
             </div>
+            {/* Text */}
             <div className="text-left" style={{ fontStyle: "italic" }}>
               <p>{t("feedback.p5")}</p>
               <p>{t("feedback.p6")}</p>
               <p>{t("feedback.p7")}</p>
             </div>
           </div>
-          {/* Column 2 */}
+          {/* Annamari & Bence */}
           <div className="col-md-3 mb-4 mx-3 mt-5">
             <div className="text-center">
               {/* Image */}
@@ -86,12 +89,13 @@ const Feedback = () => {
                 style={{ width: "50%", borderRadius: "50%" }}
               />
             </div>
+            {/* Text */}
             <div className="text-left" style={{ fontStyle: "italic" }}>
               <p>{t("feedback.p3")}</p>
               <p>{t("feedback.p4")}</p>
             </div>
           </div>
-          {/* Column 3 */}
+          {/* Erika */}
           <div className="col-md-3 mb-4 mx-3 mt-5">
             <div className="text-center">
               {/* Image */}
@@ -102,6 +106,7 @@ const Feedback = () => {
                 style={{ width: "50%", borderRadius: "50%" }}
               />
             </div>
+            {/* Text */}
             <div className="text-left" style={{ fontStyle: "italic" }}>
               <p>{t("feedback.p12")}</p>
               <p>{t("feedback.p13")}</p>
@@ -111,7 +116,7 @@ const Feedback = () => {
 
         {/* Row 2 */}
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for image */}
+          {/* Ildikó */}
           <div className="col-md-3 mb-4 mt-5 mx-3">
             <div className="text-center">
               {/* Image */}
@@ -122,12 +127,13 @@ const Feedback = () => {
                 style={{ width: "50%", borderRadius: "50%" }}
               />
             </div>
+            {/* Text */}
             <div className="text-left" style={{ fontStyle: "italic" }}>
               <p>{t("feedback.p8")}</p>
               <p>{t("feedback.p9")}</p>
             </div>
           </div>
-          {/* Column 2 */}
+          {/* Gábor */}
           <div className="col-md-3 mb-4 mt-5 mx-3">
             <div className="text-center">
               {/* Image */}
@@ -138,12 +144,13 @@ const Feedback = () => {
                 style={{ width: "50%", borderRadius: "50%" }}
               />
             </div>
+            {/* Text */}
             <div className="text-left" style={{ fontStyle: "italic" }}>
               <p>{t("feedback.p1")}</p>
               <p>{t("feedback.p2")}</p>
             </div>
           </div>
-          {/* Column 3 */}
+          {/* Edit & Dóra */}
           <div className="col-md-3 mb-4 mt-5 mx-3">
             <div className="text-center">
               {/* Image */}
@@ -154,6 +161,7 @@ const Feedback = () => {
                 style={{ width: "50%", borderRadius: "50%" }}
               />
             </div>
+            {/* Text */}
             <div className="text-left" style={{ fontStyle: "italic" }}>
               <p>{t("feedback.p10")}</p>
               <p>{t("feedback.p11")}</p>
@@ -162,7 +170,7 @@ const Feedback = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and white background */}
+      {/* White background section - Our Success Stories */}
       <div
         className="container-fluid mt-5 mb-5"
         onContextMenu={(e) => e.preventDefault()}
@@ -171,29 +179,30 @@ const Feedback = () => {
           <strong>{t("home.success")}</strong>
         </h2>
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for image */}
+          {/* Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the left */}
             <Link to={"/adopted-photos?lang=" + i18n.language} target="_blank">
               <img
                 src={astorImage}
                 alt="Already Adopted Dog 1"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              {/* Hover effect */}
               <div className="hover-overlay">
                 <p>{t("feedback.photos")}</p>
               </div>
             </Link>
           </div>
-          {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the right */}
             <Link to={"/adopted-videos?lang=" + i18n.language} target="_blank">
               <img
                 src={batorImage}
                 alt="Already Adopted Dog 2"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              {/* Hover effect */}
               <div className="hover-overlay">
                 <p>{t("feedback.videos")}</p>
               </div>
@@ -202,6 +211,7 @@ const Feedback = () => {
         </div>
       </div>
 
+      {/* Dark background section at the bottom */}
       <div
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
 import dogImage from "../images/microchips/german-shepherd-dog.jpg";
 import microchipsImage from "../images/microchips/microchips-for-dogs.jpg";
 import spayNeuterImage from "../images/microchips/spay-neuter.jpg";
-import { Link, useNavigate } from "react-router-dom";
 
 const Microchips = () => {
   const { t, i18n } = useTranslation();
@@ -37,9 +37,11 @@ const Microchips = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("microchips.aboutMicrochips")}</strong>
           </h1>
+          {/* Intro */}
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}
@@ -49,11 +51,11 @@ const Microchips = () => {
         </div>
       </div>
 
-      {/* Grey background section with more padding */}
+      {/* Grey background section */}
       <div className="container-fluid mt-5 bg-light py-5">
         <div className="container">
           <div className="row py-5 justify-content-center">
-            {/* Image on the right with reduced margin */}
+            {/* Text on the left */}
             <div className="col-md-6">
               <p>
                 <strong>{t("microchips.p1")}</strong>
@@ -83,6 +85,7 @@ const Microchips = () => {
 
             {/* Text on the right */}
             <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
+              {/* Image  */}
               <img
                 src={microchipsImage}
                 alt="microchips-for-dogs"
@@ -106,7 +109,7 @@ const Microchips = () => {
         </div>
       </div>
 
-      {/* Section with black background and 2x2 grid for YouTube videos */}
+      {/* Dark background section with 2x2 grid of YouTube videos */}
       <div className="container-fluid bg-dark py-5 text-center">
         <h3
           className="text-center"
@@ -169,7 +172,7 @@ const Microchips = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and white background */}
+      {/* White background section with 2 columns */}
       <div
         className="container-fluid mt-5 mb-5"
         onContextMenu={(e) => e.preventDefault()}
@@ -178,9 +181,8 @@ const Microchips = () => {
           <strong>{t("microchips.spayNeuter")}</strong>
         </h3>
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the left */}
             <Link to={"/breed?lang=" + i18n.language}>
               <img
                 src={dogImage}
@@ -192,9 +194,8 @@ const Microchips = () => {
               </div>
             </Link>
           </div>
-          {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the right */}
             <Link to={"/spay-neuter?lang=" + i18n.language} target="_blank">
               <img
                 src={spayNeuterImage}
@@ -209,6 +210,7 @@ const Microchips = () => {
         </div>
       </div>
 
+      {/* Dark background section at the bottom */}
       <div
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}

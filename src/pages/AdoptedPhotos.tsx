@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import astor1 from "../images/adopted/astor/astor-1.jpg";
@@ -491,6 +491,7 @@ const AdoptedPhotos = () => {
     },
   ];
 
+  // Modal to display more images
   const openModal = (dog: Dog) => {
     setSelectedDog(dog);
     setModalIsOpen(true);
@@ -506,12 +507,15 @@ const AdoptedPhotos = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("adopted-photos.adopted")}</strong>
           </h1>
+          {/* Intro */}
           <div>
             <p className="intro">{t("adopted-photos.intro")}</p>
           </div>
+          {/* Send Us Your Photos button */}
           <Link to={`/send-photos`} onClick={handleButtonClick("/send-photos")}>
             <button className="button-style mt-4 mb-4">
               {t("adopted-photos.sendPhotoButton")}
@@ -565,7 +569,7 @@ const AdoptedPhotos = () => {
             <div>
               {/* Close modal button */}
               <button className="button-style mt-3" onClick={closeModal}>
-                Close
+                {t("adopted-photos.close")}
               </button>
             </div>
           </div>
@@ -573,6 +577,7 @@ const AdoptedPhotos = () => {
       </Modal>
 
       <div className="container py-5">
+        {/* Flickr button */}
         <Link to="http://bit.ly/3vyEfxz" target="_blank">
           <button className="button-style mt-4 mb-4">
             {t("adopted-photos.morePhotosButton")}

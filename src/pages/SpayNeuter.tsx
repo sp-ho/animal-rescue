@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
 import neuterSpayImage from "../images/spay_neuter/neuter-spay.jpg";
 import microchipsImage from "../images/spay_neuter/microchips.jpg";
 import dogImage from "../images/spay_neuter/dog-german-shepherd.jpg";
-import { Link, useNavigate } from "react-router-dom";
 
 const SpayNeuter = () => {
   const { t, i18n } = useTranslation();
@@ -42,18 +42,17 @@ const SpayNeuter = () => {
           </h1>
           <div>
             <div>
-              {/* Use d-flex to display p1 in one line */}
               <p className="intro d-flex">{t("spay-neuter.intro")}</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Grey background section with more padding */}
+      {/* Grey background section */}
       <div className="container-fluid mt-5 bg-light py-5">
         <div className="container">
           <div className="row py-5 justify-content-center">
-            {/* Image on the right with reduced margin */}
+            {/* Text on the left */}
             <div className="col-md-6">
               <p>
                 <strong>{t("spay-neuter.p1")}</strong>
@@ -72,7 +71,7 @@ const SpayNeuter = () => {
               <p>{t("spay-neuter.p11")}</p>
             </div>
 
-            {/* Text on the right */}
+            {/* Image on the right */}
             <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={neuterSpayImage}
@@ -93,7 +92,7 @@ const SpayNeuter = () => {
         </div>
       </div>
 
-      {/* Section with black background and 2x2 grid for YouTube videos */}
+      {/* Dark background section with 2x2 grid of YouTube videos */}
       <div className="container-fluid bg-dark py-5 text-center">
         <h3
           className="text-center"
@@ -156,7 +155,7 @@ const SpayNeuter = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and white background */}
+      {/* White background section with 2 columns */}
       <div
         className="container-fluid mt-5 mb-5"
         onContextMenu={(e) => e.preventDefault()}
@@ -165,9 +164,8 @@ const SpayNeuter = () => {
           <strong>{t("spay-neuter.spayNeuter")}</strong>
         </h3>
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the left */}
             <Link to={"/breed?lang=" + i18n.language} target="_blank">
               <img
                 src={dogImage}
@@ -179,9 +177,8 @@ const SpayNeuter = () => {
               </div>
             </Link>
           </div>
-          {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the right */}
             <Link to={"/microchips?lang=" + i18n.language} target="_blank">
               <img
                 src={microchipsImage}
@@ -196,6 +193,7 @@ const SpayNeuter = () => {
         </div>
       </div>
 
+      {/* Dark background section at the bottom */}
       <div
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}

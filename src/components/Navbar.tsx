@@ -29,6 +29,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
+        {/* Logo */}
         <Link
           className="navbar-brand"
           to={`/?lang=${currentLanguage}`}
@@ -53,6 +54,7 @@ const Navbar: React.FC = () => {
         />
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
+            {/* Home */}
             <li className="nav-item">
               <Link
                 className="navbarLink nav-link active"
@@ -63,6 +65,8 @@ const Navbar: React.FC = () => {
                 {t("navbar.home")}
               </Link>
             </li>
+
+            {/* About */}
             <li className="nav-item  dropdown">
               <span
                 className="navbarLink nav-link dropdown-toggle"
@@ -72,7 +76,9 @@ const Navbar: React.FC = () => {
               >
                 {t("navbar.about")}
               </span>
+              {/* About dropdown menu */}
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {/* About Us */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -81,6 +87,7 @@ const Navbar: React.FC = () => {
                     {t("navbar.abUs")}
                   </Link>
                 </li>
+                {/* Our Sponsors, Fosters & Volunteers */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -91,6 +98,8 @@ const Navbar: React.FC = () => {
                 </li>
               </ul>
             </li>
+
+            {/* Adopt */}
             <li className="nav-item  dropdown">
               <span
                 className="nav-link dropdown-toggle"
@@ -100,7 +109,9 @@ const Navbar: React.FC = () => {
               >
                 {t("navbar.adopt")}
               </span>
+              {/* Adopt dropdown menu */}
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {/* The Adoption Process */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -109,6 +120,7 @@ const Navbar: React.FC = () => {
                     {t("navbar.adoptProcess")}
                   </Link>
                 </li>
+                {/* Adoptable Dogs */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -119,7 +131,8 @@ const Navbar: React.FC = () => {
                 </li>
               </ul>
             </li>
-            {/* Success Stories dropdown */}
+
+            {/* Success Stories */}
             <li className="nav-item  dropdown">
               <span
                 className="nav-link dropdown-toggle"
@@ -129,7 +142,9 @@ const Navbar: React.FC = () => {
               >
                 {t("navbar.success")}
               </span>
+              {/* Success Stories dropdown menu*/}
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {/* Already Adopted - Photos */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -138,6 +153,7 @@ const Navbar: React.FC = () => {
                     {t("navbar.adoptedPhotos")}
                   </Link>
                 </li>
+                {/* Already Adopted - Videos */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -146,6 +162,7 @@ const Navbar: React.FC = () => {
                     {t("navbar.adoptedVideos")}
                   </Link>
                 </li>
+                {/* Feedback from Adopters */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -154,6 +171,7 @@ const Navbar: React.FC = () => {
                     {t("navbar.feedback")}
                   </Link>
                 </li>
+                {/* Send Us Your Photos */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -164,7 +182,8 @@ const Navbar: React.FC = () => {
                 </li>
               </ul>
             </li>
-            {/* Get Involved dropdown */}
+
+            {/* Get Involved */}
             <li className="nav-item  dropdown">
               <span
                 className="nav-link dropdown-toggle"
@@ -174,13 +193,14 @@ const Navbar: React.FC = () => {
               >
                 {t("navbar.involve")}
               </span>
+              {/* Get Involved dropdown menu */}
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {/* Become a Sponsor */}
                 <li
                   style={{
                     paddingBottom: "5px",
                   }}
                 >
-                  {/* Become a Sponsor */}
                   <Link
                     smooth
                     to={`/sponsors?lang=${currentLanguage}#beSponsor`}
@@ -210,8 +230,8 @@ const Navbar: React.FC = () => {
                     {t("navbar.sponsor")}
                   </Link>
                 </li>
+                {/* Become a Volunteer */}
                 <li>
-                  {/* Become a Volunteer */}
                   <Link
                     className="dropdown-item"
                     to={`/volunteer?lang=${currentLanguage}`}
@@ -219,8 +239,8 @@ const Navbar: React.FC = () => {
                     {t("navbar.volunteer")}
                   </Link>
                 </li>
+                {/* Become a Foster */}
                 <li>
-                  {/* Become a Foster */}
                   <Link
                     className="dropdown-item"
                     to={`/fostering?lang=${currentLanguage}`}
@@ -230,7 +250,8 @@ const Navbar: React.FC = () => {
                 </li>
               </ul>
             </li>
-            {/* Important dropdown */}
+
+            {/* Important */}
             <li className="nav-item  dropdown">
               <span
                 className="nav-link dropdown-toggle"
@@ -240,7 +261,9 @@ const Navbar: React.FC = () => {
               >
                 {t("navbar.important")}
               </span>
+              {/* Important dropdown menu */}
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {/* About the Breed */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -249,6 +272,7 @@ const Navbar: React.FC = () => {
                     {t("navbar.abBreed")}
                   </Link>
                 </li>
+                {/* About Microchips */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -257,6 +281,7 @@ const Navbar: React.FC = () => {
                     {t("navbar.abMicrochips")}
                   </Link>
                 </li>
+                {/* About Spaying & Neutering */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -265,6 +290,7 @@ const Navbar: React.FC = () => {
                     {t("navbar.abSpayNeuter")}
                   </Link>
                 </li>
+                {/* Videos */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -275,6 +301,8 @@ const Navbar: React.FC = () => {
                 </li>
               </ul>
             </li>
+
+            {/* Contact */}
             <li className="nav-item">
               <Link
                 className="nav-link active"
@@ -284,6 +312,8 @@ const Navbar: React.FC = () => {
                 {t("navbar.contact")}
               </Link>
             </li>
+
+            {/* Donate */}
             <li className="nav-item">
               <Link
                 className="nav-link active"
@@ -293,8 +323,10 @@ const Navbar: React.FC = () => {
                 {t("navbar.donate")}
               </Link>
             </li>
+
             {/* Language selection */}
             <li className="nav-item">
+              {/* Hungarian button */}
               <button
                 title={t("navbar.hungarian")}
                 className="nav-link"
@@ -309,6 +341,7 @@ const Navbar: React.FC = () => {
               </button>
             </li>
             <li className="nav-item">
+              {/* English button */}
               <button
                 title={t("navbar.english")}
                 className="nav-link"

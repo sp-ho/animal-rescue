@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import breedImage from "../images/breed/about-the-breed.jpg";
 import adoptImage1 from "../images/breed/adopting-dog.jpg";
 import adoptImage2 from "../images/adoption/foster-a-dog.jpg";
@@ -37,23 +37,24 @@ const Breed = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("breed.aboutBreed")}</strong>
           </h1>
           <div>
+            {/* Intro */}
             <div>
-              {/* Use d-flex to display p1 in one line */}
               <p className="intro d-flex">{t("breed.p1")}</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Grey background section with more padding */}
+      {/* Grey background section */}
       <div className="container-fluid mt-5 bg-light py-5">
         <div className="container">
           <div className="row py-5 justify-content-center">
-            {/* Image on the left with reduced margin */}
+            {/* Image on the left */}
             <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={breedImage}
@@ -75,19 +76,19 @@ const Breed = () => {
           {/* Section with 3 columns */}
           <div className="row text-center">
             <p className="mt-5 mb-5 text-center">{t("breed.p6")}</p>
-            {/* Column 1 */}
+            {/* Column 1 : Height */}
             <div className="col-md-4 ">
               <p>{t("breed.p7")}</p>
               <p>{t("breed.p7a")}</p>
               <p>{t("breed.p7b")}</p>
             </div>
-            {/* Column 2 */}
+            {/* Column 2 : Weight */}
             <div className="col-md-4">
               <p>{t("breed.p8")}</p>
               <p>{t("breed.p8a")}</p>
               <p>{t("breed.p8b")}</p>
             </div>
-            {/* Column 3 */}
+            {/* Column 3 : Life Expectancy */}
             <div className="col-md-4 mb-5">
               <p>{t("breed.p9")}</p>
               <p>{t("breed.p9a")}</p>
@@ -96,7 +97,7 @@ const Breed = () => {
         </div>
       </div>
 
-      {/* Section with black background and 2x2 grid for YouTube videos */}
+      {/* Dark background section with 2x2 grid of YouTube videos */}
       <div className="container-fluid bg-dark py-5 text-center">
         <h3
           className="text-center"
@@ -151,6 +152,7 @@ const Breed = () => {
               ></iframe>
             </div>
           </div>
+          {/* View more videos button */}
           <Link to={`/videos`} onClick={handleButtonClick("/videos")}>
             <button className="button-style mt-5">
               {t("breed.videosButton")}
@@ -159,7 +161,7 @@ const Breed = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and white background */}
+      {/* White background section with 2 columns */}
       <div className="container-fluid mt-5 mb-5">
         <h3 className="mb-5 text-center">
           <strong>{t("breed.p11")}</strong>
@@ -168,29 +170,30 @@ const Breed = () => {
           className="row justify-content-center"
           onContextMenu={(e) => e.preventDefault()}
         >
-          {/* Column 1 - Placeholder for image */}
+          {/* Placeholder for image */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the left */}
             <Link to={"/adoption?lang=" + i18n.language} target="_blank">
               <img
                 src={adoptImage1}
                 alt="adopting-dog"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              {/* Hover effect */}
               <div className="hover-overlay">
                 <p>{t("adoption.adoptionProcess")}</p>
               </div>
             </Link>
           </div>
-          {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the right */}
             <Link to={"/fostering?lang=" + i18n.language} target="_blank">
               <img
                 src={adoptImage2}
                 alt="foster-a-dog"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              {/* Hover effect */}
               <div className="hover-overlay">
                 <p>{t("fostering.aboutFostering")}</p>
               </div>
@@ -199,6 +202,7 @@ const Breed = () => {
         </div>
       </div>
 
+      {/* Dark background section at the bottom */}
       <div
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}
@@ -210,6 +214,7 @@ const Breed = () => {
           {t("breed.p12")}
         </h3>
         <p className="mt-5 mb-5">{t("breed.p13")}</p>
+        {/* Learn More button */}
         <Link to={`/volunteer`} onClick={handleButtonClick("/volunteer")}>
           <button className="button-style mb-5">
             {t("breed.learnMoreButton")}

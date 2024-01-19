@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import aboutUsImage from "../images/german-shepherds-foundation.jpg";
 
@@ -30,9 +30,11 @@ const About = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("aboutUs.aboutUs")}</strong>
           </h1>
+          {/* Intro */}
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}
@@ -42,11 +44,11 @@ const About = () => {
         </div>
       </div>
 
-      {/* Grey background section with more padding */}
+      {/* Grey background section with 2 columns */}
       <div className="container-fluid mt-5 bg-light py-5">
         <div className="container">
           <div className="row">
-            {/* Image on the left with reduced margin */}
+            {/* Image on the left */}
             <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={aboutUsImage}

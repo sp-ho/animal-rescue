@@ -89,7 +89,7 @@ const Volunteer = () => {
 
   const isPhoneNumberValid = (phoneNumber: string): boolean => {
     // Simple phone number validation regex
-    const phoneRegex = /^[0-9+\-() ]*$/; // Change this regex based on your validation criteria
+    const phoneRegex = /^[0-9+\-() ]*$/;
     return phoneRegex.test(phoneNumber);
   };
 
@@ -174,15 +174,6 @@ const Volunteer = () => {
       return;
     }
 
-    // Ensure that selectedInterests is always an array
-    const interestsArray = Array.isArray(formData.selectedInterests)
-      ? formData.selectedInterests
-      : [];
-
-    console.log("Form Data:", formData);
-    console.log("Selected Interests:", interestsArray.join(", "));
-    console.log("Recaptcha Value:", recaptchaValue);
-
     // Validation for required fields
     const requiredFields = [
       "firstName",
@@ -248,7 +239,7 @@ const Volunteer = () => {
         </div>
       </div>
 
-      {/* Grey background section with more padding */}
+      {/* Grey background section */}
       <div className="container-fluid mt-5 bg-light py-5">
         <div className="container">
           <div className="row">
@@ -292,7 +283,8 @@ const Volunteer = () => {
                 </li>
                 <li>
                   <p>
-                    {t("volunteer.p10")}{" "}
+                    {t("volunteer.p10")}
+                    {/* Link to Become a Foster Home */}
                     <Link
                       to={`/fostering`}
                       onClick={handleButtonClick("/fostering")}
@@ -387,6 +379,7 @@ const Volunteer = () => {
             </div>
           </div>
 
+          {/* Radio buttons */}
           {/* Age */}
           <div className="mb-3">
             <label>{t("volunteer.form.age")}</label>
@@ -452,6 +445,7 @@ const Volunteer = () => {
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
               onChange={handleRecaptchaChange}
             />
+            {/* Submit button */}
             <button type="submit" className="btn btn-primary mt-3">
               {t("contact.submitButton")}
             </button>

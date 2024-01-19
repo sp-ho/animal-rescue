@@ -18,7 +18,7 @@ const Footer = () => {
             <p>&copy; 2023 Mi Hárman a Németjuhászokért Alapítvány</p>
           </div>
 
-          {/* Right column for Facebook icon */}
+          {/* Right column for social media icon */}
           <div className="col-md-6 text-end">
             {/* Facebook Icon */}
             <a href="https://bit.ly/3ua4R7s" className="me-3" target="_blank">

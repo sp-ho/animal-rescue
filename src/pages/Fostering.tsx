@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 import fosterImage from "../images/fostering/volunteer.jpg";
@@ -533,9 +533,11 @@ const Fostering = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white mt-5 mb-5">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("fostering.aboutFostering")}</strong>
           </h1>
+          {/* Intro */}
           <div>
             <div>
               <p className="intro d-flex">{t("fostering.p1")}</p>
@@ -544,7 +546,7 @@ const Fostering = () => {
         </div>
       </div>
 
-      {/* Grey background section with more padding */}
+      {/* Grey background section */}
       <div className="container-fluid bg-light py-5">
         <div className="container">
           <div className="row py-5">
@@ -578,6 +580,7 @@ const Fostering = () => {
           </h2>
           <br />
           <div className="row mb-3">
+            {/* First Name */}
             <div className="col-md-4 me-5">
               <label htmlFor="firstName">{t("fostering.form.fName")}</label>
               <input
@@ -591,6 +594,7 @@ const Fostering = () => {
                 }
               />
             </div>
+            {/* Last Name */}
             <div className="col-md-4">
               <label htmlFor="lastName">{t("fostering.form.lName")}</label>
               <input
@@ -606,6 +610,7 @@ const Fostering = () => {
             </div>
           </div>
           <div className="row mb-3">
+            {/* Email */}
             <div className="col-md-4 me-5 mb-3">
               <label htmlFor="email">{t("fostering.form.email1")}</label>
               <input
@@ -624,6 +629,7 @@ const Fostering = () => {
                 <div className="invalid-feedback">{formErrors.email}</div>
               )}
             </div>
+            {/* Cell */}
             <div className="col-md-4 ">
               <label htmlFor="cell">{t("fostering.form.cell1")}</label>
               <input
@@ -640,6 +646,7 @@ const Fostering = () => {
                 <div className="invalid-feedback">{formErrors.cell}</div>
               )}
             </div>
+            {/* Home Telephone */}
             <div className="col-md-4 me-5 mb-3">
               <label htmlFor="homeTel">{t("fostering.form.tel1")}</label>
               <input
@@ -654,6 +661,7 @@ const Fostering = () => {
                 <div className="invalid-feedback">{formErrors.tel}</div>
               )}
             </div>
+            {/* Address */}
             <div className="col-md-4">
               <label htmlFor="address">{t("fostering.form.address")}</label>
               <input
@@ -666,6 +674,7 @@ const Fostering = () => {
                 }
               />
             </div>
+            {/* City */}
             <div className="col-md-4 me-5 mb-3">
               <label htmlFor="city">{t("fostering.form.city")}</label>
               <input
@@ -678,6 +687,7 @@ const Fostering = () => {
                 }
               />
             </div>
+            {/* Province */}
             <div className="col-md-4">
               <label htmlFor="province">{t("fostering.form.prov")}</label>
               <input
@@ -690,6 +700,7 @@ const Fostering = () => {
                 }
               />
             </div>
+            {/* Postal Code */}
             <div className="col-md-4 me-5 mb-3">
               <label htmlFor="city">{t("fostering.form.postal")}</label>
               <input
@@ -702,9 +713,10 @@ const Fostering = () => {
                 }
               />
             </div>
+            {/* Country */}
             <div className="col-md-4">
               <label htmlFor="country">{t("fostering.form.country")}</label>
-              {/* Use Select component for the country dropdown options */}
+              {/* Select component for the country dropdown options */}
               <Select
                 options={countries}
                 isSearchable
@@ -713,13 +725,14 @@ const Fostering = () => {
                 styles={{
                   option: (provided) => ({
                     ...provided,
-                    color: "black", // Set text color to black
+                    color: "black",
                   }),
                 }}
               />
             </div>
           </div>
 
+          {/* Radio buttons */}
           {/* Preferred way to reach you */}
           <div className="mb-3">
             <label>{t("fostering.form.wayOfReach")}</label>

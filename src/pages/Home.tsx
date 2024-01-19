@@ -1,8 +1,8 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
 import backgroundImage from "../images/german-shepherd-dog.jpg";
 import breedImage from "../images/home/about-the-breed.jpg";
 import adoptedImage1 from "../images/home/already-adopted-dogs1.jpg";
@@ -88,10 +88,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section with 3 columns */}
+      {/* WHite background section with 3 columns */}
       <div className="container mt-5 mb-4">
         <div className="row">
-          {/* Column 1 */}
+          {/* Spay/Neuter program */}
           <div className="col-md-4 mb-4">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
@@ -106,7 +106,7 @@ const Home = () => {
             {/* Description */}
             <p>{t("home.spay-neuter2")}</p>
           </div>
-          {/* Column 2 */}
+          {/* Dogs Adopted */}
           <div className="col-md-4 mb-4">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
@@ -121,7 +121,7 @@ const Home = () => {
             {/* Description */}
             <p>{t("home.dogs-adopted2")}</p>
           </div>
-          {/* Column 3 */}
+          {/* Together we can do more */}
           <div className="col-md-4 mb-4">
             <div className="text-center mb-3">
               {/* Check icon in a circle */}
@@ -139,12 +139,11 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and grey background */}
+      {/* Grey background section - Our Story */}
       <div className="container-fluid bg-light mt-5 mb-5">
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for YouTube video */}
           <div className="col-md-6 mt-5 mb-5">
-            {/* YouTube video here */}
+            {/* YouTube video on the left */}
             <iframe
               width="90%"
               height="400"
@@ -154,15 +153,12 @@ const Home = () => {
               allowFullScreen
             ></iframe>
           </div>
-          {/* Column 2 */}
+          {/* Text on the right */}
           <div className="col-md-4 d-flex flex-column justify-content-center">
-            {/* Subtitle 1 */}
             <h2 className="mb-4">
               <strong>{t("home.story")}</strong>
             </h2>
-            {/* Subtitle 2 */}
             <p className="mb-4">{t("home.story2")}</p>
-            {/* Description */}
             <Link to={`/about`} onClick={handleButtonClick("/about")}>
               <button className="button-style">{t("home.abUsButton")}</button>
             </Link>
@@ -170,28 +166,24 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and white background */}
+      {/* White background section - Become a foster home */}
       <div className="container-fluid">
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for YouTube video */}
+          {/* Text on the left */}
           <div className="col-md-5 mb-5 d-flex flex-column justify-content-center">
-            {/* Subtitle 1 */}
             <h2 className="mb-4">
               <strong>{t("home.foster")}</strong>
             </h2>
-            {/* Subtitle 2 */}
             <p className="mb-4">{t("home.foster2")}</p>
-            {/* Description */}
             <Link to={`/fostering`} onClick={handleButtonClick("/fostering")}>
               <button className="button-style">{t("home.fosterButton")}</button>
             </Link>
           </div>
-          {/* Column 2 */}
+          {/* Image on the right */}
           <div
             className="col-md-5 mb-4"
             onContextMenu={(e) => e.preventDefault()}
           >
-            {/* Image */}
             <img
               src={fosterImage}
               alt="Become a Foster Home"
@@ -201,32 +193,28 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and black background */}
+      {/* Dark background section - About the Breed */}
       <div className="container-fluid bg-dark mt-5 mb-5">
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for image */}
           <div
             className="col-md-5 mb-5 mt-5"
             onContextMenu={(e) => e.preventDefault()}
           >
-            {/* Image */}
+            {/* Image on the left */}
             <img
               src={breedImage}
               alt="About the Breed"
               style={{ width: "100%", marginLeft: "calc(-25vw + 50%)" }}
             />
           </div>
-          {/* Column 2 */}
+          {/* Text on the right */}
           <div className="col-md-4 mb-4 d-flex flex-column justify-content-center">
-            {/* Subtitle 1 */}
             <h2 className="mb-4" style={{ color: "white" }}>
               <strong>{t("home.breed")}</strong>
             </h2>
-            {/* Subtitle 2 */}
             <p className="mb-4" style={{ color: "white" }}>
               {t("home.breed2")}
             </p>
-            {/* Description */}
             <Link to={`/breed`} onClick={handleButtonClick("/breed")}>
               <button className="button-style">{t("home.breedButton")}</button>
             </Link>
@@ -234,18 +222,17 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and white background */}
+      {/* White background section with 2 columns  */}
       <div className="container-fluid mt-5 mb-5">
         <h2 className="mb-5" style={{ marginLeft: "calc(-40vw + 50%)" }}>
           <strong>{t("home.success")}</strong>
         </h2>
         <div className="row justify-content-center">
-          {/* Column 1 - Placeholder for image */}
           <div
             className="col-sm-6 col-md-5 mb-4 d-flex align-items-center justify-content-center image-container"
             onContextMenu={(e) => e.preventDefault()}
           >
-            {/* Image */}
+            {/* Image on the left */}
             <Link to={"/adopted-photos?lang=" + i18n.language} target="_blank">
               <img
                 src={adoptedImage1}
@@ -260,12 +247,11 @@ const Home = () => {
               </div>
             </Link>
           </div>
-          {/* Column 2 */}
           <div
             className="col-sm-6 col-md-5 mb-4 d-flex align-items-center justify-content-center image-container"
             onContextMenu={(e) => e.preventDefault()}
           >
-            {/* Image */}
+            {/* Image on the right */}
             <Link to={"/adopted-videos?lang=" + i18n.language} target="_blank">
               <img
                 src={adoptedImage2}
@@ -280,7 +266,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section with 3 columns */}
+      {/* Grey background section with 3 columns */}
       <div className="container-fluid bg-light mt-5">
         <div className="row justify-content-center">
           {/* Column 1 */}
@@ -295,11 +281,10 @@ const Home = () => {
                 />
               </div>
             </div>
-            {/* Subtitle */}
+            {/* Text */}
             <p className="mb-3" style={{ fontStyle: "italic" }}>
               {t("home.success1a")}
             </p>
-            {/* Description */}
             <p style={{ fontStyle: "italic" }}>{t("home.success1b")}</p>
           </div>
           {/* Column 2 */}
@@ -314,11 +299,10 @@ const Home = () => {
                 />
               </div>
             </div>
-            {/* Subtitle */}
+            {/* Text */}
             <p className="mb-3" style={{ fontStyle: "italic" }}>
               {t("home.success2a")}
             </p>
-            {/* Description */}
             <p style={{ fontStyle: "italic" }}>{t("home.success2b")}</p>
           </div>
           {/* Column 3 */}
@@ -333,17 +317,14 @@ const Home = () => {
                 />
               </div>
             </div>
-            {/* Subtitle */}
+            {/* Text */}
             <p className="mb-3" style={{ fontStyle: "italic" }}>
               {t("home.success3a")}
             </p>
-            {/* Description */}
             <p style={{ fontStyle: "italic" }}>{t("home.success3b")}</p>
           </div>
         </div>
       </div>
-
-      {/* end of page */}
     </div>
   );
 };

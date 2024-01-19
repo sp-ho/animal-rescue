@@ -590,7 +590,8 @@
         "adopted" : "Gazdis - Fényképek",
         "intro": "Íme néhány kép azokról a kutyákról, akiket megmentettünk és már örök otthonra találtak. Nyugodtan küldje el nekünk örökbe fogadott kutyáiról készült fotóit, hogy megoszthassuk azokat itt a honlapunkon.",
         "sendPhotoButton": "Küldj egy Gazdis Visszajelzések",
-        "morePhotosButton": "Több fénykép a Flickr oldalunkon"
+        "morePhotosButton": "Több fénykép a Flickr oldalunkon",
+        "close": "Bezár"
     },
 
     "adopted-videos": {

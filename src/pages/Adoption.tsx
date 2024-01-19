@@ -38,9 +38,11 @@ const Adoption = () => {
       {/* White background section under the navbar */}
       <div className="container-fluid bg-white">
         <div className="container mt-5">
+          {/* Header */}
           <h1>
             <strong>{t("adoption.adoptionProcess")}</strong>
           </h1>
+          {/* Intro */}
           <div>
             <div>
               {/* Use d-flex to display p1 in one line */}
@@ -50,11 +52,11 @@ const Adoption = () => {
         </div>
       </div>
 
-      {/* Grey background section with more padding */}
+      {/* Grey background section with 2 columns */}
       <div className="container-fluid mt-5 bg-light py-5">
         <div className="container">
           <div className="row py-5">
-            {/* Image on the left with reduced margin */}
+            {/* Image on the left */}
             <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
               <img
                 src={i18n.language === "hu" ? fosterImageHu : fosterImage}
@@ -81,7 +83,7 @@ const Adoption = () => {
         </div>
       </div>
 
-      {/* Section with 2 columns and white background */}
+      {/* White background section - Our Success Stories */}
       <div className="container-fluid mt-5 mb-5">
         <h3 className="mb-5 text-center">
           <strong>{t("adoption.success")}</strong>
@@ -90,29 +92,30 @@ const Adoption = () => {
           className="row py-2 justify-content-center"
           onContextMenu={(e) => e.preventDefault()}
         >
-          {/* Column 1 - Placeholder for image */}
+          {/* Placeholder for images */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the left */}
             <Link to={"/adopted-photos?lang=" + i18n.language} target="_blank">
               <img
                 src={successImage1}
                 alt="dog-german-shepherd"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              {/* Hover effect */}
               <div className="hover-overlay">
                 <p>{t("adoption.photos")}</p>
               </div>
             </Link>
           </div>
-          {/* Column 2 */}
           <div className="col-md-5 mb-4 d-flex align-items-center justify-content-center image-container">
-            {/* Image */}
+            {/* Image on the right */}
             <Link to={"/adopted-videos?lang=" + i18n.language} target="_blank">
               <img
                 src={successImage2}
                 alt="microchips"
                 style={{ width: "90%", borderRadius: "15px" }}
               />
+              {/* Hover effect */}
               <div className="hover-overlay">
                 <p>{t("adoption.videos")}</p>
               </div>
@@ -121,6 +124,7 @@ const Adoption = () => {
         </div>
       </div>
 
+      {/* Dark background section at the bottom */}
       <div
         className="container-fluid bg-dark text-center py-5"
         style={{ color: "white" }}
@@ -133,6 +137,7 @@ const Adoption = () => {
         </h3>
         <p className="mt-5">{t("adoption.fosterProcess1")}</p>
         <p className="mb-5">{t("adoption.fosterProcess2")}</p>
+        {/* Learn More button */}
         <Link to={`/fostering`} onClick={handleButtonClick("/fostering")}>
           <button className="button-style mb-5">
             {t("adoption.learnMoreButton")}
