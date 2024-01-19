@@ -80,7 +80,7 @@ const Home = () => {
           <h1>
             <strong>{t("home.line3")}</strong>
           </h1>
-          <Link to={`/adoption`} onClick={handleButtonClick("/doption")}>
+          <Link to={`/adoption`} onClick={handleButtonClick("/adoption")}>
             <button className="button-style mt-2">
               {t("home.adoptButton")}
             </button>
