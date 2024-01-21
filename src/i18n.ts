@@ -12,8 +12,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // set the default language
-    fallbackLng: 'en', // use Hungarian if the language file is missing
+    lng: 'hu', // set the default language
+    fallbackLng: 'hu', // use Hungarian if the language file is missing
     interpolation: {
       escapeValue: false, // react already safely escapes by default
     },

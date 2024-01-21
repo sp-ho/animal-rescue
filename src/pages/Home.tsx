@@ -23,7 +23,7 @@ const Home = () => {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const lang = params.get("lang") ?? "en"; // default to English
+    const lang = params.get("lang") ?? "hu"; // default to Hungarian
 
     // Change language and update URL
     i18n.changeLanguage(lang, (err, translatedText) => {
