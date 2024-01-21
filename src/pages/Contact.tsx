@@ -398,7 +398,6 @@ const Contact = () => {
           <form
             className="compact-form"
             name="contact"
-            method="POST"
             data-netlify="true" // submission success message
             data-netlify-honeypot="bot-field"
             data-netlify-recaptcha="true"
