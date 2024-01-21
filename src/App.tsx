@@ -20,7 +20,6 @@ import Videos from "./pages/Videos";
 import SendPhotos from "./pages/SendPhotos";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

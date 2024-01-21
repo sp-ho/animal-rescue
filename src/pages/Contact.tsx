@@ -247,8 +247,6 @@ const Contact = () => {
             name="contact"
             method="POST"
             data-netlify="true" // submission success message
-            data-netlify-honeypot="bot-field"
-            data-netlify-recaptcha="true"
           >
             <h2>
               <strong>{t("contact.p2")}</strong>
@@ -376,20 +374,6 @@ const Contact = () => {
                 </div>
               )}
             </div>
-
-            {/* Add honeypot field for spam protection */}
-            <div
-              style={{ position: "absolute", left: "-5000px" }}
-              aria-hidden="true"
-            >
-              <label>
-                Don't fill this out if you're human:{" "}
-                <input type="text" name="bot-field" />
-              </label>
-            </div>
-
-            {/* Add reCAPTCHA 2 challenge */}
-            <div data-netlify-recaptcha="true"></div>
 
             <div>
               {/* Submit button */}
