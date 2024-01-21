@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-// import ReCAPTCHA from "react-google-recaptcha";
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +11,6 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-// import axios from "axios";
 
 const Contact = () => {
   const { t, i18n } = useTranslation();
@@ -48,12 +46,6 @@ const Contact = () => {
     agreeTerms: false,
     imagePreview: null as string | null, // Store the image preview URL
   });
-
-  // useState for reCAPTCHA
-  // const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-
-  // useState for submission status
-  // const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
 
   // Add state variables for email and telephone validation
   const [emailError, setEmailError] = useState<string | null>(null);
@@ -163,151 +155,6 @@ const Contact = () => {
     }
   };
 
-  // const handleRecaptchaChange = (value: string | null) => {
-  //   setRecaptchaValue(value);
-  // };
-
-  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-
-  //   if (!recaptchaValue) {
-  //     // Handle case where reCAPTCHA is not completed
-  //     console.error("reCAPTCHA not completed");
-  //     return;
-  //   }
-
-  //   const formDataInstance = new FormData();
-
-  //   // log for debug
-  //   // console.log("Current formData:", formData);
-
-  //   Object.entries(formData).forEach(([key, value]) => {
-  //     formDataInstance.append(key, value as string | Blob);
-  //   });
-
-  //   // log for debug
-  //   // console.log("Form Data Instance:", formDataInstance);
-
-  //   const errors: Record<string, string> = {};
-
-  //   // Check required fields
-  //   const requiredFields = [
-  //     "firstName",
-  //     "lastName",
-  //     "email",
-  //     "subject",
-  //     "comments",
-  //   ];
-  //   requiredFields.forEach((field) => {
-  //     if (!formData[field as keyof typeof formData]) {
-  //       errors[field] = `"${field}" is required`;
-  //     }
-  //   });
-
-  //   // Validate email format
-  //   const email = formData.email;
-  //   if (!isValidEmail(email)) {
-  //     errors["email"] = `"${email}" is not a valid email address`;
-  //   }
-
-  //   // Validate telephone format
-  //   const telephone = formData.telephone;
-  //   if (telephone && !isValidTelephone(telephone)) {
-  //     errors["telephone"] = `"${telephone}" is not a valid telephone number`;
-  //   }
-
-  //   // Validate image if provided
-  //   const image = formData.image;
-  //   if (image) {
-  //     const imageSize = image.size / (1024 * 1024); // in MB
-  //     const allowedImageFormats = ["image/jpeg", "image/png", "image/jpg"];
-
-  //     if (image.type != null) {
-  //       if (!allowedImageFormats.includes(image.type)) {
-  //         errors["image"] =
-  //           "Invalid image format. Please upload a jpg, jpeg, or png file.";
-  //       }
-
-  //       if (imageSize > 5) {
-  //         errors["image"] =
-  //           "Image size exceeds the maximum allowed limit of 5MB.";
-  //       }
-  //     }
-  //   }
-
-  //   // Update error states
-  //   if (errors.email) {
-  //     setEmailError(errors.email);
-  //   }
-
-  //   if (errors.telephone) {
-  //     setTelephoneError(errors.telephone);
-  //   }
-
-  //   if (Object.keys(errors).length === 0) {
-  //     // Include reCAPTCHA value in the form data
-  //     formDataInstance.append("recaptcha", recaptchaValue);
-
-  //     // Perform the actual form submission
-  //     try {
-  //       const response = await axios.post(
-  //         "http://localhost:5000/api/message",
-  //         formDataInstance
-  //       );
-
-  //       if (response.status === 200) {
-  //         console.log("Form submitted successfully");
-
-  //         // Reset reCAPTCHA
-  //         setRecaptchaValue(null);
-
-  //         // If the submission is successful, update the submission status
-  //         setSubmissionStatus("success");
-
-  //         // Clear the form fields
-  //         setFormData({
-  //           firstName: "",
-  //           lastName: "",
-  //           email: "",
-  //           subject: "",
-  //           telephone: "",
-  //           comments: "",
-  //           image: null,
-  //           agreeTerms: false,
-  //           imagePreview: null,
-  //         });
-  //       } else {
-  //         console.error("Form submission failed");
-  //       }
-  //     } catch (error) {
-  //       console.error("Error submitting form:", error);
-
-  //       // Update the submission status with an error message
-  //       setSubmissionStatus("error");
-  //     }
-  //   } else {
-  //     // Validation errors
-  //     console.error("Validation errors:", errors);
-
-  //     // Display validation errors to the user
-  //     Object.entries(errors).forEach(([key, value]) => {
-  //       const inputElement = document.getElementById(key) as HTMLInputElement;
-  //       if (inputElement) {
-  //         inputElement.classList.add("is-invalid");
-
-  //         const errorElement = document.createElement("div");
-  //         errorElement.classList.add("invalid-feedback");
-  //         errorElement.innerText = value;
-
-  //         const parentElement = inputElement.parentElement;
-  //         if (parentElement) {
-  //           parentElement.appendChild(errorElement);
-  //         }
-  //       }
-  //     });
-  //   }
-  // };
-
   return (
     <>
       {/* White background section under the navbar */}
@@ -398,6 +245,7 @@ const Contact = () => {
           <form
             className="compact-form"
             name="contact"
+            method="POST"
             data-netlify="true" // submission success message
             data-netlify-honeypot="bot-field"
             data-netlify-recaptcha="true"
