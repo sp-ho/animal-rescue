@@ -1052,9 +1052,9 @@ const Fostering = () => {
           </div>
 
           <div>
-            {/* We are using the global site key for testing */}
+            {/* global site key for testing: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI */}
             <ReCAPTCHA
-              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              sitekey="6LcagmApAAAAABycBt2yiQOtlY1qPK1uGlSAuq-v"
               onChange={handleRecaptchaChange}
             />
             <button type="submit" className="btn btn-primary mt-3">
